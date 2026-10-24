@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="label" for="all" attr.name="label" attr.type="string"/>
+  <key id="kind" for="all" attr.name="kind" attr.type="string"/>
+  <graph id="dfg_00101020" edgedefault="directed">
+    <node id="op_0">
+      <data key="label">CALLIND</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_1bd044a8c31b3d63">
+      <data key="label">UNNAMED</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_1">
+      <data key="label">RETURN</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_7d8171ad5edfba5c">
+      <data key="label">None</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_2">
+      <data key="label">INDIRECT</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_d7e79a47e750929e">
+      <data key="label">PTR_00103f38</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="var_3bba7c1477af2e87">
+      <data key="label">(const, 0x3, 4)</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_3">
+      <data key="label">COPY</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_4">
+      <data key="label">INDIRECT</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_8b10ce2dfeee12f8">
+      <data key="label">PTR_00103f40</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_5">
+      <data key="label">COPY</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_6">
+      <data key="label">CAST</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <edge id="e0" source="var_1bd044a8c31b3d63" target="op_0">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e1" source="var_7d8171ad5edfba5c" target="op_1">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e2" source="op_2" target="var_d7e79a47e750929e">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e3" source="var_d7e79a47e750929e" target="op_2">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e4" source="var_3bba7c1477af2e87" target="op_2">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e5" source="op_3" target="var_d7e79a47e750929e">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e6" source="var_d7e79a47e750929e" target="op_3">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e7" source="op_4" target="var_8b10ce2dfeee12f8">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e8" source="var_8b10ce2dfeee12f8" target="op_4">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e9" source="var_3bba7c1477af2e87" target="op_4">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e10" source="op_5" target="var_8b10ce2dfeee12f8">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e11" source="var_8b10ce2dfeee12f8" target="op_5">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e12" source="op_6" target="var_1bd044a8c31b3d63">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e13" source="var_8b10ce2dfeee12f8" target="op_6">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+  </graph>
+</graphml>

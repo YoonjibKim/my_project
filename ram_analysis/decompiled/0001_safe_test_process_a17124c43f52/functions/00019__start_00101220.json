@@ -1,0 +1,727 @@
+{
+  "index": 19,
+  "name": "_start",
+  "entry": "00101220",
+  "kind": "internal_function",
+  "external": false,
+  "declared_external": false,
+  "implementation_external": false,
+  "external_thunk_record": false,
+  "internal_external_thunk": false,
+  "thunk_target_name": null,
+  "thunk_target_entry": null,
+  "memory_block": ".text",
+  "signature": "undefined processEntry _start(void)",
+  "is_thunk": false,
+  "pseudocode": "\nvoid processEntry _start(undefined8 param_1,undefined8 param_2)\n\n{\n  undefined1 auStack_8 [8];\n  \n  (*(code *)PTR___libc_start_main_00103fc0)(main,param_2,&stack0x00000008,0,0,param_1,auStack_8);\n  do {\n                    /* WARNING: Do nothing block with infinite loop */\n  } while( true );\n}\n\n",
+  "assembly": [
+    {
+      "address": "00101220",
+      "bytes": "f3 0f 1e fa",
+      "mnemonic": "ENDBR64",
+      "text": "ENDBR64",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101224",
+      "bytes": "31 ed",
+      "mnemonic": "XOR",
+      "text": "XOR EBP,EBP",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101226",
+      "bytes": "49 89 d1",
+      "mnemonic": "MOV",
+      "text": "MOV R9,RDX",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101229",
+      "bytes": "5e",
+      "mnemonic": "POP",
+      "text": "POP RSI",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "0010122a",
+      "bytes": "48 89 e2",
+      "mnemonic": "MOV",
+      "text": "MOV RDX,RSP",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "0010122d",
+      "bytes": "48 83 e4 f0",
+      "mnemonic": "AND",
+      "text": "AND RSP,-0x10",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101231",
+      "bytes": "50",
+      "mnemonic": "PUSH",
+      "text": "PUSH RAX",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101232",
+      "bytes": "54",
+      "mnemonic": "PUSH",
+      "text": "PUSH RSP",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "Stack[-0x10]",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "00101233",
+      "bytes": "45 31 c0",
+      "mnemonic": "XOR",
+      "text": "XOR R8D,R8D",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101236",
+      "bytes": "31 c9",
+      "mnemonic": "XOR",
+      "text": "XOR ECX,ECX",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101238",
+      "bytes": "48 8d 3d 69 04 00 00",
+      "mnemonic": "LEA",
+      "text": "LEA RDI,[0x1016a8]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "001016a8",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "0010123f",
+      "bytes": "ff 15 7b 2d 00 00",
+      "mnemonic": "CALL",
+      "text": "CALL qword ptr [0x00103fc0]",
+      "flow_type": "COMPUTED_CALL",
+      "references": [
+        {
+          "to": "00103fc0",
+          "type": "READ"
+        },
+        {
+          "to": "00105000",
+          "type": "COMPUTED_CALL"
+        }
+      ]
+    },
+    {
+      "address": "00101245",
+      "bytes": "f4",
+      "mnemonic": "HLT",
+      "text": "HLT",
+      "flow_type": "TERMINATOR",
+      "references": []
+    }
+  ],
+  "pcode": [
+    {
+      "id": "op_0",
+      "sequence": "(ram, 0x101229, 118, 0)",
+      "mnemonic": "PTRSUB",
+      "output": {
+        "text": "(register, 0x20, 8)",
+        "address": "register:00000020",
+        "size": 8,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x20, 8)",
+          "address": "register:00000020",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0x8, 8)",
+          "address": "const:00000008",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_1",
+      "sequence": "(ram, 0x101231, 119, 1)",
+      "mnemonic": "PTRSUB",
+      "output": {
+        "text": "(register, 0x20, 8)",
+        "address": "register:00000020",
+        "size": 8,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x20, 8)",
+          "address": "register:00000020",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0xfffffffffffffff8, 8)",
+          "address": "const:fffffffffffffff8",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_2",
+      "sequence": "(ram, 0x10123f, 55, 5)",
+      "mnemonic": "CALLIND",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(unique, 0x10000049, 8)",
+          "address": "unique:10000049",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(unique, 0x10000031, 8)",
+          "address": "unique:10000031",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(stack, 0x0, 8)",
+          "address": "Stack[0x0]",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "param_2"
+        },
+        {
+          "text": "(register, 0x20, 8)",
+          "address": "register:00000020",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        },
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        },
+        {
+          "text": "(register, 0x10, 8)",
+          "address": "register:00000010",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "param_1"
+        },
+        {
+          "text": "(register, 0x20, 8)",
+          "address": "register:00000020",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_3",
+      "sequence": "(ram, 0x10123f, 112, 4)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(ram, 0x103fc0, 8)",
+        "address": "00103fc0",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "PTR___libc_start_main_00103fc0"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103fc0, 8)",
+          "address": "00103fc0",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR___libc_start_main_00103fc0"
+        },
+        {
+          "text": "(const, 0x37, 4)",
+          "address": "const:00000037",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_4",
+      "sequence": "(ram, 0x10123f, 117, 2)",
+      "mnemonic": "PTRSUB",
+      "output": {
+        "text": "(unique, 0x10000031, 8)",
+        "address": "unique:10000031",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0x1016a8, 8)",
+          "address": "const:001016a8",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_5",
+      "sequence": "(ram, 0x10123f, 120, 3)",
+      "mnemonic": "CAST",
+      "output": {
+        "text": "(unique, 0x10000049, 8)",
+        "address": "unique:10000049",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103fc0, 8)",
+          "address": "00103fc0",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR___libc_start_main_00103fc0"
+        }
+      ]
+    },
+    {
+      "id": "op_6",
+      "sequence": "(ram, 0x101245, 56, 0)",
+      "mnemonic": "BRANCH",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(ram, 0x101245, 1)",
+          "address": "00101245",
+          "size": 1,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": null
+        }
+      ]
+    }
+  ],
+  "cfg": {
+    "nodes": [
+      {
+        "id": "00101220",
+        "label": "00101220",
+        "kind": "basic_block",
+        "start": "00101220",
+        "end": "00101245",
+        "flow_type": "TERMINATOR"
+      }
+    ],
+    "edges": [
+      {
+        "source": "00101220",
+        "target": "00105000",
+        "kind": "COMPUTED_CALL",
+        "label": "COMPUTED_CALL"
+      }
+    ]
+  },
+  "dfg": {
+    "nodes": [
+      {
+        "id": "op_0",
+        "label": "PTRSUB",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_1ac9615899b43657",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_d64598c224908858",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_1",
+        "label": "PTRSUB",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_d7cba7124fa1c548",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_2",
+        "label": "CALLIND",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_7d9e1881ef9cd9e5",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_0b4b241b7e18c7cb",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_0519e981421f8e2f",
+        "label": "param_2",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_88811e232378f02a",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_4be8295ac8e04da8",
+        "label": "param_1",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_3",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_814e7bc046a7acf7",
+        "label": "PTR___libc_start_main_00103fc0",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_a5b0c71d3422cd74",
+        "label": "(const, 0x37, 4)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_4",
+        "label": "PTRSUB",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_ef3d9536ba2018ce",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_5",
+        "label": "CAST",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_6",
+        "label": "BRANCH",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_ef08fa4482813ec0",
+        "label": "(ram, 0x101245, 1)",
+        "kind": "varnode"
+      }
+    ],
+    "edges": [
+      {
+        "source": "op_0",
+        "target": "var_1ac9615899b43657",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_1ac9615899b43657",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_d64598c224908858",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_1",
+        "target": "var_1ac9615899b43657",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_1ac9615899b43657",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_d7cba7124fa1c548",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_7d9e1881ef9cd9e5",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_0b4b241b7e18c7cb",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_0519e981421f8e2f",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_1ac9615899b43657",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_4be8295ac8e04da8",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_1ac9615899b43657",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_3",
+        "target": "var_814e7bc046a7acf7",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_814e7bc046a7acf7",
+        "target": "op_3",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_a5b0c71d3422cd74",
+        "target": "op_3",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_4",
+        "target": "var_0b4b241b7e18c7cb",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_4",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_ef3d9536ba2018ce",
+        "target": "op_4",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_5",
+        "target": "var_7d9e1881ef9cd9e5",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_814e7bc046a7acf7",
+        "target": "op_5",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_ef08fa4482813ec0",
+        "target": "op_6",
+        "kind": "uses",
+        "label": "uses"
+      }
+    ]
+  },
+  "call_graph": {
+    "callers": [],
+    "callees": [
+      {
+        "name": "__libc_start_main",
+        "entry": "00105000",
+        "kind": "external_symbol",
+        "external": true,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": true,
+        "entry_in_external_space": false,
+        "external_thunk_record": true,
+        "internal_external_thunk": false,
+        "implementation_external": true,
+        "thunk": true,
+        "thunk_target_name": "__libc_start_main",
+        "thunk_target_entry": "EXTERNAL:00000001",
+        "memory_block": "EXTERNAL"
+      }
+    ]
+  },
+  "string_references": [],
+  "graph_files": {
+    "cfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00019__start_00101220.cfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00019__start_00101220.cfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00019__start_00101220.cfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00019__start_00101220.cfg.svg",
+      "rendered": true,
+      "error": null
+    },
+    "dfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00019__start_00101220.dfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00019__start_00101220.dfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00019__start_00101220.dfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00019__start_00101220.dfg.svg",
+      "rendered": true,
+      "error": null
+    }
+  },
+  "success": true,
+  "error": null
+}

@@ -1,0 +1,8 @@
+{
+  "path": "/home/asurada/safe_test_process",
+  "manager": "dpkg",
+  "package": null,
+  "verification": null,
+  "status": "not_managed",
+  "error": "dpkg-query: no path found matching pattern /home/asurada/safe_test_process"
+}

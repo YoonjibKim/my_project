@@ -209,6 +209,11 @@ STORE_PCODE = True
 STORE_CFG = True
 STORE_DFG = True
 STORE_CALL_GRAPH = True
+# GraphML과 함께 Graphviz 기반 PNG/SVG 도면도 저장합니다.
+RENDER_GRAPH_IMAGES = True
+GRAPHVIZ_ENGINE = "dot"
+GRAPH_IMAGE_FORMATS = ("png", "svg")
+GRAPHVIZ_TIMEOUT_SECONDS = 120
 STORE_STRINGS = True
 STORE_IMPORTS = True
 STORE_GLOBALS = True
@@ -1075,6 +1080,145 @@ def write_graphml(path, nodes, edges, graph_name):
         ])
     lines.extend(['  </graph>', '</graphml>'])
     path.write_text('\n'.join(lines), encoding='utf-8')
+
+
+def dot_escape(value):
+    """Escape a Python value for a quoted Graphviz DOT string."""
+    return (
+        str(value)
+        .replace("\\", "\\\\")
+        .replace('"', '\\"')
+        .replace("\r", "")
+        .replace("\n", "\\n")
+    )
+
+
+def graph_node_style(kind):
+    """Return shape/fill/border colors for known graph node kinds."""
+    styles = {
+        "pcode_op": ("box", "#9EC5FE", "#2457A7"),
+        "varnode": ("ellipse", "#FFD59A", "#A85D00"),
+        "basic_block": ("box", "#D9EAD3", "#38761D"),
+        "internal_function": ("box", "#CFE2F3", "#0B5394"),
+        "internal_external_thunk": ("box", "#D9D2E9", "#674EA7"),
+        "plt_stub": ("box", "#FCE5CD", "#B45F06"),
+        "external_symbol": ("ellipse", "#F4CCCC", "#990000"),
+    }
+    return styles.get(str(kind), ("ellipse", "#EEEEEE", "#666666"))
+
+
+def graph_edge_style(kind):
+    """Return line color/style for known graph edge kinds."""
+    normalized = str(kind or "edge").lower()
+    if normalized == "defines":
+        return "#16794D", "solid"
+    if normalized == "uses":
+        return "#666666", "solid"
+    if normalized == "calls":
+        return "#7B1FA2", "solid"
+    if "conditional" in normalized:
+        return "#C62828", "dashed"
+    if "unconditional" in normalized:
+        return "#1565C0", "solid"
+    return "#555555", "solid"
+
+
+def write_dot(path, nodes, edges, graph_name):
+    """Write a styled DOT file that Graphviz can render."""
+    lines = [
+        f'digraph "{dot_escape(graph_name)}" {{',
+        '  graph [rankdir=LR, bgcolor="white", pad="0.25", nodesep="0.35", ranksep="0.55", overlap=false, splines=true];',
+        '  node [fontname="DejaVu Sans", fontsize=10, style="filled,rounded", margin="0.10,0.06"];',
+        '  edge [fontname="DejaVu Sans", fontsize=8, arrowsize=0.75];',
+    ]
+    for node in nodes:
+        node_id = dot_escape(node["id"])
+        label = dot_escape(node.get("label", node["id"]))
+        kind = node.get("kind", "node")
+        shape, fill, border = graph_node_style(kind)
+        tooltip = dot_escape(f"id={node['id']} | kind={kind}")
+        lines.append(
+            f'  "{node_id}" [label="{label}", shape={shape}, '
+            f'fillcolor="{fill}", color="{border}", penwidth=1.4, tooltip="{tooltip}"];'
+        )
+    for edge in edges:
+        source = dot_escape(edge["source"])
+        target = dot_escape(edge["target"])
+        label = dot_escape(edge.get("label", ""))
+        kind = edge.get("kind", "edge")
+        color, style = graph_edge_style(kind)
+        lines.append(
+            f'  "{source}" -> "{target}" [label="{label}", '
+            f'color="{color}", fontcolor="{color}", style="{style}"];'
+        )
+    lines.append("}")
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return path
+
+
+def render_graph(path, nodes, edges, graph_name):
+    """
+    Save GraphML, DOT, PNG, and SVG for one graph.
+
+    GraphML is always written. PNG/SVG rendering is skipped cleanly when the
+    free Graphviz 'dot' executable is not installed or rendering fails.
+    """
+    path = Path(path)
+    write_graphml(path, nodes, edges, graph_name)
+    result = {
+        "graphml": str(path),
+        "dot": None,
+        "png": None,
+        "svg": None,
+        "rendered": False,
+        "error": None,
+    }
+    if not RENDER_GRAPH_IMAGES:
+        result["error"] = "graph image rendering disabled"
+        return result
+    dot_executable = shutil.which(GRAPHVIZ_ENGINE)
+    if dot_executable is None:
+        result["error"] = (
+            f"Graphviz executable '{GRAPHVIZ_ENGINE}' not found. "
+            "Install it with: sudo apt install graphviz"
+        )
+        print(f"[그래프] {result['error']}", file=sys.stderr, flush=True)
+        return result
+    dot_path = path.with_suffix(".dot")
+    write_dot(dot_path, nodes, edges, graph_name)
+    result["dot"] = str(dot_path)
+    errors = []
+    for output_format in GRAPH_IMAGE_FORMATS:
+        output_path = path.with_suffix(f".{output_format}")
+        try:
+            completed = subprocess.run(
+                [dot_executable, f"-T{output_format}", str(dot_path), "-o", str(output_path)],
+                check=False,
+                text=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                timeout=GRAPHVIZ_TIMEOUT_SECONDS,
+            )
+            if completed.returncode != 0:
+                detail = completed.stderr.strip() or completed.stdout.strip()
+                errors.append(f"{output_format}: {detail or 'Graphviz failed'}")
+                continue
+            if output_path.is_file() and output_path.stat().st_size > 0:
+                result[output_format] = str(output_path)
+            else:
+                errors.append(f"{output_format}: output file was not created")
+        except Exception as error:
+            errors.append(f"{output_format}: {error!r}")
+    result["rendered"] = any(result.get(fmt) for fmt in GRAPH_IMAGE_FORMATS)
+    result["error"] = "; ".join(errors) if errors else None
+    if result["rendered"]:
+        print(
+            f"[그래프] 저장 완료: {result.get('png') or '-'} | {result.get('svg') or '-'}",
+            flush=True,
+        )
+    elif result["error"]:
+        print(f"[그래프] 렌더링 실패: {result['error']}", file=sys.stderr, flush=True)
+    return result
 
 
 def varnode_record(varnode):
@@ -2595,10 +2739,16 @@ def decompile_target(target, index, global_cpu_slots, function_worker_count):
                     function_json_path = function_directory / f"{function_stem}.json"
                     cfg_path = graph_directory / f"{function_stem}.cfg.graphml"
                     dfg_path = graph_directory / f"{function_stem}.dfg.graphml"
+                    cfg_graph_files = None
+                    dfg_graph_files = None
                     if STORE_CFG:
-                        write_graphml(cfg_path, cfg['nodes'], cfg['edges'], f"cfg_{entry}")
+                        cfg_graph_files = render_graph(
+                            cfg_path, cfg['nodes'], cfg['edges'], f"cfg_{entry}"
+                        )
                     if STORE_DFG:
-                        write_graphml(dfg_path, dfg['nodes'], dfg['edges'], f"dfg_{entry}")
+                        dfg_graph_files = render_graph(
+                            dfg_path, dfg['nodes'], dfg['edges'], f"dfg_{entry}"
+                        )
 
                     function_classification = classify_ghidra_function(program, function)
                     function_detail = {
@@ -2624,8 +2774,8 @@ def decompile_target(target, index, global_cpu_slots, function_worker_count):
                         'call_graph': calls,
                         'string_references': string_references,
                         'graph_files': {
-                            'cfg': str(cfg_path) if STORE_CFG else None,
-                            'dfg': str(dfg_path) if STORE_DFG else None,
+                            'cfg': cfg_graph_files,
+                            'dfg': dfg_graph_files,
                         },
                         'success': ok,
                         'error': error,
@@ -2653,7 +2803,11 @@ def decompile_target(target, index, global_cpu_slots, function_worker_count):
                         "c_file": str(function_path),
                         "json_file": str(function_json_path),
                         "cfg_file": str(cfg_path) if STORE_CFG else None,
+                        "cfg_png_file": cfg_graph_files.get("png") if cfg_graph_files else None,
+                        "cfg_svg_file": cfg_graph_files.get("svg") if cfg_graph_files else None,
                         "dfg_file": str(dfg_path) if STORE_DFG else None,
+                        "dfg_png_file": dfg_graph_files.get("png") if dfg_graph_files else None,
+                        "dfg_svg_file": dfg_graph_files.get("svg") if dfg_graph_files else None,
                         "callees": calls['callees'],
                         "success": ok,
                         "error": error,
@@ -2727,9 +2881,12 @@ def decompile_target(target, index, global_cpu_slots, function_worker_count):
                             'kind': 'calls', 'label': 'calls'
                         })
                 call_graph_path = graph_directory / 'call_graph.graphml'
-                write_graphml(call_graph_path, list(call_nodes.values()), call_edges, 'call_graph')
+                call_graph_files = render_graph(
+                    call_graph_path, list(call_nodes.values()), call_edges, 'call_graph'
+                )
             else:
                 call_graph_path = None
+                call_graph_files = None
             status = "success"
     except Exception as error:
         error_message = repr(error)
@@ -2789,7 +2946,7 @@ def decompile_target(target, index, global_cpu_slots, function_worker_count):
             "elf_security_profile": str(program_directory / 'elf_security_profile.json'),
             "package_verification": str(program_directory / 'package_verification.json'),
             "runtime_context": str(runtime_directory / 'process_context.json'),
-            "call_graph": str(call_graph_path) if status == 'success' and call_graph_path else None,
+            "call_graph": call_graph_files if status == 'success' and call_graph_path else None,
         },
         "functions": function_records,
         "error": error_message,

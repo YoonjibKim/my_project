@@ -1,0 +1,271 @@
+{
+  "index": 24,
+  "name": "handle_signal",
+  "entry": "00101309",
+  "kind": "internal_function",
+  "external": false,
+  "declared_external": false,
+  "implementation_external": false,
+  "external_thunk_record": false,
+  "internal_external_thunk": false,
+  "thunk_target_name": null,
+  "thunk_target_entry": null,
+  "memory_block": ".text",
+  "signature": "void __stdcall handle_signal(int signal_number)",
+  "is_thunk": false,
+  "pseudocode": "\nvoid handle_signal(int signal_number)\n\n{\n  int signal_number_local;\n  \n  stop_requested = 1;\n  return;\n}\n\n",
+  "assembly": [
+    {
+      "address": "00101309",
+      "bytes": "f3 0f 1e fa",
+      "mnemonic": "ENDBR64",
+      "text": "ENDBR64",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "0010130d",
+      "bytes": "55",
+      "mnemonic": "PUSH",
+      "text": "PUSH RBP",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "0010130e",
+      "bytes": "48 89 e5",
+      "mnemonic": "MOV",
+      "text": "MOV RBP,RSP",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101311",
+      "bytes": "89 7d fc",
+      "mnemonic": "MOV",
+      "text": "MOV dword ptr [RBP + -0x4],EDI",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "Stack[-0xc]",
+          "type": "WRITE"
+        }
+      ]
+    },
+    {
+      "address": "00101314",
+      "bytes": "c7 05 fe 2c 00 00 01 00 00 00",
+      "mnemonic": "MOV",
+      "text": "MOV dword ptr [0x0010401c],0x1",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "0010401c",
+          "type": "WRITE"
+        }
+      ]
+    },
+    {
+      "address": "0010131e",
+      "bytes": "90",
+      "mnemonic": "NOP",
+      "text": "NOP",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "0010131f",
+      "bytes": "5d",
+      "mnemonic": "POP",
+      "text": "POP RBP",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101320",
+      "bytes": "c3",
+      "mnemonic": "RET",
+      "text": "RET",
+      "flow_type": "TERMINATOR",
+      "references": []
+    }
+  ],
+  "pcode": [
+    {
+      "id": "op_0",
+      "sequence": "(ram, 0x101314, 7, 0)",
+      "mnemonic": "COPY",
+      "output": {
+        "text": "(ram, 0x10401c, 4)",
+        "address": "0010401c",
+        "size": 4,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "stop_requested"
+      },
+      "inputs": [
+        {
+          "text": "(const, 0x1, 4)",
+          "address": "const:00000001",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_1",
+      "sequence": "(ram, 0x101320, 14, 2)",
+      "mnemonic": "RETURN",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_2",
+      "sequence": "(ram, 0x101320, 17, 1)",
+      "mnemonic": "COPY",
+      "output": {
+        "text": "(ram, 0x10401c, 4)",
+        "address": "0010401c",
+        "size": 4,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "stop_requested"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x10401c, 4)",
+          "address": "0010401c",
+          "size": 4,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "stop_requested"
+        }
+      ]
+    }
+  ],
+  "cfg": {
+    "nodes": [
+      {
+        "id": "00101309",
+        "label": "00101309",
+        "kind": "basic_block",
+        "start": "00101309",
+        "end": "00101320",
+        "flow_type": "TERMINATOR"
+      }
+    ],
+    "edges": []
+  },
+  "dfg": {
+    "nodes": [
+      {
+        "id": "op_0",
+        "label": "COPY",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_af923fe2ac709acf",
+        "label": "stop_requested",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_7d8171ad5edfba5c",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_1",
+        "label": "RETURN",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_88811e232378f02a",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_2",
+        "label": "COPY",
+        "kind": "pcode_op"
+      }
+    ],
+    "edges": [
+      {
+        "source": "op_0",
+        "target": "var_af923fe2ac709acf",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_7d8171ad5edfba5c",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_2",
+        "target": "var_af923fe2ac709acf",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_af923fe2ac709acf",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      }
+    ]
+  },
+  "call_graph": {
+    "callers": [],
+    "callees": []
+  },
+  "string_references": [],
+  "graph_files": {
+    "cfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00024_handle_signal_00101309.cfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00024_handle_signal_00101309.cfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00024_handle_signal_00101309.cfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00024_handle_signal_00101309.cfg.svg",
+      "rendered": true,
+      "error": null
+    },
+    "dfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00024_handle_signal_00101309.dfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00024_handle_signal_00101309.dfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00024_handle_signal_00101309.dfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00024_handle_signal_00101309.dfg.svg",
+      "rendered": true,
+      "error": null
+    }
+  },
+  "success": true,
+  "error": null
+}

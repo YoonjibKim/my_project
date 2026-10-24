@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="label" for="all" attr.name="label" attr.type="string"/>
+  <key id="kind" for="all" attr.name="kind" attr.type="string"/>
+  <graph id="dfg_001012c0" edgedefault="directed">
+    <node id="op_0">
+      <data key="label">INT_EQUAL</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_099964eb209491dd">
+      <data key="label">UNNAMED</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="var_a87766598fe8a95e">
+      <data key="label">completed.0</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="var_66ddc00835e1e222">
+      <data key="label">None</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_1">
+      <data key="label">CBRANCH</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_fa618a0565be6005">
+      <data key="label">(ram, 0x1012f8, 1)</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_2">
+      <data key="label">INT_NOTEQUAL</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_8fcae3a280183706">
+      <data key="label">PTR___cxa_finalize_00103fe0</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="var_88811e232378f02a">
+      <data key="label">None</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_3">
+      <data key="label">CBRANCH</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_f8bbca92e4642c66">
+      <data key="label">(ram, 0x1012e7, 1)</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_4">
+      <data key="label">CALL</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_9a5083e132890a56">
+      <data key="label">(ram, 0x101120, 8)</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="var_3b55e58a1c8e15a4">
+      <data key="label">__dso_handle</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_5">
+      <data key="label">INDIRECT</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_8f261b3a2550dddc">
+      <data key="label">(const, 0x1e, 4)</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_6">
+      <data key="label">INDIRECT</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_7">
+      <data key="label">INDIRECT</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_8">
+      <data key="label">CALL</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_7d6088767e539855">
+      <data key="label">(ram, 0x101250, 8)</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_9">
+      <data key="label">INDIRECT</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_19ba64e5c7f9c61d">
+      <data key="label">(const, 0x21, 4)</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_10">
+      <data key="label">MULTIEQUAL</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_11">
+      <data key="label">INDIRECT</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_12">
+      <data key="label">MULTIEQUAL</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_13">
+      <data key="label">INDIRECT</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_14">
+      <data key="label">MULTIEQUAL</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_15">
+      <data key="label">COPY</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_12663588b1c220a5">
+      <data key="label">None</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_16">
+      <data key="label">RETURN</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_17">
+      <data key="label">COPY</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_18">
+      <data key="label">COPY</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_19">
+      <data key="label">COPY</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_20">
+      <data key="label">RETURN</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_21">
+      <data key="label">COPY</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_22">
+      <data key="label">COPY</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="op_23">
+      <data key="label">COPY</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <edge id="e0" source="op_0" target="var_099964eb209491dd">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e1" source="var_a87766598fe8a95e" target="op_0">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e2" source="var_66ddc00835e1e222" target="op_0">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e3" source="var_fa618a0565be6005" target="op_1">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e4" source="var_099964eb209491dd" target="op_1">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e5" source="op_2" target="var_099964eb209491dd">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e6" source="var_8fcae3a280183706" target="op_2">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e7" source="var_88811e232378f02a" target="op_2">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e8" source="var_f8bbca92e4642c66" target="op_3">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e9" source="var_099964eb209491dd" target="op_3">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e10" source="var_9a5083e132890a56" target="op_4">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e11" source="var_3b55e58a1c8e15a4" target="op_4">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e12" source="op_5" target="var_8fcae3a280183706">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e13" source="var_8fcae3a280183706" target="op_5">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e14" source="var_8f261b3a2550dddc" target="op_5">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e15" source="op_6" target="var_3b55e58a1c8e15a4">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e16" source="var_3b55e58a1c8e15a4" target="op_6">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e17" source="var_8f261b3a2550dddc" target="op_6">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e18" source="op_7" target="var_a87766598fe8a95e">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e19" source="var_a87766598fe8a95e" target="op_7">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e20" source="var_8f261b3a2550dddc" target="op_7">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e21" source="var_7d6088767e539855" target="op_8">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e22" source="op_9" target="var_8fcae3a280183706">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e23" source="var_8fcae3a280183706" target="op_9">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e24" source="var_19ba64e5c7f9c61d" target="op_9">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e25" source="op_10" target="var_8fcae3a280183706">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e26" source="var_8fcae3a280183706" target="op_10">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e27" source="var_8fcae3a280183706" target="op_10">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e28" source="op_11" target="var_3b55e58a1c8e15a4">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e29" source="var_3b55e58a1c8e15a4" target="op_11">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e30" source="var_19ba64e5c7f9c61d" target="op_11">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e31" source="op_12" target="var_3b55e58a1c8e15a4">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e32" source="var_3b55e58a1c8e15a4" target="op_12">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e33" source="var_3b55e58a1c8e15a4" target="op_12">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e34" source="op_13" target="var_a87766598fe8a95e">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e35" source="var_a87766598fe8a95e" target="op_13">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e36" source="var_19ba64e5c7f9c61d" target="op_13">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e37" source="op_14" target="var_a87766598fe8a95e">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e38" source="var_a87766598fe8a95e" target="op_14">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e39" source="var_a87766598fe8a95e" target="op_14">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e40" source="op_15" target="var_a87766598fe8a95e">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e41" source="var_12663588b1c220a5" target="op_15">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e42" source="var_88811e232378f02a" target="op_16">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e43" source="op_17" target="var_8fcae3a280183706">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e44" source="var_8fcae3a280183706" target="op_17">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e45" source="op_18" target="var_3b55e58a1c8e15a4">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e46" source="var_3b55e58a1c8e15a4" target="op_18">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e47" source="op_19" target="var_a87766598fe8a95e">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e48" source="var_a87766598fe8a95e" target="op_19">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e49" source="var_88811e232378f02a" target="op_20">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e50" source="op_21" target="var_8fcae3a280183706">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e51" source="var_8fcae3a280183706" target="op_21">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e52" source="op_22" target="var_3b55e58a1c8e15a4">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e53" source="var_3b55e58a1c8e15a4" target="op_22">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e54" source="op_23" target="var_a87766598fe8a95e">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e55" source="var_a87766598fe8a95e" target="op_23">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+  </graph>
+</graphml>

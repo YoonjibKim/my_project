@@ -1,0 +1,14 @@
+digraph "cfg_00101250" {
+  graph [rankdir=LR, bgcolor="white", pad="0.25", nodesep="0.35", ranksep="0.55", overlap=false, splines=true];
+  node [fontname="DejaVu Sans", fontsize=10, style="filled,rounded", margin="0.10,0.06"];
+  edge [fontname="DejaVu Sans", fontsize=8, arrowsize=0.75];
+  "00101250" [label="00101250", shape=box, fillcolor="#D9EAD3", color="#38761D", penwidth=1.4, tooltip="id=00101250 | kind=basic_block"];
+  "00101263" [label="00101263", shape=box, fillcolor="#D9EAD3", color="#38761D", penwidth=1.4, tooltip="id=00101263 | kind=basic_block"];
+  "0010126f" [label="0010126f", shape=box, fillcolor="#D9EAD3", color="#38761D", penwidth=1.4, tooltip="id=0010126f | kind=basic_block"];
+  "00101278" [label="00101278", shape=box, fillcolor="#D9EAD3", color="#38761D", penwidth=1.4, tooltip="id=00101278 | kind=basic_block"];
+  "00101250" -> "00101278" [label="CONDITIONAL_JUMP", color="#C62828", fontcolor="#C62828", style="dashed"];
+  "00101250" -> "00101263" [label="FALL_THROUGH", color="#555555", fontcolor="#555555", style="solid"];
+  "00101263" -> "00101278" [label="CONDITIONAL_JUMP", color="#C62828", fontcolor="#C62828", style="dashed"];
+  "00101263" -> "0010126f" [label="FALL_THROUGH", color="#555555", fontcolor="#555555", style="solid"];
+  "0010126f" -> "00105010" [label="COMPUTED_CALL", color="#555555", fontcolor="#555555", style="solid"];
+}

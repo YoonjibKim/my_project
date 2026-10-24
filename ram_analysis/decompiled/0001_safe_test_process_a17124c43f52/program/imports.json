@@ -1,0 +1,142 @@
+[
+  {
+    "name": "__libc_start_main",
+    "entry": "EXTERNAL:00000001",
+    "namespace": "<EXTERNAL>",
+    "signature": "undefined __libc_start_main(void)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "__errno_location",
+    "entry": "EXTERNAL:00000002",
+    "namespace": "<EXTERNAL>",
+    "signature": "int * __errno_location(void)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "puts",
+    "entry": "EXTERNAL:00000003",
+    "namespace": "<EXTERNAL>",
+    "signature": "int puts(char * __s)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "sigaction",
+    "entry": "EXTERNAL:00000004",
+    "namespace": "<EXTERNAL>",
+    "signature": "int sigaction(int __sig, sigaction * __act, sigaction * __oact)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "getpid",
+    "entry": "EXTERNAL:00000005",
+    "namespace": "<EXTERNAL>",
+    "signature": "__pid_t getpid(void)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "__stack_chk_fail",
+    "entry": "EXTERNAL:00000006",
+    "namespace": "<EXTERNAL>",
+    "signature": "noreturn undefined __stack_chk_fail(void)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "mmap",
+    "entry": "EXTERNAL:00000007",
+    "namespace": "<EXTERNAL>",
+    "signature": "void * mmap(void * __addr, size_t __len, int __prot, int __flags, int __fd, __off_t __offset)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "printf",
+    "entry": "EXTERNAL:00000008",
+    "namespace": "<EXTERNAL>",
+    "signature": "int printf(char * __format, ...)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "memset",
+    "entry": "EXTERNAL:00000009",
+    "namespace": "<EXTERNAL>",
+    "signature": "void * memset(void * __s, int __c, size_t __n)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "sigemptyset",
+    "entry": "EXTERNAL:0000000a",
+    "namespace": "<EXTERNAL>",
+    "signature": "int sigemptyset(sigset_t * __set)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "time",
+    "entry": "EXTERNAL:0000000b",
+    "namespace": "<EXTERNAL>",
+    "signature": "time_t time(time_t * __timer)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "fflush",
+    "entry": "EXTERNAL:0000000c",
+    "namespace": "<EXTERNAL>",
+    "signature": "int fflush(FILE * __stream)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "munmap",
+    "entry": "EXTERNAL:0000000d",
+    "namespace": "<EXTERNAL>",
+    "signature": "int munmap(void * __addr, size_t __len)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "mprotect",
+    "entry": "EXTERNAL:0000000e",
+    "namespace": "<EXTERNAL>",
+    "signature": "int mprotect(void * __addr, size_t __len, int __prot)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "perror",
+    "entry": "EXTERNAL:0000000f",
+    "namespace": "<EXTERNAL>",
+    "signature": "void perror(char * __s)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "sleep",
+    "entry": "EXTERNAL:00000010",
+    "namespace": "<EXTERNAL>",
+    "signature": "uint sleep(uint __seconds)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "__cxa_finalize",
+    "entry": "EXTERNAL:00000011",
+    "namespace": "<EXTERNAL>",
+    "signature": "undefined __cxa_finalize(void)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "_ITM_deregisterTMCloneTable",
+    "entry": "EXTERNAL:00000012",
+    "namespace": "<EXTERNAL>",
+    "signature": "undefined _ITM_deregisterTMCloneTable(void)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "_ITM_registerTMCloneTable",
+    "entry": "EXTERNAL:00000013",
+    "namespace": "<EXTERNAL>",
+    "signature": "undefined _ITM_registerTMCloneTable(void)",
+    "library": "<EXTERNAL>"
+  },
+  {
+    "name": "__gmon_start__",
+    "entry": "EXTERNAL:00000014",
+    "namespace": "<EXTERNAL>",
+    "signature": "undefined __gmon_start__(void)",
+    "library": "<EXTERNAL>"
+  }
+]

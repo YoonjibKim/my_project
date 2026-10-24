@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="label" for="all" attr.name="label" attr.type="string"/>
+  <key id="kind" for="all" attr.name="kind" attr.type="string"/>
+  <graph id="dfg_00101309" edgedefault="directed">
+    <node id="op_0">
+      <data key="label">COPY</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_af923fe2ac709acf">
+      <data key="label">stop_requested</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="var_7d8171ad5edfba5c">
+      <data key="label">None</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_1">
+      <data key="label">RETURN</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_88811e232378f02a">
+      <data key="label">None</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_2">
+      <data key="label">COPY</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <edge id="e0" source="op_0" target="var_af923fe2ac709acf">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e1" source="var_7d8171ad5edfba5c" target="op_0">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e2" source="var_88811e232378f02a" target="op_1">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e3" source="op_2" target="var_af923fe2ac709acf">
+      <data key="label">defines</data>
+      <data key="kind">defines</data>
+    </edge>
+    <edge id="e4" source="var_af923fe2ac709acf" target="op_2">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+  </graph>
+</graphml>

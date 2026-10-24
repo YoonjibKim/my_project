@@ -1,0 +1,8 @@
+digraph "dfg_00101280" {
+  graph [rankdir=LR, bgcolor="white", pad="0.25", nodesep="0.35", ranksep="0.55", overlap=false, splines=true];
+  node [fontname="DejaVu Sans", fontsize=10, style="filled,rounded", margin="0.10,0.06"];
+  edge [fontname="DejaVu Sans", fontsize=8, arrowsize=0.75];
+  "op_0" [label="RETURN", shape=box, fillcolor="#9EC5FE", color="#2457A7", penwidth=1.4, tooltip="id=op_0 | kind=pcode_op"];
+  "var_88811e232378f02a" [label="None", shape=ellipse, fillcolor="#FFD59A", color="#A85D00", penwidth=1.4, tooltip="id=var_88811e232378f02a | kind=varnode"];
+  "var_88811e232378f02a" -> "op_0" [label="uses", color="#666666", fontcolor="#666666", style="solid"];
+}

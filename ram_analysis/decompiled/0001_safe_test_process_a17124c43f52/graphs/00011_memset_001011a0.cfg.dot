@@ -1,0 +1,8 @@
+digraph "cfg_001011a0" {
+  graph [rankdir=LR, bgcolor="white", pad="0.25", nodesep="0.35", ranksep="0.55", overlap=false, splines=true];
+  node [fontname="DejaVu Sans", fontsize=10, style="filled,rounded", margin="0.10,0.06"];
+  edge [fontname="DejaVu Sans", fontsize=8, arrowsize=0.75];
+  "001011a0" [label="001011a0", shape=box, fillcolor="#D9EAD3", color="#38761D", penwidth=1.4, tooltip="id=001011a0 | kind=basic_block"];
+  "001011a0" -> "00105048" [label="COMPUTED_CALL", color="#555555", fontcolor="#555555", style="solid"];
+  "001011a0" -> "00105048" [label="COMPUTED_CALL_TERMINATOR", color="#555555", fontcolor="#555555", style="solid"];
+}

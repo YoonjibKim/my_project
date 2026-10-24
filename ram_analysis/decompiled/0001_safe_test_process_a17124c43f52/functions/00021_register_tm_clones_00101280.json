@@ -1,0 +1,336 @@
+{
+  "index": 21,
+  "name": "register_tm_clones",
+  "entry": "00101280",
+  "kind": "internal_function",
+  "external": false,
+  "declared_external": false,
+  "implementation_external": false,
+  "external_thunk_record": false,
+  "internal_external_thunk": false,
+  "thunk_target_name": null,
+  "thunk_target_entry": null,
+  "memory_block": ".text",
+  "signature": "undefined register_tm_clones(void)",
+  "is_thunk": false,
+  "pseudocode": "\n/* WARNING: Removing unreachable block (ram,0x001012a4) */\n/* WARNING: Removing unreachable block (ram,0x001012b0) */\n\nvoid register_tm_clones(void)\n\n{\n  return;\n}\n\n",
+  "assembly": [
+    {
+      "address": "00101280",
+      "bytes": "48 8d 3d 89 2d 00 00",
+      "mnemonic": "LEA",
+      "text": "LEA RDI,[0x104010]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "00104010",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "00101287",
+      "bytes": "48 8d 35 82 2d 00 00",
+      "mnemonic": "LEA",
+      "text": "LEA RSI,[0x104010]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "00104010",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "0010128e",
+      "bytes": "48 29 fe",
+      "mnemonic": "SUB",
+      "text": "SUB RSI,RDI",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101291",
+      "bytes": "48 89 f0",
+      "mnemonic": "MOV",
+      "text": "MOV RAX,RSI",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101294",
+      "bytes": "48 c1 ee 3f",
+      "mnemonic": "SHR",
+      "text": "SHR RSI,0x3f",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101298",
+      "bytes": "48 c1 f8 03",
+      "mnemonic": "SAR",
+      "text": "SAR RAX,0x3",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "0010129c",
+      "bytes": "48 01 c6",
+      "mnemonic": "ADD",
+      "text": "ADD RSI,RAX",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "0010129f",
+      "bytes": "48 d1 fe",
+      "mnemonic": "SAR",
+      "text": "SAR RSI,0x1",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "001012a2",
+      "bytes": "74 14",
+      "mnemonic": "JZ",
+      "text": "JZ 0x001012b8",
+      "flow_type": "CONDITIONAL_JUMP",
+      "references": [
+        {
+          "to": "001012b8",
+          "type": "CONDITIONAL_JUMP"
+        }
+      ]
+    },
+    {
+      "address": "001012a4",
+      "bytes": "48 8b 05 2d 2d 00 00",
+      "mnemonic": "MOV",
+      "text": "MOV RAX,qword ptr [0x00103fd8]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "00103fd8",
+          "type": "READ"
+        },
+        {
+          "to": "00105088",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "001012ab",
+      "bytes": "48 85 c0",
+      "mnemonic": "TEST",
+      "text": "TEST RAX,RAX",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "001012ae",
+      "bytes": "74 08",
+      "mnemonic": "JZ",
+      "text": "JZ 0x001012b8",
+      "flow_type": "CONDITIONAL_JUMP",
+      "references": [
+        {
+          "to": "001012b8",
+          "type": "CONDITIONAL_JUMP"
+        }
+      ]
+    },
+    {
+      "address": "001012b0",
+      "bytes": "ff e0",
+      "mnemonic": "JMP",
+      "text": "JMP RAX",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "references": [
+        {
+          "to": "00105088",
+          "type": "COMPUTED_CALL"
+        }
+      ]
+    },
+    {
+      "address": "001012b8",
+      "bytes": "c3",
+      "mnemonic": "RET",
+      "text": "RET",
+      "flow_type": "TERMINATOR",
+      "references": []
+    }
+  ],
+  "pcode": [
+    {
+      "id": "op_0",
+      "sequence": "(ram, 0x1012b8, 128, 0)",
+      "mnemonic": "RETURN",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    }
+  ],
+  "cfg": {
+    "nodes": [
+      {
+        "id": "00101280",
+        "label": "00101280",
+        "kind": "basic_block",
+        "start": "00101280",
+        "end": "001012a3",
+        "flow_type": "CONDITIONAL_JUMP"
+      },
+      {
+        "id": "001012a4",
+        "label": "001012a4",
+        "kind": "basic_block",
+        "start": "001012a4",
+        "end": "001012af",
+        "flow_type": "CONDITIONAL_JUMP"
+      },
+      {
+        "id": "001012b0",
+        "label": "001012b0",
+        "kind": "basic_block",
+        "start": "001012b0",
+        "end": "001012b1",
+        "flow_type": "COMPUTED_CALL_TERMINATOR"
+      },
+      {
+        "id": "001012b8",
+        "label": "001012b8",
+        "kind": "basic_block",
+        "start": "001012b8",
+        "end": "001012b8",
+        "flow_type": "TERMINATOR"
+      }
+    ],
+    "edges": [
+      {
+        "source": "00101280",
+        "target": "001012b8",
+        "kind": "CONDITIONAL_JUMP",
+        "label": "CONDITIONAL_JUMP"
+      },
+      {
+        "source": "00101280",
+        "target": "001012a4",
+        "kind": "FALL_THROUGH",
+        "label": "FALL_THROUGH"
+      },
+      {
+        "source": "001012a4",
+        "target": "001012b8",
+        "kind": "CONDITIONAL_JUMP",
+        "label": "CONDITIONAL_JUMP"
+      },
+      {
+        "source": "001012a4",
+        "target": "001012b0",
+        "kind": "FALL_THROUGH",
+        "label": "FALL_THROUGH"
+      },
+      {
+        "source": "001012b0",
+        "target": "00105088",
+        "kind": "COMPUTED_CALL",
+        "label": "COMPUTED_CALL"
+      }
+    ]
+  },
+  "dfg": {
+    "nodes": [
+      {
+        "id": "op_0",
+        "label": "RETURN",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_88811e232378f02a",
+        "label": "None",
+        "kind": "varnode"
+      }
+    ],
+    "edges": [
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      }
+    ]
+  },
+  "call_graph": {
+    "callers": [
+      {
+        "name": "frame_dummy",
+        "entry": "00101300",
+        "kind": "internal_function",
+        "external": false,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": false,
+        "entry_in_external_space": false,
+        "external_thunk_record": false,
+        "internal_external_thunk": false,
+        "implementation_external": false,
+        "thunk": true,
+        "thunk_target_name": "register_tm_clones",
+        "thunk_target_entry": "00101280",
+        "memory_block": ".text"
+      }
+    ],
+    "callees": [
+      {
+        "name": "_ITM_registerTMCloneTable",
+        "entry": "00105088",
+        "kind": "external_symbol",
+        "external": true,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": true,
+        "entry_in_external_space": false,
+        "external_thunk_record": true,
+        "internal_external_thunk": false,
+        "implementation_external": true,
+        "thunk": true,
+        "thunk_target_name": "_ITM_registerTMCloneTable",
+        "thunk_target_entry": "EXTERNAL:00000013",
+        "memory_block": "EXTERNAL"
+      }
+    ]
+  },
+  "string_references": [],
+  "graph_files": {
+    "cfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00021_register_tm_clones_00101280.cfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00021_register_tm_clones_00101280.cfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00021_register_tm_clones_00101280.cfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00021_register_tm_clones_00101280.cfg.svg",
+      "rendered": true,
+      "error": null
+    },
+    "dfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00021_register_tm_clones_00101280.dfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00021_register_tm_clones_00101280.dfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00021_register_tm_clones_00101280.dfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00021_register_tm_clones_00101280.dfg.svg",
+      "rendered": true,
+      "error": null
+    }
+  },
+  "success": true,
+  "error": null
+}

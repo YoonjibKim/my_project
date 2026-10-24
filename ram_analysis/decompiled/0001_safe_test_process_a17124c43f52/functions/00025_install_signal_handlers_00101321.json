@@ -1,0 +1,3417 @@
+{
+  "index": 25,
+  "name": "install_signal_handlers",
+  "entry": "00101321",
+  "kind": "internal_function",
+  "external": false,
+  "declared_external": false,
+  "implementation_external": false,
+  "external_thunk_record": false,
+  "internal_external_thunk": false,
+  "thunk_target_name": null,
+  "thunk_target_entry": null,
+  "memory_block": ".text",
+  "signature": "int install_signal_handlers(void)",
+  "is_thunk": false,
+  "pseudocode": "\n/* WARNING: Unknown calling convention -- yet parameter storage is locked */\n\nint install_signal_handlers(void)\n\n{\n  long lVar1;\n  int iVar2;\n  long in_FS_OFFSET;\n  sigaction action;\n  \n  lVar1 = *(long *)(in_FS_OFFSET + 0x28);\n  memset(&action,0,0x98);\n  action.__sigaction_handler.sa_handler = handle_signal;\n  sigemptyset((sigset_t *)&action.sa_mask);\n  iVar2 = sigaction(2,(sigaction *)&action,(sigaction *)0x0);\n  if (iVar2 == -1) {\n    iVar2 = -1;\n  }\n  else {\n    iVar2 = sigaction(0xf,(sigaction *)&action,(sigaction *)0x0);\n    if (iVar2 == -1) {\n      iVar2 = -1;\n    }\n    else {\n      iVar2 = 0;\n    }\n  }\n  if (lVar1 != *(long *)(in_FS_OFFSET + 0x28)) {\n                    /* WARNING: Subroutine does not return */\n    __stack_chk_fail();\n  }\n  return iVar2;\n}\n\n",
+  "assembly": [
+    {
+      "address": "00101321",
+      "bytes": "f3 0f 1e fa",
+      "mnemonic": "ENDBR64",
+      "text": "ENDBR64",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101325",
+      "bytes": "55",
+      "mnemonic": "PUSH",
+      "text": "PUSH RBP",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101326",
+      "bytes": "48 89 e5",
+      "mnemonic": "MOV",
+      "text": "MOV RBP,RSP",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101329",
+      "bytes": "48 81 ec a0 00 00 00",
+      "mnemonic": "SUB",
+      "text": "SUB RSP,0xa0",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101330",
+      "bytes": "64 48 8b 04 25 28 00 00 00",
+      "mnemonic": "MOV",
+      "text": "MOV RAX,qword ptr FS:[0x28]",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101339",
+      "bytes": "48 89 45 f8",
+      "mnemonic": "MOV",
+      "text": "MOV qword ptr [RBP + -0x8],RAX",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "Stack[-0x10]",
+          "type": "WRITE"
+        }
+      ]
+    },
+    {
+      "address": "0010133d",
+      "bytes": "31 c0",
+      "mnemonic": "XOR",
+      "text": "XOR EAX,EAX",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "0010133f",
+      "bytes": "48 8d 85 60 ff ff ff",
+      "mnemonic": "LEA",
+      "text": "LEA RAX,[RBP + -0xa0]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "Stack[-0xa8]",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "00101346",
+      "bytes": "ba 98 00 00 00",
+      "mnemonic": "MOV",
+      "text": "MOV EDX,0x98",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "0010134b",
+      "bytes": "be 00 00 00 00",
+      "mnemonic": "MOV",
+      "text": "MOV ESI,0x0",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101350",
+      "bytes": "48 89 c7",
+      "mnemonic": "MOV",
+      "text": "MOV RDI,RAX",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101353",
+      "bytes": "e8 48 fe ff ff",
+      "mnemonic": "CALL",
+      "text": "CALL 0x001011a0",
+      "flow_type": "UNCONDITIONAL_CALL",
+      "references": [
+        {
+          "to": "001011a0",
+          "type": "UNCONDITIONAL_CALL"
+        }
+      ]
+    },
+    {
+      "address": "00101358",
+      "bytes": "48 8d 05 aa ff ff ff",
+      "mnemonic": "LEA",
+      "text": "LEA RAX,[0x101309]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "00101309",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "0010135f",
+      "bytes": "48 89 85 60 ff ff ff",
+      "mnemonic": "MOV",
+      "text": "MOV qword ptr [RBP + -0xa0],RAX",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "00101309",
+          "type": "DATA"
+        },
+        {
+          "to": "Stack[-0xa8]",
+          "type": "WRITE"
+        }
+      ]
+    },
+    {
+      "address": "00101366",
+      "bytes": "48 8d 85 60 ff ff ff",
+      "mnemonic": "LEA",
+      "text": "LEA RAX,[RBP + -0xa0]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "Stack[-0xa8]",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "0010136d",
+      "bytes": "48 83 c0 08",
+      "mnemonic": "ADD",
+      "text": "ADD RAX,0x8",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101371",
+      "bytes": "48 89 c7",
+      "mnemonic": "MOV",
+      "text": "MOV RDI,RAX",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101374",
+      "bytes": "e8 37 fe ff ff",
+      "mnemonic": "CALL",
+      "text": "CALL 0x001011b0",
+      "flow_type": "UNCONDITIONAL_CALL",
+      "references": [
+        {
+          "to": "001011b0",
+          "type": "UNCONDITIONAL_CALL"
+        }
+      ]
+    },
+    {
+      "address": "00101379",
+      "bytes": "48 8d 85 60 ff ff ff",
+      "mnemonic": "LEA",
+      "text": "LEA RAX,[RBP + -0xa0]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "Stack[-0xa8]",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "00101380",
+      "bytes": "ba 00 00 00 00",
+      "mnemonic": "MOV",
+      "text": "MOV EDX,0x0",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101385",
+      "bytes": "48 89 c6",
+      "mnemonic": "MOV",
+      "text": "MOV RSI,RAX",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101388",
+      "bytes": "bf 02 00 00 00",
+      "mnemonic": "MOV",
+      "text": "MOV EDI,0x2",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "0010138d",
+      "bytes": "e8 be fd ff ff",
+      "mnemonic": "CALL",
+      "text": "CALL 0x00101150",
+      "flow_type": "UNCONDITIONAL_CALL",
+      "references": [
+        {
+          "to": "00101150",
+          "type": "UNCONDITIONAL_CALL"
+        }
+      ]
+    },
+    {
+      "address": "00101392",
+      "bytes": "83 f8 ff",
+      "mnemonic": "CMP",
+      "text": "CMP EAX,-0x1",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101395",
+      "bytes": "75 07",
+      "mnemonic": "JNZ",
+      "text": "JNZ 0x0010139e",
+      "flow_type": "CONDITIONAL_JUMP",
+      "references": [
+        {
+          "to": "0010139e",
+          "type": "CONDITIONAL_JUMP"
+        }
+      ]
+    },
+    {
+      "address": "00101397",
+      "bytes": "b8 ff ff ff ff",
+      "mnemonic": "MOV",
+      "text": "MOV EAX,0xffffffff",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "0010139c",
+      "bytes": "eb 2a",
+      "mnemonic": "JMP",
+      "text": "JMP 0x001013c8",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "references": [
+        {
+          "to": "001013c8",
+          "type": "UNCONDITIONAL_JUMP"
+        }
+      ]
+    },
+    {
+      "address": "0010139e",
+      "bytes": "48 8d 85 60 ff ff ff",
+      "mnemonic": "LEA",
+      "text": "LEA RAX,[RBP + -0xa0]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "Stack[-0xa8]",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "001013a5",
+      "bytes": "ba 00 00 00 00",
+      "mnemonic": "MOV",
+      "text": "MOV EDX,0x0",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "001013aa",
+      "bytes": "48 89 c6",
+      "mnemonic": "MOV",
+      "text": "MOV RSI,RAX",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "001013ad",
+      "bytes": "bf 0f 00 00 00",
+      "mnemonic": "MOV",
+      "text": "MOV EDI,0xf",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "001013b2",
+      "bytes": "e8 99 fd ff ff",
+      "mnemonic": "CALL",
+      "text": "CALL 0x00101150",
+      "flow_type": "UNCONDITIONAL_CALL",
+      "references": [
+        {
+          "to": "00101150",
+          "type": "UNCONDITIONAL_CALL"
+        }
+      ]
+    },
+    {
+      "address": "001013b7",
+      "bytes": "83 f8 ff",
+      "mnemonic": "CMP",
+      "text": "CMP EAX,-0x1",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "001013ba",
+      "bytes": "75 07",
+      "mnemonic": "JNZ",
+      "text": "JNZ 0x001013c3",
+      "flow_type": "CONDITIONAL_JUMP",
+      "references": [
+        {
+          "to": "001013c3",
+          "type": "CONDITIONAL_JUMP"
+        }
+      ]
+    },
+    {
+      "address": "001013bc",
+      "bytes": "b8 ff ff ff ff",
+      "mnemonic": "MOV",
+      "text": "MOV EAX,0xffffffff",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "001013c1",
+      "bytes": "eb 05",
+      "mnemonic": "JMP",
+      "text": "JMP 0x001013c8",
+      "flow_type": "UNCONDITIONAL_JUMP",
+      "references": [
+        {
+          "to": "001013c8",
+          "type": "UNCONDITIONAL_JUMP"
+        }
+      ]
+    },
+    {
+      "address": "001013c3",
+      "bytes": "b8 00 00 00 00",
+      "mnemonic": "MOV",
+      "text": "MOV EAX,0x0",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "001013c8",
+      "bytes": "48 8b 55 f8",
+      "mnemonic": "MOV",
+      "text": "MOV RDX,qword ptr [RBP + -0x8]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "Stack[-0x10]",
+          "type": "READ"
+        }
+      ]
+    },
+    {
+      "address": "001013cc",
+      "bytes": "64 48 2b 14 25 28 00 00 00",
+      "mnemonic": "SUB",
+      "text": "SUB RDX,qword ptr FS:[0x28]",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "001013d5",
+      "bytes": "74 05",
+      "mnemonic": "JZ",
+      "text": "JZ 0x001013dc",
+      "flow_type": "CONDITIONAL_JUMP",
+      "references": [
+        {
+          "to": "001013dc",
+          "type": "CONDITIONAL_JUMP"
+        }
+      ]
+    },
+    {
+      "address": "001013d7",
+      "bytes": "e8 94 fd ff ff",
+      "mnemonic": "CALL",
+      "text": "CALL 0x00101170",
+      "flow_type": "CALL_TERMINATOR",
+      "references": [
+        {
+          "to": "00101170",
+          "type": "UNCONDITIONAL_CALL"
+        }
+      ]
+    },
+    {
+      "address": "001013dc",
+      "bytes": "c9",
+      "mnemonic": "LEAVE",
+      "text": "LEAVE",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "001013dd",
+      "bytes": "c3",
+      "mnemonic": "RET",
+      "text": "RET",
+      "flow_type": "TERMINATOR",
+      "references": []
+    }
+  ],
+  "pcode": [
+    {
+      "id": "op_0",
+      "sequence": "(ram, 0x101330, 13, 0)",
+      "mnemonic": "INT_ADD",
+      "output": {
+        "text": "(unique, 0x100000a6, 8)",
+        "address": "unique:100000a6",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x110, 8)",
+          "address": "register:00000110",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "in_FS_OFFSET"
+        },
+        {
+          "text": "(const, 0x28, 8)",
+          "address": "const:00000028",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_1",
+      "sequence": "(ram, 0x101330, 14, 2)",
+      "mnemonic": "LOAD",
+      "output": {
+        "text": "(unique, 0x23d00, 8)",
+        "address": "unique:00023d00",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "lVar1"
+      },
+      "inputs": [
+        {
+          "text": "(const, 0x1b1, 4)",
+          "address": "const:000001b1",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        },
+        {
+          "text": "(unique, 0xc800, 8)",
+          "address": "unique:0000c800",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_2",
+      "sequence": "(ram, 0x101330, 300, 1)",
+      "mnemonic": "CAST",
+      "output": {
+        "text": "(unique, 0xc800, 8)",
+        "address": "unique:0000c800",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(unique, 0x100000a6, 8)",
+          "address": "unique:100000a6",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_3",
+      "sequence": "(ram, 0x10133f, 294, 3)",
+      "mnemonic": "PTRSUB",
+      "output": {
+        "text": "(unique, 0x9000, 8)",
+        "address": "unique:00009000",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x20, 8)",
+          "address": "register:00000020",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0xffffffffffffff58, 8)",
+          "address": "const:ffffffffffffff58",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_4",
+      "sequence": "(ram, 0x101353, 36, 5)",
+      "mnemonic": "CALL",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(ram, 0x1011a0, 8)",
+          "address": "001011a0",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": null
+        },
+        {
+          "text": "(unique, 0x9000, 8)",
+          "address": "unique:00009000",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0x0, 4)",
+          "address": "const:00000000",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        },
+        {
+          "text": "(const, 0x98, 8)",
+          "address": "const:00000098",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_5",
+      "sequence": "(ram, 0x101353, 205, 4)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(register, 0x110, 8)",
+        "address": "register:00000110",
+        "size": 8,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "in_FS_OFFSET"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x110, 8)",
+          "address": "register:00000110",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "in_FS_OFFSET"
+        },
+        {
+          "text": "(const, 0x24, 4)",
+          "address": "const:00000024",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_6",
+      "sequence": "(ram, 0x10135f, 40, 6)",
+      "mnemonic": "PTRSUB",
+      "output": {
+        "text": "(stack, 0xffffffffffffff58, 8)",
+        "address": "Stack[-0xa8]",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0x101309, 8)",
+          "address": "const:00101309",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_7",
+      "sequence": "(ram, 0x10136d, 295, 7)",
+      "mnemonic": "PTRSUB",
+      "output": {
+        "text": "(unique, 0x1000007e, 8)",
+        "address": "unique:1000007e",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x20, 8)",
+          "address": "register:00000020",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0xffffffffffffff58, 8)",
+          "address": "const:ffffffffffffff58",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_8",
+      "sequence": "(ram, 0x10136d, 299, 8)",
+      "mnemonic": "PTRSUB",
+      "output": {
+        "text": "(register, 0x0, 8)",
+        "address": "register:00000000",
+        "size": 8,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(unique, 0x1000007e, 8)",
+          "address": "unique:1000007e",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0x8, 8)",
+          "address": "const:00000008",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_9",
+      "sequence": "(ram, 0x101374, 55, 12)",
+      "mnemonic": "CALL",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(ram, 0x1011b0, 8)",
+          "address": "001011b0",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": null
+        },
+        {
+          "text": "(unique, 0x100000ae, 8)",
+          "address": "unique:100000ae",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_10",
+      "sequence": "(ram, 0x101374, 206, 10)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(register, 0x110, 8)",
+        "address": "register:00000110",
+        "size": 8,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "in_FS_OFFSET"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x110, 8)",
+          "address": "register:00000110",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "in_FS_OFFSET"
+        },
+        {
+          "text": "(const, 0x37, 4)",
+          "address": "const:00000037",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_11",
+      "sequence": "(ram, 0x101374, 276, 11)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(stack, 0xffffffffffffff58, 8)",
+        "address": "Stack[-0xa8]",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(stack, 0xffffffffffffff58, 8)",
+          "address": "Stack[-0xa8]",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0x37, 4)",
+          "address": "const:00000037",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_12",
+      "sequence": "(ram, 0x101374, 301, 9)",
+      "mnemonic": "CAST",
+      "output": {
+        "text": "(unique, 0x100000ae, 8)",
+        "address": "unique:100000ae",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x0, 8)",
+          "address": "register:00000000",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_13",
+      "sequence": "(ram, 0x101379, 297, 13)",
+      "mnemonic": "PTRSUB",
+      "output": {
+        "text": "(unique, 0x9000, 8)",
+        "address": "unique:00009000",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x20, 8)",
+          "address": "register:00000020",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0xffffffffffffff58, 8)",
+          "address": "const:ffffffffffffff58",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_14",
+      "sequence": "(ram, 0x10138d, 63, 17)",
+      "mnemonic": "CALL",
+      "output": {
+        "text": "(register, 0x0, 4)",
+        "address": "register:00000000",
+        "size": 4,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "iVar2"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x101150, 8)",
+          "address": "00101150",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": null
+        },
+        {
+          "text": "(const, 0x2, 4)",
+          "address": "const:00000002",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        },
+        {
+          "text": "(unique, 0x100000b6, 8)",
+          "address": "unique:100000b6",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_15",
+      "sequence": "(ram, 0x10138d, 207, 15)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(register, 0x110, 8)",
+        "address": "register:00000110",
+        "size": 8,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "in_FS_OFFSET"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x110, 8)",
+          "address": "register:00000110",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "in_FS_OFFSET"
+        },
+        {
+          "text": "(const, 0x3f, 4)",
+          "address": "const:0000003f",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_16",
+      "sequence": "(ram, 0x10138d, 277, 16)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(stack, 0xffffffffffffff58, 8)",
+        "address": "Stack[-0xa8]",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(stack, 0xffffffffffffff58, 8)",
+          "address": "Stack[-0xa8]",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0x3f, 4)",
+          "address": "const:0000003f",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_17",
+      "sequence": "(ram, 0x10138d, 302, 14)",
+      "mnemonic": "CAST",
+      "output": {
+        "text": "(unique, 0x100000b6, 8)",
+        "address": "unique:100000b6",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(unique, 0x9000, 8)",
+          "address": "unique:00009000",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_18",
+      "sequence": "(ram, 0x101392, 69, 18)",
+      "mnemonic": "INT_EQUAL",
+      "output": {
+        "text": "(register, 0x206, 1)",
+        "address": "register:00000206",
+        "size": 1,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x0, 4)",
+          "address": "register:00000000",
+          "size": 4,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "iVar2"
+        },
+        {
+          "text": "(const, 0xffffffff, 4)",
+          "address": "const:ffffffff",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_19",
+      "sequence": "(ram, 0x101395, 75, 19)",
+      "mnemonic": "CBRANCH",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(ram, 0x10139e, 1)",
+          "address": "0010139e",
+          "size": 1,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": null
+        },
+        {
+          "text": "(register, 0x206, 1)",
+          "address": "register:00000206",
+          "size": 1,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_20",
+      "sequence": "(ram, 0x101397, 265, 0)",
+      "mnemonic": "COPY",
+      "output": {
+        "text": "(register, 0x0, 4)",
+        "address": "register:00000000",
+        "size": 4,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "iVar2"
+      },
+      "inputs": [
+        {
+          "text": "(const, 0xffffffff, 4)",
+          "address": "const:ffffffff",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_21",
+      "sequence": "(ram, 0x10139c, 77, 1)",
+      "mnemonic": "BRANCH",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(ram, 0x1013c8, 1)",
+          "address": "001013c8",
+          "size": 1,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_22",
+      "sequence": "(ram, 0x10139e, 298, 0)",
+      "mnemonic": "PTRSUB",
+      "output": {
+        "text": "(unique, 0x9000, 8)",
+        "address": "unique:00009000",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x20, 8)",
+          "address": "register:00000020",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0xffffffffffffff58, 8)",
+          "address": "const:ffffffffffffff58",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_23",
+      "sequence": "(ram, 0x1013b2, 113, 4)",
+      "mnemonic": "CALL",
+      "output": {
+        "text": "(register, 0x0, 4)",
+        "address": "register:00000000",
+        "size": 4,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "iVar2"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x101150, 8)",
+          "address": "00101150",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": null
+        },
+        {
+          "text": "(const, 0xf, 4)",
+          "address": "const:0000000f",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        },
+        {
+          "text": "(unique, 0x100000be, 8)",
+          "address": "unique:100000be",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_24",
+      "sequence": "(ram, 0x1013b2, 208, 2)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(register, 0x110, 8)",
+        "address": "register:00000110",
+        "size": 8,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "in_FS_OFFSET"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x110, 8)",
+          "address": "register:00000110",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "in_FS_OFFSET"
+        },
+        {
+          "text": "(const, 0x71, 4)",
+          "address": "const:00000071",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_25",
+      "sequence": "(ram, 0x1013b2, 278, 3)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(stack, 0xffffffffffffff58, 8)",
+        "address": "Stack[-0xa8]",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(stack, 0xffffffffffffff58, 8)",
+          "address": "Stack[-0xa8]",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0x71, 4)",
+          "address": "const:00000071",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_26",
+      "sequence": "(ram, 0x1013b2, 303, 1)",
+      "mnemonic": "CAST",
+      "output": {
+        "text": "(unique, 0x100000be, 8)",
+        "address": "unique:100000be",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(unique, 0x9000, 8)",
+          "address": "unique:00009000",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_27",
+      "sequence": "(ram, 0x1013b7, 119, 5)",
+      "mnemonic": "INT_EQUAL",
+      "output": {
+        "text": "(register, 0x206, 1)",
+        "address": "register:00000206",
+        "size": 1,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x0, 4)",
+          "address": "register:00000000",
+          "size": 4,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "iVar2"
+        },
+        {
+          "text": "(const, 0xffffffff, 4)",
+          "address": "const:ffffffff",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_28",
+      "sequence": "(ram, 0x1013ba, 125, 6)",
+      "mnemonic": "CBRANCH",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(ram, 0x1013c3, 1)",
+          "address": "001013c3",
+          "size": 1,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": null
+        },
+        {
+          "text": "(register, 0x206, 1)",
+          "address": "register:00000206",
+          "size": 1,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_29",
+      "sequence": "(ram, 0x1013bc, 266, 0)",
+      "mnemonic": "COPY",
+      "output": {
+        "text": "(register, 0x0, 4)",
+        "address": "register:00000000",
+        "size": 4,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "iVar2"
+      },
+      "inputs": [
+        {
+          "text": "(const, 0xffffffff, 4)",
+          "address": "const:ffffffff",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_30",
+      "sequence": "(ram, 0x1013c1, 127, 1)",
+      "mnemonic": "BRANCH",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(ram, 0x1013c8, 1)",
+          "address": "001013c8",
+          "size": 1,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_31",
+      "sequence": "(ram, 0x1013c3, 267, 0)",
+      "mnemonic": "COPY",
+      "output": {
+        "text": "(register, 0x0, 4)",
+        "address": "register:00000000",
+        "size": 4,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "iVar2"
+      },
+      "inputs": [
+        {
+          "text": "(const, 0x0, 4)",
+          "address": "const:00000000",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_32",
+      "sequence": "(ram, 0x1013c8, 210, 2)",
+      "mnemonic": "MULTIEQUAL",
+      "output": {
+        "text": "(register, 0x110, 8)",
+        "address": "register:00000110",
+        "size": 8,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "in_FS_OFFSET"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x110, 8)",
+          "address": "register:00000110",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "in_FS_OFFSET"
+        },
+        {
+          "text": "(register, 0x110, 8)",
+          "address": "register:00000110",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "in_FS_OFFSET"
+        },
+        {
+          "text": "(register, 0x110, 8)",
+          "address": "register:00000110",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "in_FS_OFFSET"
+        }
+      ]
+    },
+    {
+      "id": "op_33",
+      "sequence": "(ram, 0x1013c8, 268, 1)",
+      "mnemonic": "MULTIEQUAL",
+      "output": {
+        "text": "(register, 0x0, 4)",
+        "address": "register:00000000",
+        "size": 4,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "iVar2"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x0, 4)",
+          "address": "register:00000000",
+          "size": 4,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "iVar2"
+        },
+        {
+          "text": "(register, 0x0, 4)",
+          "address": "register:00000000",
+          "size": 4,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "iVar2"
+        },
+        {
+          "text": "(register, 0x0, 4)",
+          "address": "register:00000000",
+          "size": 4,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "iVar2"
+        }
+      ]
+    },
+    {
+      "id": "op_34",
+      "sequence": "(ram, 0x1013c8, 280, 0)",
+      "mnemonic": "MULTIEQUAL",
+      "output": {
+        "text": "(stack, 0xffffffffffffff58, 8)",
+        "address": "Stack[-0xa8]",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(stack, 0xffffffffffffff58, 8)",
+          "address": "Stack[-0xa8]",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(stack, 0xffffffffffffff58, 8)",
+          "address": "Stack[-0xa8]",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(stack, 0xffffffffffffff58, 8)",
+          "address": "Stack[-0xa8]",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_35",
+      "sequence": "(ram, 0x1013cc, 81, 3)",
+      "mnemonic": "INT_ADD",
+      "output": {
+        "text": "(unique, 0x100000c6, 8)",
+        "address": "unique:100000c6",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x110, 8)",
+          "address": "register:00000110",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "in_FS_OFFSET"
+        },
+        {
+          "text": "(const, 0x28, 8)",
+          "address": "const:00000028",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_36",
+      "sequence": "(ram, 0x1013cc, 86, 5)",
+      "mnemonic": "LOAD",
+      "output": {
+        "text": "(unique, 0x23d00, 8)",
+        "address": "unique:00023d00",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(const, 0x1b1, 4)",
+          "address": "const:000001b1",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        },
+        {
+          "text": "(unique, 0xc800, 8)",
+          "address": "unique:0000c800",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_37",
+      "sequence": "(ram, 0x1013cc, 89, 6)",
+      "mnemonic": "INT_NOTEQUAL",
+      "output": {
+        "text": "(register, 0x206, 1)",
+        "address": "register:00000206",
+        "size": 1,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(unique, 0x23d00, 8)",
+          "address": "unique:00023d00",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "lVar1"
+        },
+        {
+          "text": "(unique, 0x23d00, 8)",
+          "address": "unique:00023d00",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_38",
+      "sequence": "(ram, 0x1013cc, 304, 4)",
+      "mnemonic": "CAST",
+      "output": {
+        "text": "(unique, 0xc800, 8)",
+        "address": "unique:0000c800",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(unique, 0x100000c6, 8)",
+          "address": "unique:100000c6",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_39",
+      "sequence": "(ram, 0x1013d5, 94, 7)",
+      "mnemonic": "CBRANCH",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(ram, 0x1013dc, 1)",
+          "address": "001013dc",
+          "size": 1,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": null
+        },
+        {
+          "text": "(register, 0x206, 1)",
+          "address": "register:00000206",
+          "size": 1,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_40",
+      "sequence": "(ram, 0x1013d7, 97, 1)",
+      "mnemonic": "CALL",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(ram, 0x101170, 8)",
+          "address": "00101170",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_41",
+      "sequence": "(ram, 0x1013d7, 99, 2)",
+      "mnemonic": "RETURN",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(const, 0x1, 4)",
+          "address": "const:00000001",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_42",
+      "sequence": "(ram, 0x1013d7, 279, 0)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(stack, 0xffffffffffffff58, 8)",
+        "address": "Stack[-0xa8]",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(stack, 0xffffffffffffff58, 8)",
+          "address": "Stack[-0xa8]",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        },
+        {
+          "text": "(const, 0x61, 4)",
+          "address": "const:00000061",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_43",
+      "sequence": "(ram, 0x1013dd, 105, 1)",
+      "mnemonic": "RETURN",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        },
+        {
+          "text": "(register, 0x0, 4)",
+          "address": "register:00000000",
+          "size": 4,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_44",
+      "sequence": "(ram, 0x1013dd, 169, 0)",
+      "mnemonic": "COPY",
+      "output": {
+        "text": "(register, 0x0, 4)",
+        "address": "register:00000000",
+        "size": 4,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x0, 4)",
+          "address": "register:00000000",
+          "size": 4,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "iVar2"
+        }
+      ]
+    }
+  ],
+  "cfg": {
+    "nodes": [
+      {
+        "id": "00101321",
+        "label": "00101321",
+        "kind": "basic_block",
+        "start": "00101321",
+        "end": "00101396",
+        "flow_type": "CONDITIONAL_JUMP"
+      },
+      {
+        "id": "00101397",
+        "label": "00101397",
+        "kind": "basic_block",
+        "start": "00101397",
+        "end": "0010139d",
+        "flow_type": "UNCONDITIONAL_JUMP"
+      },
+      {
+        "id": "0010139e",
+        "label": "0010139e",
+        "kind": "basic_block",
+        "start": "0010139e",
+        "end": "001013bb",
+        "flow_type": "CONDITIONAL_JUMP"
+      },
+      {
+        "id": "001013bc",
+        "label": "001013bc",
+        "kind": "basic_block",
+        "start": "001013bc",
+        "end": "001013c2",
+        "flow_type": "UNCONDITIONAL_JUMP"
+      },
+      {
+        "id": "001013c3",
+        "label": "001013c3",
+        "kind": "basic_block",
+        "start": "001013c3",
+        "end": "001013c7",
+        "flow_type": "FALL_THROUGH"
+      },
+      {
+        "id": "001013c8",
+        "label": "001013c8",
+        "kind": "basic_block",
+        "start": "001013c8",
+        "end": "001013d6",
+        "flow_type": "CONDITIONAL_JUMP"
+      },
+      {
+        "id": "001013d7",
+        "label": "001013d7",
+        "kind": "basic_block",
+        "start": "001013d7",
+        "end": "001013db",
+        "flow_type": "CALL_TERMINATOR"
+      },
+      {
+        "id": "001013dc",
+        "label": "001013dc",
+        "kind": "basic_block",
+        "start": "001013dc",
+        "end": "001013dd",
+        "flow_type": "TERMINATOR"
+      }
+    ],
+    "edges": [
+      {
+        "source": "00101321",
+        "target": "001011a0",
+        "kind": "UNCONDITIONAL_CALL",
+        "label": "UNCONDITIONAL_CALL"
+      },
+      {
+        "source": "00101321",
+        "target": "001011b0",
+        "kind": "UNCONDITIONAL_CALL",
+        "label": "UNCONDITIONAL_CALL"
+      },
+      {
+        "source": "00101321",
+        "target": "00101150",
+        "kind": "UNCONDITIONAL_CALL",
+        "label": "UNCONDITIONAL_CALL"
+      },
+      {
+        "source": "00101321",
+        "target": "0010139e",
+        "kind": "CONDITIONAL_JUMP",
+        "label": "CONDITIONAL_JUMP"
+      },
+      {
+        "source": "00101321",
+        "target": "00101397",
+        "kind": "FALL_THROUGH",
+        "label": "FALL_THROUGH"
+      },
+      {
+        "source": "00101397",
+        "target": "001013c8",
+        "kind": "UNCONDITIONAL_JUMP",
+        "label": "UNCONDITIONAL_JUMP"
+      },
+      {
+        "source": "0010139e",
+        "target": "00101150",
+        "kind": "UNCONDITIONAL_CALL",
+        "label": "UNCONDITIONAL_CALL"
+      },
+      {
+        "source": "0010139e",
+        "target": "001013c3",
+        "kind": "CONDITIONAL_JUMP",
+        "label": "CONDITIONAL_JUMP"
+      },
+      {
+        "source": "0010139e",
+        "target": "001013bc",
+        "kind": "FALL_THROUGH",
+        "label": "FALL_THROUGH"
+      },
+      {
+        "source": "001013bc",
+        "target": "001013c8",
+        "kind": "UNCONDITIONAL_JUMP",
+        "label": "UNCONDITIONAL_JUMP"
+      },
+      {
+        "source": "001013c3",
+        "target": "001013c8",
+        "kind": "FALL_THROUGH",
+        "label": "FALL_THROUGH"
+      },
+      {
+        "source": "001013c8",
+        "target": "001013dc",
+        "kind": "CONDITIONAL_JUMP",
+        "label": "CONDITIONAL_JUMP"
+      },
+      {
+        "source": "001013c8",
+        "target": "001013d7",
+        "kind": "FALL_THROUGH",
+        "label": "FALL_THROUGH"
+      },
+      {
+        "source": "001013d7",
+        "target": "00101170",
+        "kind": "UNCONDITIONAL_CALL",
+        "label": "UNCONDITIONAL_CALL"
+      }
+    ]
+  },
+  "dfg": {
+    "nodes": [
+      {
+        "id": "op_0",
+        "label": "INT_ADD",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_f24d4c8d746a725b",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_2c51b1f308e0453d",
+        "label": "in_FS_OFFSET",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_918eb9c8c57396b7",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_1",
+        "label": "LOAD",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_2ed4f3879909bf15",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_f043b00394f9c107",
+        "label": "(const, 0x1b1, 4)",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_bb1073787ce74d32",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_2",
+        "label": "CAST",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_3",
+        "label": "PTRSUB",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_b6a43c20ebaf9a88",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_1ac9615899b43657",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_0987fabca47a8547",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_4",
+        "label": "CALL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_487eaeceee08509d",
+        "label": "(ram, 0x1011a0, 8)",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_5bd3595558fd8d2a",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_15880db1bd3cb687",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_5",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_fe5f6b685c1b9178",
+        "label": "(const, 0x24, 4)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_6",
+        "label": "PTRSUB",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_ee346f9b230fb6ba",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_88811e232378f02a",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_35ed875a34a62abd",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_7",
+        "label": "PTRSUB",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_0f351fcd4d66e5c0",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_8",
+        "label": "PTRSUB",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_1cc3985f02ba7623",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_d64598c224908858",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_9",
+        "label": "CALL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_54220e0f7a4e65b5",
+        "label": "(ram, 0x1011b0, 8)",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_4c43cf54a5153532",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_10",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_a5b0c71d3422cd74",
+        "label": "(const, 0x37, 4)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_11",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_12",
+        "label": "CAST",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_13",
+        "label": "PTRSUB",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_14",
+        "label": "CALL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_83ca96423576297e",
+        "label": "iVar2",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_d33f8474218953d2",
+        "label": "(ram, 0x101150, 8)",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_312122d76b64243a",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_ea9326ce80a6cc53",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_15",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_2ac2ab954c6920a7",
+        "label": "(const, 0x3f, 4)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_16",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_17",
+        "label": "CAST",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_18",
+        "label": "INT_EQUAL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_099964eb209491dd",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_4c39e9a7cad9ddd8",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_19",
+        "label": "CBRANCH",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_0a4ee624425cd873",
+        "label": "(ram, 0x10139e, 1)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_20",
+        "label": "COPY",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_21",
+        "label": "BRANCH",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_26a6143b6397e5d6",
+        "label": "(ram, 0x1013c8, 1)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_22",
+        "label": "PTRSUB",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_23",
+        "label": "CALL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_fbbabff5e7cf3f94",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_8ebc9cfb2dac7ad7",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_24",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_d2283e3cc9920787",
+        "label": "(const, 0x71, 4)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_25",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_26",
+        "label": "CAST",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_27",
+        "label": "INT_EQUAL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_28",
+        "label": "CBRANCH",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_b68a7b70e8c2c67d",
+        "label": "(ram, 0x1013c3, 1)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_29",
+        "label": "COPY",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_30",
+        "label": "BRANCH",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_31",
+        "label": "COPY",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_32",
+        "label": "MULTIEQUAL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_33",
+        "label": "MULTIEQUAL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_34",
+        "label": "MULTIEQUAL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_35",
+        "label": "INT_ADD",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_f162d0fe82d7b731",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_36",
+        "label": "LOAD",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_37",
+        "label": "INT_NOTEQUAL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_38",
+        "label": "CAST",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_39",
+        "label": "CBRANCH",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_7e708f65c2460c10",
+        "label": "(ram, 0x1013dc, 1)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_40",
+        "label": "CALL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_9bff0947909b1e75",
+        "label": "(ram, 0x101170, 8)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_41",
+        "label": "RETURN",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_7d8171ad5edfba5c",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_42",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_008ef37e952c7bbf",
+        "label": "(const, 0x61, 4)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_43",
+        "label": "RETURN",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_44",
+        "label": "COPY",
+        "kind": "pcode_op"
+      }
+    ],
+    "edges": [
+      {
+        "source": "op_0",
+        "target": "var_f24d4c8d746a725b",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_2c51b1f308e0453d",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_918eb9c8c57396b7",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_1",
+        "target": "var_2ed4f3879909bf15",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_f043b00394f9c107",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_bb1073787ce74d32",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_2",
+        "target": "var_bb1073787ce74d32",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_f24d4c8d746a725b",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_3",
+        "target": "var_b6a43c20ebaf9a88",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_1ac9615899b43657",
+        "target": "op_3",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_0987fabca47a8547",
+        "target": "op_3",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_487eaeceee08509d",
+        "target": "op_4",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_b6a43c20ebaf9a88",
+        "target": "op_4",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_5bd3595558fd8d2a",
+        "target": "op_4",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_15880db1bd3cb687",
+        "target": "op_4",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_5",
+        "target": "var_2c51b1f308e0453d",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_2c51b1f308e0453d",
+        "target": "op_5",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_fe5f6b685c1b9178",
+        "target": "op_5",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_6",
+        "target": "var_ee346f9b230fb6ba",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_6",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_35ed875a34a62abd",
+        "target": "op_6",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_7",
+        "target": "var_0f351fcd4d66e5c0",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_1ac9615899b43657",
+        "target": "op_7",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_0987fabca47a8547",
+        "target": "op_7",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_8",
+        "target": "var_1cc3985f02ba7623",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_0f351fcd4d66e5c0",
+        "target": "op_8",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_d64598c224908858",
+        "target": "op_8",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_54220e0f7a4e65b5",
+        "target": "op_9",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_4c43cf54a5153532",
+        "target": "op_9",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_10",
+        "target": "var_2c51b1f308e0453d",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_2c51b1f308e0453d",
+        "target": "op_10",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_a5b0c71d3422cd74",
+        "target": "op_10",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_11",
+        "target": "var_ee346f9b230fb6ba",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_ee346f9b230fb6ba",
+        "target": "op_11",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_a5b0c71d3422cd74",
+        "target": "op_11",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_12",
+        "target": "var_4c43cf54a5153532",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_1cc3985f02ba7623",
+        "target": "op_12",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_13",
+        "target": "var_b6a43c20ebaf9a88",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_1ac9615899b43657",
+        "target": "op_13",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_0987fabca47a8547",
+        "target": "op_13",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_14",
+        "target": "var_83ca96423576297e",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_d33f8474218953d2",
+        "target": "op_14",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_312122d76b64243a",
+        "target": "op_14",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_ea9326ce80a6cc53",
+        "target": "op_14",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_14",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_15",
+        "target": "var_2c51b1f308e0453d",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_2c51b1f308e0453d",
+        "target": "op_15",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_2ac2ab954c6920a7",
+        "target": "op_15",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_16",
+        "target": "var_ee346f9b230fb6ba",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_ee346f9b230fb6ba",
+        "target": "op_16",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_2ac2ab954c6920a7",
+        "target": "op_16",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_17",
+        "target": "var_ea9326ce80a6cc53",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_b6a43c20ebaf9a88",
+        "target": "op_17",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_18",
+        "target": "var_099964eb209491dd",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_83ca96423576297e",
+        "target": "op_18",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_4c39e9a7cad9ddd8",
+        "target": "op_18",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_0a4ee624425cd873",
+        "target": "op_19",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_099964eb209491dd",
+        "target": "op_19",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_20",
+        "target": "var_83ca96423576297e",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_4c39e9a7cad9ddd8",
+        "target": "op_20",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_26a6143b6397e5d6",
+        "target": "op_21",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_22",
+        "target": "var_b6a43c20ebaf9a88",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_1ac9615899b43657",
+        "target": "op_22",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_0987fabca47a8547",
+        "target": "op_22",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_23",
+        "target": "var_83ca96423576297e",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_d33f8474218953d2",
+        "target": "op_23",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_fbbabff5e7cf3f94",
+        "target": "op_23",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_8ebc9cfb2dac7ad7",
+        "target": "op_23",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_23",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_24",
+        "target": "var_2c51b1f308e0453d",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_2c51b1f308e0453d",
+        "target": "op_24",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_d2283e3cc9920787",
+        "target": "op_24",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_25",
+        "target": "var_ee346f9b230fb6ba",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_ee346f9b230fb6ba",
+        "target": "op_25",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_d2283e3cc9920787",
+        "target": "op_25",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_26",
+        "target": "var_8ebc9cfb2dac7ad7",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_b6a43c20ebaf9a88",
+        "target": "op_26",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_27",
+        "target": "var_099964eb209491dd",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_83ca96423576297e",
+        "target": "op_27",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_4c39e9a7cad9ddd8",
+        "target": "op_27",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_b68a7b70e8c2c67d",
+        "target": "op_28",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_099964eb209491dd",
+        "target": "op_28",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_29",
+        "target": "var_83ca96423576297e",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_4c39e9a7cad9ddd8",
+        "target": "op_29",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_26a6143b6397e5d6",
+        "target": "op_30",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_31",
+        "target": "var_83ca96423576297e",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_5bd3595558fd8d2a",
+        "target": "op_31",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_32",
+        "target": "var_2c51b1f308e0453d",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_2c51b1f308e0453d",
+        "target": "op_32",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_2c51b1f308e0453d",
+        "target": "op_32",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_2c51b1f308e0453d",
+        "target": "op_32",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_33",
+        "target": "var_83ca96423576297e",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_83ca96423576297e",
+        "target": "op_33",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_83ca96423576297e",
+        "target": "op_33",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_83ca96423576297e",
+        "target": "op_33",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_34",
+        "target": "var_ee346f9b230fb6ba",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_ee346f9b230fb6ba",
+        "target": "op_34",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_ee346f9b230fb6ba",
+        "target": "op_34",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_ee346f9b230fb6ba",
+        "target": "op_34",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_35",
+        "target": "var_f162d0fe82d7b731",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_2c51b1f308e0453d",
+        "target": "op_35",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_918eb9c8c57396b7",
+        "target": "op_35",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_36",
+        "target": "var_2ed4f3879909bf15",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_f043b00394f9c107",
+        "target": "op_36",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_bb1073787ce74d32",
+        "target": "op_36",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_37",
+        "target": "var_099964eb209491dd",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_2ed4f3879909bf15",
+        "target": "op_37",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_2ed4f3879909bf15",
+        "target": "op_37",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_38",
+        "target": "var_bb1073787ce74d32",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_f162d0fe82d7b731",
+        "target": "op_38",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_7e708f65c2460c10",
+        "target": "op_39",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_099964eb209491dd",
+        "target": "op_39",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_9bff0947909b1e75",
+        "target": "op_40",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_7d8171ad5edfba5c",
+        "target": "op_41",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_42",
+        "target": "var_ee346f9b230fb6ba",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_ee346f9b230fb6ba",
+        "target": "op_42",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_008ef37e952c7bbf",
+        "target": "op_42",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_43",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_83ca96423576297e",
+        "target": "op_43",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_44",
+        "target": "var_83ca96423576297e",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_83ca96423576297e",
+        "target": "op_44",
+        "kind": "uses",
+        "label": "uses"
+      }
+    ]
+  },
+  "call_graph": {
+    "callers": [
+      {
+        "name": "main",
+        "entry": "001016a8",
+        "kind": "internal_function",
+        "external": false,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": false,
+        "entry_in_external_space": false,
+        "external_thunk_record": false,
+        "internal_external_thunk": false,
+        "implementation_external": false,
+        "thunk": false,
+        "thunk_target_name": null,
+        "thunk_target_entry": null,
+        "memory_block": ".text"
+      }
+    ],
+    "callees": [
+      {
+        "name": "sigaction",
+        "entry": "00101150",
+        "kind": "plt_stub",
+        "external": true,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": false,
+        "entry_in_external_space": false,
+        "external_thunk_record": false,
+        "internal_external_thunk": false,
+        "implementation_external": true,
+        "thunk": true,
+        "thunk_target_name": "sigaction",
+        "thunk_target_entry": "EXTERNAL:00000004",
+        "memory_block": ".plt.sec"
+      },
+      {
+        "name": "__stack_chk_fail",
+        "entry": "00101170",
+        "kind": "plt_stub",
+        "external": true,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": false,
+        "entry_in_external_space": false,
+        "external_thunk_record": false,
+        "internal_external_thunk": false,
+        "implementation_external": true,
+        "thunk": true,
+        "thunk_target_name": "__stack_chk_fail",
+        "thunk_target_entry": "EXTERNAL:00000006",
+        "memory_block": ".plt.sec"
+      },
+      {
+        "name": "memset",
+        "entry": "001011a0",
+        "kind": "plt_stub",
+        "external": true,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": false,
+        "entry_in_external_space": false,
+        "external_thunk_record": false,
+        "internal_external_thunk": false,
+        "implementation_external": true,
+        "thunk": true,
+        "thunk_target_name": "memset",
+        "thunk_target_entry": "EXTERNAL:00000009",
+        "memory_block": ".plt.sec"
+      },
+      {
+        "name": "sigemptyset",
+        "entry": "001011b0",
+        "kind": "plt_stub",
+        "external": true,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": false,
+        "entry_in_external_space": false,
+        "external_thunk_record": false,
+        "internal_external_thunk": false,
+        "implementation_external": true,
+        "thunk": true,
+        "thunk_target_name": "sigemptyset",
+        "thunk_target_entry": "EXTERNAL:0000000a",
+        "memory_block": ".plt.sec"
+      }
+    ]
+  },
+  "string_references": [],
+  "graph_files": {
+    "cfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00025_install_signal_handlers_00101321.cfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00025_install_signal_handlers_00101321.cfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00025_install_signal_handlers_00101321.cfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00025_install_signal_handlers_00101321.cfg.svg",
+      "rendered": true,
+      "error": null
+    },
+    "dfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00025_install_signal_handlers_00101321.dfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00025_install_signal_handlers_00101321.dfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00025_install_signal_handlers_00101321.dfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00025_install_signal_handlers_00101321.dfg.svg",
+      "rendered": true,
+      "error": null
+    }
+  },
+  "success": true,
+  "error": null
+}

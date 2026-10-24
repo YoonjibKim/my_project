@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="label" for="all" attr.name="label" attr.type="string"/>
+  <key id="kind" for="all" attr.name="kind" attr.type="string"/>
+  <graph id="call_graph" edgedefault="directed">
+    <node id="00101300">
+      <data key="label">frame_dummy</data>
+      <data key="kind">internal_function</data>
+    </node>
+    <node id="00101280">
+      <data key="label">register_tm_clones</data>
+      <data key="kind">internal_function</data>
+    </node>
+    <node id="001018e4">
+      <data key="label">_fini</data>
+      <data key="kind">internal_function</data>
+    </node>
+    <node id="00101250">
+      <data key="label">deregister_tm_clones</data>
+      <data key="kind">internal_function</data>
+    </node>
+    <node id="00105010">
+      <data key="label">_ITM_deregisterTMCloneTable</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00105088">
+      <data key="label">_ITM_registerTMCloneTable</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="001011d0">
+      <data key="label">fflush</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105068">
+      <data key="label">fflush</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="001011f0">
+      <data key="label">mprotect</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105078">
+      <data key="label">mprotect</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00101160">
+      <data key="label">getpid</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105028">
+      <data key="label">getpid</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="001011b0">
+      <data key="label">sigemptyset</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105050">
+      <data key="label">sigemptyset</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="001011c0">
+      <data key="label">time</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105060">
+      <data key="label">time</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00101150">
+      <data key="label">sigaction</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105020">
+      <data key="label">sigaction</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00101120">
+      <data key="label">__cxa_finalize</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105098">
+      <data key="label">__cxa_finalize</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="001011a0">
+      <data key="label">memset</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105048">
+      <data key="label">memset</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00101309">
+      <data key="label">handle_signal</data>
+      <data key="kind">internal_function</data>
+    </node>
+    <node id="00101140">
+      <data key="label">puts</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105018">
+      <data key="label">puts</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00101190">
+      <data key="label">printf</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105040">
+      <data key="label">printf</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="001011e0">
+      <data key="label">munmap</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105070">
+      <data key="label">munmap</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00101210">
+      <data key="label">sleep</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105090">
+      <data key="label">sleep</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00101200">
+      <data key="label">perror</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105080">
+      <data key="label">perror</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00101130">
+      <data key="label">__errno_location</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105008">
+      <data key="label">__errno_location</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00101020">
+      <data key="label">FUN_00101020</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00101170">
+      <data key="label">__stack_chk_fail</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105030">
+      <data key="label">__stack_chk_fail</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00101180">
+      <data key="label">mmap</data>
+      <data key="kind">plt_stub</data>
+    </node>
+    <node id="00105038">
+      <data key="label">mmap</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00101000">
+      <data key="label">_init</data>
+      <data key="kind">internal_function</data>
+    </node>
+    <node id="00105058">
+      <data key="label">__gmon_start__</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00101220">
+      <data key="label">_start</data>
+      <data key="kind">internal_function</data>
+    </node>
+    <node id="00105000">
+      <data key="label">__libc_start_main</data>
+      <data key="kind">external_symbol</data>
+    </node>
+    <node id="00101636">
+      <data key="label">print_test_markers</data>
+      <data key="kind">internal_function</data>
+    </node>
+    <node id="001015cb">
+      <data key="label">calculate_checksum</data>
+      <data key="kind">internal_function</data>
+    </node>
+    <node id="001012c0">
+      <data key="label">__do_global_dtors_aux</data>
+      <data key="kind">internal_function</data>
+    </node>
+    <node id="00101321">
+      <data key="label">install_signal_handlers</data>
+      <data key="kind">internal_function</data>
+    </node>
+    <node id="001016a8">
+      <data key="label">main</data>
+      <data key="kind">internal_function</data>
+    </node>
+    <node id="001013de">
+      <data key="label">create_test_memory</data>
+      <data key="kind">internal_function</data>
+    </node>
+    <edge id="e0" source="00101300" target="00101280">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e1" source="00101250" target="00105010">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e2" source="00101280" target="00105088">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e3" source="001011d0" target="00105068">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e4" source="001011f0" target="00105078">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e5" source="00101160" target="00105028">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e6" source="001011b0" target="00105050">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e7" source="001011c0" target="00105060">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e8" source="00101150" target="00105020">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e9" source="00101120" target="00105098">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e10" source="001011a0" target="00105048">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e11" source="00101140" target="00105018">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e12" source="00101190" target="00105040">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e13" source="001011e0" target="00105070">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e14" source="00101210" target="00105090">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e15" source="00101200" target="00105080">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e16" source="00101130" target="00105008">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e17" source="00101170" target="00105030">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e18" source="00101180" target="00105038">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e19" source="00101000" target="00105058">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e20" source="00101220" target="00105000">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e21" source="00101636" target="00101140">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e22" source="00101636" target="00101190">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e23" source="001012c0" target="00101120">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e24" source="001012c0" target="00101250">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e25" source="00101321" target="00101150">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e26" source="00101321" target="00101170">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e27" source="00101321" target="001011a0">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e28" source="00101321" target="001011b0">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e29" source="001016a8" target="00101321">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e30" source="001016a8" target="001011d0">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e31" source="001016a8" target="00101140">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e32" source="001016a8" target="001015cb">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e33" source="001016a8" target="001011e0">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e34" source="001016a8" target="001013de">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e35" source="001016a8" target="001011c0">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e36" source="001016a8" target="00101200">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e37" source="001016a8" target="00101160">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e38" source="001016a8" target="00101210">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e39" source="001016a8" target="00101190">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e40" source="001016a8" target="00101636">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e41" source="001013de" target="001011f0">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e42" source="001013de" target="00101130">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e43" source="001013de" target="001011e0">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e44" source="001013de" target="001011a0">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+    <edge id="e45" source="001013de" target="00101180">
+      <data key="label">calls</data>
+      <data key="kind">calls</data>
+    </edge>
+  </graph>
+</graphml>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="label" for="all" attr.name="label" attr.type="string"/>
+  <key id="kind" for="all" attr.name="kind" attr.type="string"/>
+  <graph id="dfg_00101300" edgedefault="directed">
+    <node id="op_0">
+      <data key="label">CALL</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_7a10c3e11d2a6aa9">
+      <data key="label">(ram, 0x101280, 8)</data>
+      <data key="kind">varnode</data>
+    </node>
+    <node id="op_1">
+      <data key="label">RETURN</data>
+      <data key="kind">pcode_op</data>
+    </node>
+    <node id="var_88811e232378f02a">
+      <data key="label">None</data>
+      <data key="kind">varnode</data>
+    </node>
+    <edge id="e0" source="var_7a10c3e11d2a6aa9" target="op_0">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+    <edge id="e1" source="var_88811e232378f02a" target="op_1">
+      <data key="label">uses</data>
+      <data key="kind">uses</data>
+    </edge>
+  </graph>
+</graphml>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="label" for="all" attr.name="label" attr.type="string"/>
+  <key id="kind" for="all" attr.name="kind" attr.type="string"/>
+  <graph id="cfg_00101020" edgedefault="directed">
+    <node id="00101020">
+      <data key="label">00101020</data>
+      <data key="kind">basic_block</data>
+    </node>
+    <edge id="e0" source="00101020" target="00103f40">
+      <data key="label">INDIRECTION</data>
+      <data key="kind">INDIRECTION</data>
+    </edge>
+  </graph>
+</graphml>

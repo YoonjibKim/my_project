@@ -1,0 +1,182 @@
+{
+  "status": "skipped",
+  "reason": "malware triage did not meet CVE matching threshold",
+  "search_performed": false,
+  "binary_path": "/home/asurada/safe_test_process",
+  "pid": null,
+  "processes": [
+    {
+      "pid": 24817,
+      "name": "safe_test_process",
+      "create_time": 1792812887.52,
+      "command_line": "./safe_test_process",
+      "command_line_args": [
+        "./safe_test_process"
+      ],
+      "detected_at": "2026-10-24T03:35:41.540607+00:00",
+      "parent": {
+        "pid": 22706,
+        "ppid": 22703,
+        "name": "bash",
+        "create_time": 1792812733.86,
+        "executable": "/usr/bin/bash",
+        "command_line": "-bash",
+        "command_line_args": [
+          "-bash"
+        ]
+      },
+      "ancestor_chain": [
+        {
+          "pid": 22706,
+          "ppid": 22703,
+          "name": "bash",
+          "create_time": 1792812733.86,
+          "executable": "/usr/bin/bash",
+          "command_line": "-bash",
+          "command_line_args": [
+            "-bash"
+          ]
+        },
+        {
+          "pid": 22703,
+          "ppid": 22700,
+          "name": "Relay(22706)",
+          "create_time": 1792812733.85,
+          "executable": "/init",
+          "command_line": "/init",
+          "command_line_args": [
+            "/init"
+          ]
+        },
+        {
+          "pid": 22700,
+          "ppid": 2,
+          "name": "SessionLeader",
+          "create_time": 1792812733.85,
+          "executable": "/init",
+          "command_line": "/init",
+          "command_line_args": [
+            "/init"
+          ]
+        },
+        {
+          "pid": 2,
+          "ppid": 1,
+          "name": "init-systemd(Ub",
+          "create_time": 1792805933.51,
+          "executable": "/init",
+          "command_line": "/init",
+          "command_line_args": [
+            "/init"
+          ]
+        },
+        {
+          "pid": 1,
+          "ppid": 0,
+          "name": "systemd",
+          "create_time": 1792805933.47,
+          "executable": "/sbin/init",
+          "command_line": "/sbin/init",
+          "command_line_args": [
+            "/sbin/init"
+          ]
+        }
+      ]
+    }
+  ],
+  "malware_result": {
+    "verdict": "likely_benign",
+    "malware_probability": 0.05,
+    "confidence": 0.85,
+    "summary_ko": "실행 파일은 보안 테스트를 위한 임시 파일로 보입니다. 특별한 악성코드 특징이 발견되지 않았습니다.",
+    "behaviors": [
+      {
+        "name": "메모리 할당 및 초기화",
+        "evidence": [
+          "create_test_memory 함수에서 mmap 및 memset 호출"
+        ],
+        "severity": "low"
+      },
+      {
+        "name": "프로세스 종료",
+        "evidence": [
+          "프로세스가 종료된 것으로 보입니다."
+        ],
+        "severity": "low"
+      }
+    ],
+    "recommended_actions": [
+      "이 파일이 테스트 용도로 사용되었는지 확인하세요.",
+      "유사한 파일이 시스템에 존재하는지 검토하세요."
+    ],
+    "limitations": [],
+    "evidence": [
+      "create_test_memory 함수에서 mmap 및 memset 호출",
+      "프로세스가 종료된 것으로 보입니다."
+    ],
+    "model": "qwen2.5-coder:7b",
+    "backend": "ollama",
+    "ollama_server": "http://127.0.0.1:11437/api/chat",
+    "analyzed_at": "2026-10-24T03:36:08.808369+00:00",
+    "format_repaired": false,
+    "raw_response": "{\n  \"verdict\": \"likely_benign\",\n  \"malware_probability\": 0.05,\n  \"confidence\": 0.85,\n  \"summary_ko\": \"실행 파일은 보안 테스트를 위한 임시 파일로 보입니다. 특별한 악성코드 특징이 발견되지 않았습니다.\",\n  \"behaviors\": [\n    {\n      \"name\": \"메모리 할당 및 초기화\",\n      \"evidence\": [\n        \"create_test_memory 함수에서 mmap 및 memset 호출\"\n      ],\n      \"severity\": \"low\"\n    },\n    {\n      \"name\": \"프로세스 종료\",\n      \"evidence\": [\n        \"프로세스가 종료된 것으로 보입니다.\"\n      ],\n      \"severity\": \"low\"\n    }\n  ],\n  \"recommended_actions\": [\n    \"이 파일이 테스트 용도로 사용되었는지 확인하세요.\",\n    \"유사한 파일이 시스템에 존재하는지 검토하세요.\"\n  ]\n}",
+    "raw_responses": [
+      "{\n  \"verdict\": \"likely_benign\",\n  \"malware_probability\": 0.05,\n  \"confidence\": 0.85,\n  \"summary_ko\": \"실행 파일은 보안 테스트를 위한 임시 파일로 보입니다. 특별한 악성코드 특징이 발견되지 않았습니다.\",\n  \"behaviors\": [\n    {\n      \"name\": \"메모리 할당 및 초기화\",\n      \"evidence\": [\n        \"create_test_memory 함수에서 mmap 및 memset 호출\"\n      ],\n      \"severity\": \"low\"\n    },\n    {\n      \"name\": \"프로세스 종료\",\n      \"evidence\": [\n        \"프로세스가 종료된 것으로 보입니다.\"\n      ],\n      \"severity\": \"low\"\n    }\n  ],\n  \"recommended_actions\": [\n    \"이 파일이 테스트 용도로 사용되었는지 확인하세요.\",\n    \"유사한 파일이 시스템에 존재하는지 검토하세요.\"\n  ]\n}"
+    ],
+    "request_attempt": 1,
+    "gpu_server_index": 3,
+    "status": "success",
+    "candidate_function_count": 12,
+    "included_function_count": 8,
+    "function_payload_characters": 45296,
+    "prompt_characters": 67769,
+    "selected_function_count": 8,
+    "disclaimer": "LLM 정적 분석 보조 결과이며 악성/정상 확정 판정이 아닙니다.",
+    "model_original_result": {
+      "verdict": "likely_benign",
+      "malware_probability": 0.05,
+      "confidence": 0.85,
+      "summary_ko": "실행 파일은 보안 테스트를 위한 임시 파일로 보입니다. 특별한 악성코드 특징이 발견되지 않았습니다.",
+      "evidence": [
+        "create_test_memory 함수에서 mmap 및 memset 호출",
+        "프로세스가 종료된 것으로 보입니다."
+      ],
+      "limitations": [],
+      "recommended_actions": [
+        "이 파일이 테스트 용도로 사용되었는지 확인하세요.",
+        "유사한 파일이 시스템에 존재하는지 검토하세요."
+      ],
+      "suspicious_indicators": null
+    },
+    "consistency_adjusted": false,
+    "consistency_adjustment_flags": {
+      "verdict": false,
+      "summary": false,
+      "evidence": false,
+      "recommended_actions": false
+    },
+    "consistency_reasons": [],
+    "final_confidence": 0.85,
+    "confidence_source": "qwen_model",
+    "summary_source": "qwen_model",
+    "evidence_source": "qwen_model",
+    "recommendation_source": "qwen_model",
+    "adjustment_summary_ko": "Qwen 판단과 수집된 결정적 증거 사이에 보정이 필요한 모순이 확인되지 않았습니다.",
+    "deterministic_evidence": {
+      "verified_package": false,
+      "package": null,
+      "package_version": null,
+      "verification_clean": null,
+      "possible_packing": false,
+      "rwx_segment_count": 0,
+      "runtime_network_connection_count": 0,
+      "hard_malicious_evidence": false,
+      "error_string_only_evidence": false
+    }
+  },
+  "matches": [],
+  "all_candidate_assessments": [],
+  "confirmed_cve": null,
+  "output_path": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/llm/cve_matches.json",
+  "generated_at": "2026-10-24T03:36:08.812561+00:00"
+}

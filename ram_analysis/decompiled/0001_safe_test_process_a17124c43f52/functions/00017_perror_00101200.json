@@ -1,0 +1,365 @@
+{
+  "index": 17,
+  "name": "perror",
+  "entry": "00101200",
+  "kind": "plt_stub",
+  "external": true,
+  "declared_external": false,
+  "implementation_external": true,
+  "external_thunk_record": false,
+  "internal_external_thunk": false,
+  "thunk_target_name": "perror",
+  "thunk_target_entry": "EXTERNAL:0000000f",
+  "memory_block": ".plt.sec",
+  "signature": "void perror(char * __s)",
+  "is_thunk": true,
+  "pseudocode": "\n/* WARNING: Unknown calling convention -- yet parameter storage is locked */\n\nvoid perror(char *__s)\n\n{\n  (*(code *)PTR_perror_00103fb0)();\n  return;\n}\n\n",
+  "assembly": [
+    {
+      "address": "00101200",
+      "bytes": "f3 0f 1e fa",
+      "mnemonic": "ENDBR64",
+      "text": "ENDBR64",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101204",
+      "bytes": "ff 25 a6 2d 00 00",
+      "mnemonic": "JMP",
+      "text": "JMP qword ptr [0x00103fb0]",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "references": [
+        {
+          "to": "00103fb0",
+          "type": "INDIRECTION"
+        },
+        {
+          "to": "00105080",
+          "type": "COMPUTED_CALL_TERMINATOR"
+        }
+      ]
+    }
+  ],
+  "pcode": [
+    {
+      "id": "op_0",
+      "sequence": "(ram, 0x101204, 0, 2)",
+      "mnemonic": "CALLIND",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(unique, 0x10000009, 8)",
+          "address": "unique:10000009",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_1",
+      "sequence": "(ram, 0x101204, 1, 4)",
+      "mnemonic": "RETURN",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_2",
+      "sequence": "(ram, 0x101204, 8, 1)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(ram, 0x103fb0, 8)",
+        "address": "00103fb0",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "PTR_perror_00103fb0"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103fb0, 8)",
+          "address": "00103fb0",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR_perror_00103fb0"
+        },
+        {
+          "text": "(const, 0x0, 4)",
+          "address": "const:00000000",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_3",
+      "sequence": "(ram, 0x101204, 9, 3)",
+      "mnemonic": "COPY",
+      "output": {
+        "text": "(ram, 0x103fb0, 8)",
+        "address": "00103fb0",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "PTR_perror_00103fb0"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103fb0, 8)",
+          "address": "00103fb0",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR_perror_00103fb0"
+        }
+      ]
+    },
+    {
+      "id": "op_4",
+      "sequence": "(ram, 0x101204, 10, 0)",
+      "mnemonic": "CAST",
+      "output": {
+        "text": "(unique, 0x10000009, 8)",
+        "address": "unique:10000009",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103fb0, 8)",
+          "address": "00103fb0",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR_perror_00103fb0"
+        }
+      ]
+    }
+  ],
+  "cfg": {
+    "nodes": [
+      {
+        "id": "00101200",
+        "label": "00101200",
+        "kind": "basic_block",
+        "start": "00101200",
+        "end": "00101209",
+        "flow_type": "COMPUTED_CALL_TERMINATOR"
+      }
+    ],
+    "edges": [
+      {
+        "source": "00101200",
+        "target": "00105080",
+        "kind": "COMPUTED_CALL",
+        "label": "COMPUTED_CALL"
+      },
+      {
+        "source": "00101200",
+        "target": "00105080",
+        "kind": "COMPUTED_CALL_TERMINATOR",
+        "label": "COMPUTED_CALL_TERMINATOR"
+      }
+    ]
+  },
+  "dfg": {
+    "nodes": [
+      {
+        "id": "op_0",
+        "label": "CALLIND",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_d9653fba090902ca",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_1",
+        "label": "RETURN",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_88811e232378f02a",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_2",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_8c0eba80ba9f28f7",
+        "label": "PTR_perror_00103fb0",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_5bd3595558fd8d2a",
+        "label": "(const, 0x0, 4)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_3",
+        "label": "COPY",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_4",
+        "label": "CAST",
+        "kind": "pcode_op"
+      }
+    ],
+    "edges": [
+      {
+        "source": "var_d9653fba090902ca",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_2",
+        "target": "var_8c0eba80ba9f28f7",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_8c0eba80ba9f28f7",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_5bd3595558fd8d2a",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_3",
+        "target": "var_8c0eba80ba9f28f7",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_8c0eba80ba9f28f7",
+        "target": "op_3",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_4",
+        "target": "var_d9653fba090902ca",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_8c0eba80ba9f28f7",
+        "target": "op_4",
+        "kind": "uses",
+        "label": "uses"
+      }
+    ]
+  },
+  "call_graph": {
+    "callers": [
+      {
+        "name": "main",
+        "entry": "001016a8",
+        "kind": "internal_function",
+        "external": false,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": false,
+        "entry_in_external_space": false,
+        "external_thunk_record": false,
+        "internal_external_thunk": false,
+        "implementation_external": false,
+        "thunk": false,
+        "thunk_target_name": null,
+        "thunk_target_entry": null,
+        "memory_block": ".text"
+      }
+    ],
+    "callees": [
+      {
+        "name": "perror",
+        "entry": "00105080",
+        "kind": "external_symbol",
+        "external": true,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": true,
+        "entry_in_external_space": false,
+        "external_thunk_record": true,
+        "internal_external_thunk": false,
+        "implementation_external": true,
+        "thunk": true,
+        "thunk_target_name": "perror",
+        "thunk_target_entry": "EXTERNAL:0000000f",
+        "memory_block": "EXTERNAL"
+      }
+    ]
+  },
+  "string_references": [],
+  "graph_files": {
+    "cfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00017_perror_00101200.cfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00017_perror_00101200.cfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00017_perror_00101200.cfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00017_perror_00101200.cfg.svg",
+      "rendered": true,
+      "error": null
+    },
+    "dfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00017_perror_00101200.dfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00017_perror_00101200.dfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00017_perror_00101200.dfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00017_perror_00101200.dfg.svg",
+      "rendered": true,
+      "error": null
+    }
+  },
+  "success": true,
+  "error": null
+}

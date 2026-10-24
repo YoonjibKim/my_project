@@ -1,0 +1,296 @@
+{
+  "index": 20,
+  "name": "deregister_tm_clones",
+  "entry": "00101250",
+  "kind": "internal_function",
+  "external": false,
+  "declared_external": false,
+  "implementation_external": false,
+  "external_thunk_record": false,
+  "internal_external_thunk": false,
+  "thunk_target_name": null,
+  "thunk_target_entry": null,
+  "memory_block": ".text",
+  "signature": "undefined deregister_tm_clones(void)",
+  "is_thunk": false,
+  "pseudocode": "\n/* WARNING: Removing unreachable block (ram,0x00101263) */\n/* WARNING: Removing unreachable block (ram,0x0010126f) */\n\nvoid deregister_tm_clones(void)\n\n{\n  return;\n}\n\n",
+  "assembly": [
+    {
+      "address": "00101250",
+      "bytes": "48 8d 3d b9 2d 00 00",
+      "mnemonic": "LEA",
+      "text": "LEA RDI,[0x104010]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "00104010",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "00101257",
+      "bytes": "48 8d 05 b2 2d 00 00",
+      "mnemonic": "LEA",
+      "text": "LEA RAX,[0x104010]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "00104010",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "0010125e",
+      "bytes": "48 39 f8",
+      "mnemonic": "CMP",
+      "text": "CMP RAX,RDI",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101261",
+      "bytes": "74 15",
+      "mnemonic": "JZ",
+      "text": "JZ 0x00101278",
+      "flow_type": "CONDITIONAL_JUMP",
+      "references": [
+        {
+          "to": "00101278",
+          "type": "CONDITIONAL_JUMP"
+        }
+      ]
+    },
+    {
+      "address": "00101263",
+      "bytes": "48 8b 05 5e 2d 00 00",
+      "mnemonic": "MOV",
+      "text": "MOV RAX,qword ptr [0x00103fc8]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "00103fc8",
+          "type": "READ"
+        },
+        {
+          "to": "00105010",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "0010126a",
+      "bytes": "48 85 c0",
+      "mnemonic": "TEST",
+      "text": "TEST RAX,RAX",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "0010126d",
+      "bytes": "74 09",
+      "mnemonic": "JZ",
+      "text": "JZ 0x00101278",
+      "flow_type": "CONDITIONAL_JUMP",
+      "references": [
+        {
+          "to": "00101278",
+          "type": "CONDITIONAL_JUMP"
+        }
+      ]
+    },
+    {
+      "address": "0010126f",
+      "bytes": "ff e0",
+      "mnemonic": "JMP",
+      "text": "JMP RAX",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "references": [
+        {
+          "to": "00105010",
+          "type": "COMPUTED_CALL"
+        }
+      ]
+    },
+    {
+      "address": "00101278",
+      "bytes": "c3",
+      "mnemonic": "RET",
+      "text": "RET",
+      "flow_type": "TERMINATOR",
+      "references": []
+    }
+  ],
+  "pcode": [
+    {
+      "id": "op_0",
+      "sequence": "(ram, 0x101278, 28, 0)",
+      "mnemonic": "RETURN",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    }
+  ],
+  "cfg": {
+    "nodes": [
+      {
+        "id": "00101250",
+        "label": "00101250",
+        "kind": "basic_block",
+        "start": "00101250",
+        "end": "00101262",
+        "flow_type": "CONDITIONAL_JUMP"
+      },
+      {
+        "id": "00101263",
+        "label": "00101263",
+        "kind": "basic_block",
+        "start": "00101263",
+        "end": "0010126e",
+        "flow_type": "CONDITIONAL_JUMP"
+      },
+      {
+        "id": "0010126f",
+        "label": "0010126f",
+        "kind": "basic_block",
+        "start": "0010126f",
+        "end": "00101270",
+        "flow_type": "COMPUTED_CALL_TERMINATOR"
+      },
+      {
+        "id": "00101278",
+        "label": "00101278",
+        "kind": "basic_block",
+        "start": "00101278",
+        "end": "00101278",
+        "flow_type": "TERMINATOR"
+      }
+    ],
+    "edges": [
+      {
+        "source": "00101250",
+        "target": "00101278",
+        "kind": "CONDITIONAL_JUMP",
+        "label": "CONDITIONAL_JUMP"
+      },
+      {
+        "source": "00101250",
+        "target": "00101263",
+        "kind": "FALL_THROUGH",
+        "label": "FALL_THROUGH"
+      },
+      {
+        "source": "00101263",
+        "target": "00101278",
+        "kind": "CONDITIONAL_JUMP",
+        "label": "CONDITIONAL_JUMP"
+      },
+      {
+        "source": "00101263",
+        "target": "0010126f",
+        "kind": "FALL_THROUGH",
+        "label": "FALL_THROUGH"
+      },
+      {
+        "source": "0010126f",
+        "target": "00105010",
+        "kind": "COMPUTED_CALL",
+        "label": "COMPUTED_CALL"
+      }
+    ]
+  },
+  "dfg": {
+    "nodes": [
+      {
+        "id": "op_0",
+        "label": "RETURN",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_88811e232378f02a",
+        "label": "None",
+        "kind": "varnode"
+      }
+    ],
+    "edges": [
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      }
+    ]
+  },
+  "call_graph": {
+    "callers": [
+      {
+        "name": "__do_global_dtors_aux",
+        "entry": "001012c0",
+        "kind": "internal_function",
+        "external": false,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": false,
+        "entry_in_external_space": false,
+        "external_thunk_record": false,
+        "internal_external_thunk": false,
+        "implementation_external": false,
+        "thunk": false,
+        "thunk_target_name": null,
+        "thunk_target_entry": null,
+        "memory_block": ".text"
+      }
+    ],
+    "callees": [
+      {
+        "name": "_ITM_deregisterTMCloneTable",
+        "entry": "00105010",
+        "kind": "external_symbol",
+        "external": true,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": true,
+        "entry_in_external_space": false,
+        "external_thunk_record": true,
+        "internal_external_thunk": false,
+        "implementation_external": true,
+        "thunk": true,
+        "thunk_target_name": "_ITM_deregisterTMCloneTable",
+        "thunk_target_entry": "EXTERNAL:00000012",
+        "memory_block": "EXTERNAL"
+      }
+    ]
+  },
+  "string_references": [],
+  "graph_files": {
+    "cfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00020_deregister_tm_clones_00101250.cfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00020_deregister_tm_clones_00101250.cfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00020_deregister_tm_clones_00101250.cfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00020_deregister_tm_clones_00101250.cfg.svg",
+      "rendered": true,
+      "error": null
+    },
+    "dfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00020_deregister_tm_clones_00101250.dfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00020_deregister_tm_clones_00101250.dfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00020_deregister_tm_clones_00101250.dfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00020_deregister_tm_clones_00101250.dfg.svg",
+      "rendered": true,
+      "error": null
+    }
+  },
+  "success": true,
+  "error": null
+}

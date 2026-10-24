@@ -1,0 +1,1353 @@
+[
+  {
+    "address": "00100001",
+    "value": "ELF",
+    "length": 3,
+    "data_type": "string",
+    "references": []
+  },
+  {
+    "address": "00100318",
+    "value": "/lib64/ld-linux-x86-64.so.2",
+    "length": 28,
+    "data_type": "TerminatedCString",
+    "references": [
+      {
+        "from_address": "00100088",
+        "to_address": "00100318",
+        "type": "DATA"
+      },
+      {
+        "from_address": "_elfSectionHeaders::00000050",
+        "to_address": "00100318",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00100344",
+    "value": "GNU",
+    "length": 4,
+    "data_type": "string",
+    "references": []
+  },
+  {
+    "address": "00100374",
+    "value": "GNU",
+    "length": 4,
+    "data_type": "string",
+    "references": []
+  },
+  {
+    "address": "00100398",
+    "value": "GNU",
+    "length": 4,
+    "data_type": "string",
+    "references": []
+  },
+  {
+    "address": "001005e9",
+    "value": "sleep",
+    "length": 6,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "001005ef",
+    "value": "puts",
+    "length": 5,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "001005f4",
+    "value": "perror",
+    "length": 7,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "001005fb",
+    "value": "__stack_chk_fail",
+    "length": 17,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "0010060c",
+    "value": "sigaction",
+    "length": 10,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "00100616",
+    "value": "munmap",
+    "length": 7,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "0010061d",
+    "value": "fflush",
+    "length": 7,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "00100624",
+    "value": "time",
+    "length": 5,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "00100629",
+    "value": "getpid",
+    "length": 7,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "00100630",
+    "value": "stdout",
+    "length": 7,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "00100637",
+    "value": "__libc_start_main",
+    "length": 18,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "00100649",
+    "value": "mprotect",
+    "length": 9,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "00100652",
+    "value": "__cxa_finalize",
+    "length": 15,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "00100661",
+    "value": "memset",
+    "length": 7,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "00100668",
+    "value": "printf",
+    "length": 7,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "0010066f",
+    "value": "sigemptyset",
+    "length": 12,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "0010067b",
+    "value": "__errno_location",
+    "length": 17,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "0010068c",
+    "value": "mmap",
+    "length": 5,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "00100691",
+    "value": "libc.so.6",
+    "length": 10,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "0010069b",
+    "value": "GLIBC_2.4",
+    "length": 10,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "001006a5",
+    "value": "GLIBC_2.2.5",
+    "length": 12,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "001006b1",
+    "value": "GLIBC_2.34",
+    "length": 11,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "001006bc",
+    "value": "_ITM_deregisterTMCloneTable",
+    "length": 28,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "001006d8",
+    "value": "__gmon_start__",
+    "length": 15,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "001006e7",
+    "value": "_ITM_registerTMCloneTable",
+    "length": 26,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": "00102020",
+    "value": "SAFE_MALWARE_ANALYSIS_TEST_SAMPLE",
+    "length": 34,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00103ce0",
+        "to_address": "00102020",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00102042",
+    "value": "MALWARE_TEST_SIGNATURE_V1",
+    "length": 26,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00103ce8",
+        "to_address": "00102042",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00102060",
+    "value": "SIMULATED_MEMORY_LOADER_MARKER",
+    "length": 31,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00103cf0",
+        "to_address": "00102060",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00102080",
+    "value": "SIMULATED_COMMAND_AND_CONTROL_MARKER",
+    "length": 37,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00103cf8",
+        "to_address": "00102080",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "001020a5",
+    "value": "SIMULATED_PERSISTENCE_MARKER",
+    "length": 29,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00103d00",
+        "to_address": "001020a5",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "001020c8",
+    "value": "SIMULATED_CREDENTIAL_ACCESS_MARKER",
+    "length": 35,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00103d08",
+        "to_address": "001020c8",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "001020f0",
+    "value": "SIMULATED_ENCRYPT_DECRYPT_MARKER",
+    "length": 33,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00103d10",
+        "to_address": "001020f0",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00102111",
+    "value": "SIMULATED_PACKED_PAYLOAD",
+    "length": 25,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00103d18",
+        "to_address": "00102111",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "0010212a",
+    "value": "SIMULATED_SHELLCODE_MARKER",
+    "length": 27,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00103d20",
+        "to_address": "0010212a",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00102148",
+    "value": "mmap mprotect PROT_EXEC dlopen dlsym socket connect execve ptrace",
+    "length": 66,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00103d28",
+        "to_address": "00102148",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "0010218a",
+    "value": "/proc/self/maps",
+    "length": 16,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00103d30",
+        "to_address": "0010218a",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "0010219a",
+    "value": "/tmp/safe_test_process.marker",
+    "length": 30,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00103d38",
+        "to_address": "0010219a",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "001021b8",
+    "value": "Embedded test markers:",
+    "length": 23,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "0010164a",
+        "to_address": "001021b8",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00101651",
+        "to_address": "001021b8",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "001021cf",
+    "value": "  [%zu] %s\n",
+    "length": 12,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00101681",
+        "to_address": "001021cf",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00101688",
+        "to_address": "001021cf",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "001021db",
+    "value": "sigaction",
+    "length": 10,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "001016bf",
+        "to_address": "001021db",
+        "type": "DATA"
+      },
+      {
+        "from_address": "001016c6",
+        "to_address": "001021db",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "001021e5",
+    "value": "create_test_memory",
+    "length": 19,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "001016e8",
+        "to_address": "001021e5",
+        "type": "DATA"
+      },
+      {
+        "from_address": "001016ef",
+        "to_address": "001021e5",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "001021f8",
+    "value": "Safe analysis test process started",
+    "length": 35,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00101701",
+        "to_address": "001021f8",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00101708",
+        "to_address": "001021f8",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "0010221b",
+    "value": "PID: %ld\n",
+    "length": 10,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "0010171a",
+        "to_address": "0010221b",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00101721",
+        "to_address": "0010221b",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "00102225",
+    "value": "Memory address: %p\n",
+    "length": 20,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00101735",
+        "to_address": "00102225",
+        "type": "DATA"
+      },
+      {
+        "from_address": "0010173c",
+        "to_address": "00102225",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "00102239",
+    "value": "Memory size: %u bytes\n",
+    "length": 23,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "0010174e",
+        "to_address": "00102239",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00101755",
+        "to_address": "00102239",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "00102250",
+    "value": "Repeat count: %u\n",
+    "length": 18,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00101767",
+        "to_address": "00102250",
+        "type": "DATA"
+      },
+      {
+        "from_address": "0010176e",
+        "to_address": "00102250",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "00102262",
+    "value": "Interval: %u seconds\n",
+    "length": 22,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00101780",
+        "to_address": "00102262",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00101787",
+        "to_address": "00102262",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "00102278",
+    "value": "Expected runtime: approximately %u seconds\n",
+    "length": 44,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "00101799",
+        "to_address": "00102278",
+        "type": "DATA"
+      },
+      {
+        "from_address": "001017a0",
+        "to_address": "00102278",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "001022a8",
+    "value": "[%u/%u] time=%ld pid=%ld checksum=%llu\n",
+    "length": 40,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "0010180e",
+        "to_address": "001022a8",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00101815",
+        "to_address": "001022a8",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "001022d0",
+    "value": "Shutdown signal received",
+    "length": 25,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "0010186d",
+        "to_address": "001022d0",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00101874",
+        "to_address": "001022d0",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "001022e9",
+    "value": "All test iterations completed",
+    "length": 30,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "0010187e",
+        "to_address": "001022e9",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00101885",
+        "to_address": "001022e9",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "00102307",
+    "value": "munmap",
+    "length": 7,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "001018a3",
+        "to_address": "00102307",
+        "type": "DATA"
+      },
+      {
+        "from_address": "001018aa",
+        "to_address": "00102307",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "0010230e",
+    "value": "Test memory released",
+    "length": 21,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "001018b9",
+        "to_address": "0010230e",
+        "type": "DATA"
+      },
+      {
+        "from_address": "001018c0",
+        "to_address": "0010230e",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "00102323",
+    "value": "Process exiting normally",
+    "length": 25,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "001018c8",
+        "to_address": "00102323",
+        "type": "DATA"
+      },
+      {
+        "from_address": "001018cf",
+        "to_address": "00102323",
+        "type": "PARAM"
+      }
+    ]
+  },
+  {
+    "address": "00102340",
+    "value": "SAFE_MEMORY_RESIDENT_TEST_PATTERN|MALWARE_TEST_SIGNATURE_V1|SIMULATED_MEMORY_LOADER_MARKER|SIMULATED_COMMAND_AND_CONTROL_MARKER|SIMULATED_PACKED_PAYLOAD|SIMULATED_SHELLCODE_MARKER|THIS_IS_NOT_REAL_SHELLCODE",
+    "length": 207,
+    "data_type": "char[207]",
+    "references": [
+      {
+        "from_address": "0010143f",
+        "to_address": "00102340",
+        "type": "READ"
+      }
+    ]
+  },
+  {
+    "address": "00102479",
+    "value": "zR",
+    "length": 3,
+    "data_type": "string",
+    "references": []
+  },
+  {
+    "address": ".comment::00000000",
+    "value": "GCC: (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "length": 45,
+    "data_type": "string-utf8",
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::00000710",
+        "to_address": ".comment::00000000",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": ".debug_line_str::00000000",
+    "value": "safe_test_process.c",
+    "length": 20,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::00000890",
+        "to_address": ".debug_line_str::00000000",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": ".debug_str::00000000",
+    "value": "printf",
+    "length": 7,
+    "data_type": "string",
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::00000850",
+        "to_address": ".debug_str::00000000",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": ".shstrtab::00000001",
+    "value": ".symtab",
+    "length": 8,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000009",
+    "value": ".strtab",
+    "length": 8,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000011",
+    "value": ".shstrtab",
+    "length": 10,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::0000001b",
+    "value": ".interp",
+    "length": 8,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000023",
+    "value": ".note.gnu.property",
+    "length": 19,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000036",
+    "value": ".note.gnu.build-id",
+    "length": 19,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000049",
+    "value": ".note.ABI-tag",
+    "length": 14,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000057",
+    "value": ".gnu.hash",
+    "length": 10,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000061",
+    "value": ".dynsym",
+    "length": 8,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000069",
+    "value": ".dynstr",
+    "length": 8,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000071",
+    "value": ".gnu.version",
+    "length": 13,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::0000007e",
+    "value": ".gnu.version_r",
+    "length": 15,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::0000008d",
+    "value": ".rela.dyn",
+    "length": 10,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000097",
+    "value": ".rela.plt",
+    "length": 10,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::000000a1",
+    "value": ".init",
+    "length": 6,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::000000a7",
+    "value": ".plt.got",
+    "length": 9,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::000000b0",
+    "value": ".plt.sec",
+    "length": 9,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::000000b9",
+    "value": ".text",
+    "length": 6,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::000000bf",
+    "value": ".fini",
+    "length": 6,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::000000c5",
+    "value": ".rodata",
+    "length": 8,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::000000cd",
+    "value": ".eh_frame_hdr",
+    "length": 14,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::000000db",
+    "value": ".eh_frame",
+    "length": 10,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::000000e5",
+    "value": ".init_array",
+    "length": 12,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::000000f1",
+    "value": ".fini_array",
+    "length": 12,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::000000fd",
+    "value": ".data.rel.ro",
+    "length": 13,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::0000010a",
+    "value": ".dynamic",
+    "length": 9,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000113",
+    "value": ".data",
+    "length": 6,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000119",
+    "value": ".bss",
+    "length": 5,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::0000011e",
+    "value": ".comment",
+    "length": 9,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000127",
+    "value": ".debug_aranges",
+    "length": 15,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000136",
+    "value": ".debug_info",
+    "length": 12,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000142",
+    "value": ".debug_abbrev",
+    "length": 14,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000150",
+    "value": ".debug_line",
+    "length": 12,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::0000015c",
+    "value": ".debug_str",
+    "length": 11,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".shstrtab::00000167",
+    "value": ".debug_line_str",
+    "length": 16,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000001",
+    "value": "Scrt1.o",
+    "length": 8,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000009",
+    "value": "__abi_tag",
+    "length": 10,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000013",
+    "value": "crtstuff.c",
+    "length": 11,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000001e",
+    "value": "deregister_tm_clones",
+    "length": 21,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000033",
+    "value": "__do_global_dtors_aux",
+    "length": 22,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000049",
+    "value": "completed.0",
+    "length": 12,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000055",
+    "value": "__do_global_dtors_aux_fini_array_entry",
+    "length": 39,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000007c",
+    "value": "frame_dummy",
+    "length": 12,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000088",
+    "value": "__frame_dummy_init_array_entry",
+    "length": 31,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000000a7",
+    "value": "safe_test_process.c",
+    "length": 20,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000000bb",
+    "value": "stop_requested",
+    "length": 15,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000000ca",
+    "value": "handle_signal",
+    "length": 14,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000000d8",
+    "value": "install_signal_handlers",
+    "length": 24,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000000f0",
+    "value": "create_test_memory",
+    "length": 19,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000103",
+    "value": "resident_marker.0",
+    "length": 18,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000115",
+    "value": "calculate_checksum",
+    "length": 19,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000128",
+    "value": "print_test_markers",
+    "length": 19,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000013b",
+    "value": "__FRAME_END__",
+    "length": 14,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000149",
+    "value": "_DYNAMIC",
+    "length": 9,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000152",
+    "value": "__GNU_EH_FRAME_HDR",
+    "length": 19,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000165",
+    "value": "_GLOBAL_OFFSET_TABLE_",
+    "length": 22,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000017b",
+    "value": "__libc_start_main@GLIBC_2.34",
+    "length": 29,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000198",
+    "value": "__errno_location@GLIBC_2.2.5",
+    "length": 29,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000001b5",
+    "value": "_ITM_deregisterTMCloneTable",
+    "length": 28,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000001d1",
+    "value": "stdout@GLIBC_2.2.5",
+    "length": 19,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000001e4",
+    "value": "puts@GLIBC_2.2.5",
+    "length": 17,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000001f5",
+    "value": "sigaction@GLIBC_2.2.5",
+    "length": 22,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000020b",
+    "value": "getpid@GLIBC_2.2.5",
+    "length": 19,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000021e",
+    "value": "_edata",
+    "length": 7,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000225",
+    "value": "_fini",
+    "length": 6,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000022b",
+    "value": "__stack_chk_fail@GLIBC_2.4",
+    "length": 27,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000246",
+    "value": "mmap@GLIBC_2.2.5",
+    "length": 17,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000257",
+    "value": "printf@GLIBC_2.2.5",
+    "length": 19,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000026a",
+    "value": "memset@GLIBC_2.2.5",
+    "length": 19,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000027d",
+    "value": "__data_start",
+    "length": 13,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000028a",
+    "value": "sigemptyset@GLIBC_2.2.5",
+    "length": 24,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000002a2",
+    "value": "__gmon_start__",
+    "length": 15,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000002b1",
+    "value": "__dso_handle",
+    "length": 13,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000002be",
+    "value": "_IO_stdin_used",
+    "length": 15,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000002cd",
+    "value": "time@GLIBC_2.2.5",
+    "length": 17,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000002de",
+    "value": "fflush@GLIBC_2.2.5",
+    "length": 19,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000002f1",
+    "value": "_end",
+    "length": 5,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::000002f6",
+    "value": "__bss_start",
+    "length": 12,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000302",
+    "value": "munmap@GLIBC_2.2.5",
+    "length": 19,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000315",
+    "value": "main",
+    "length": 5,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000031a",
+    "value": "mprotect@GLIBC_2.2.5",
+    "length": 21,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000032f",
+    "value": "perror@GLIBC_2.2.5",
+    "length": 19,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000342",
+    "value": "__TMC_END__",
+    "length": 12,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000034e",
+    "value": "_ITM_registerTMCloneTable",
+    "length": 26,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000368",
+    "value": "sleep@GLIBC_2.2.5",
+    "length": 18,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::0000037a",
+    "value": "__cxa_finalize@GLIBC_2.2.5",
+    "length": 27,
+    "data_type": "string-utf8",
+    "references": []
+  },
+  {
+    "address": ".strtab::00000395",
+    "value": "_init",
+    "length": 6,
+    "data_type": "string-utf8",
+    "references": []
+  }
+]

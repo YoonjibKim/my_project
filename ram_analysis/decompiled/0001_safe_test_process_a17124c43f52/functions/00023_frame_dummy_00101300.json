@@ -1,0 +1,179 @@
+{
+  "index": 23,
+  "name": "frame_dummy",
+  "entry": "00101300",
+  "kind": "internal_function",
+  "external": false,
+  "declared_external": false,
+  "implementation_external": false,
+  "external_thunk_record": false,
+  "internal_external_thunk": false,
+  "thunk_target_name": "register_tm_clones",
+  "thunk_target_entry": "00101280",
+  "memory_block": ".text",
+  "signature": "undefined frame_dummy(void)",
+  "is_thunk": true,
+  "pseudocode": "\nvoid frame_dummy(void)\n\n{\n  register_tm_clones();\n  return;\n}\n\n",
+  "assembly": [
+    {
+      "address": "00101300",
+      "bytes": "f3 0f 1e fa",
+      "mnemonic": "ENDBR64",
+      "text": "ENDBR64",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101304",
+      "bytes": "e9 77 ff ff ff",
+      "mnemonic": "JMP",
+      "text": "JMP 0x00101280",
+      "flow_type": "CALL_TERMINATOR",
+      "references": [
+        {
+          "to": "00101280",
+          "type": "UNCONDITIONAL_CALL"
+        }
+      ]
+    }
+  ],
+  "pcode": [
+    {
+      "id": "op_0",
+      "sequence": "(ram, 0x101304, 0, 0)",
+      "mnemonic": "CALL",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(ram, 0x101280, 8)",
+          "address": "00101280",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_1",
+      "sequence": "(ram, 0x101304, 1, 1)",
+      "mnemonic": "RETURN",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    }
+  ],
+  "cfg": {
+    "nodes": [
+      {
+        "id": "00101300",
+        "label": "00101300",
+        "kind": "basic_block",
+        "start": "00101300",
+        "end": "00101308",
+        "flow_type": "CALL_TERMINATOR"
+      }
+    ],
+    "edges": [
+      {
+        "source": "00101300",
+        "target": "00101280",
+        "kind": "UNCONDITIONAL_CALL",
+        "label": "UNCONDITIONAL_CALL"
+      }
+    ]
+  },
+  "dfg": {
+    "nodes": [
+      {
+        "id": "op_0",
+        "label": "CALL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_7a10c3e11d2a6aa9",
+        "label": "(ram, 0x101280, 8)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_1",
+        "label": "RETURN",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_88811e232378f02a",
+        "label": "None",
+        "kind": "varnode"
+      }
+    ],
+    "edges": [
+      {
+        "source": "var_7a10c3e11d2a6aa9",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      }
+    ]
+  },
+  "call_graph": {
+    "callers": [],
+    "callees": [
+      {
+        "name": "register_tm_clones",
+        "entry": "00101280",
+        "kind": "internal_function",
+        "external": false,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": false,
+        "entry_in_external_space": false,
+        "external_thunk_record": false,
+        "internal_external_thunk": false,
+        "implementation_external": false,
+        "thunk": false,
+        "thunk_target_name": null,
+        "thunk_target_entry": null,
+        "memory_block": ".text"
+      }
+    ]
+  },
+  "string_references": [],
+  "graph_files": {
+    "cfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00023_frame_dummy_00101300.cfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00023_frame_dummy_00101300.cfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00023_frame_dummy_00101300.cfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00023_frame_dummy_00101300.cfg.svg",
+      "rendered": true,
+      "error": null
+    },
+    "dfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00023_frame_dummy_00101300.dfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00023_frame_dummy_00101300.dfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00023_frame_dummy_00101300.dfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00023_frame_dummy_00101300.dfg.svg",
+      "rendered": true,
+      "error": null
+    }
+  },
+  "success": true,
+  "error": null
+}

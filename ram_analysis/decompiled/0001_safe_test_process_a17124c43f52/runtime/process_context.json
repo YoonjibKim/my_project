@@ -1,0 +1,421 @@
+{
+  "pid": null,
+  "live_pid_at_analysis": null,
+  "detected_pid": 24817,
+  "immediate_snapshot": {
+    "detected_pid": 24817,
+    "captured_at": "2026-10-24T03:35:41.540618+00:00",
+    "status": "success",
+    "name": "safe_test_process",
+    "exe": "/home/asurada/safe_test_process",
+    "cmdline": [
+      "./safe_test_process"
+    ],
+    "cwd": "/home/asurada",
+    "ppid": 22706,
+    "create_time": 1792812887.52,
+    "open_files": [],
+    "connections": [],
+    "maps": [
+      {
+        "start": 95182989455360,
+        "end": 95182989459456,
+        "start_hex": "0x569184467000",
+        "end_hex": "0x569184468000",
+        "size": 4096,
+        "permissions": "r--p",
+        "file_offset": 0,
+        "file_offset_hex": "0x0",
+        "device": "08:30",
+        "inode": "108857",
+        "pathname": "/home/asurada/safe_test_process"
+      },
+      {
+        "start": 95182989459456,
+        "end": 95182989463552,
+        "start_hex": "0x569184468000",
+        "end_hex": "0x569184469000",
+        "size": 4096,
+        "permissions": "r-xp",
+        "file_offset": 4096,
+        "file_offset_hex": "0x1000",
+        "device": "08:30",
+        "inode": "108857",
+        "pathname": "/home/asurada/safe_test_process"
+      },
+      {
+        "start": 95182989463552,
+        "end": 95182989467648,
+        "start_hex": "0x569184469000",
+        "end_hex": "0x56918446a000",
+        "size": 4096,
+        "permissions": "r--p",
+        "file_offset": 8192,
+        "file_offset_hex": "0x2000",
+        "device": "08:30",
+        "inode": "108857",
+        "pathname": "/home/asurada/safe_test_process"
+      },
+      {
+        "start": 95182989467648,
+        "end": 95182989471744,
+        "start_hex": "0x56918446a000",
+        "end_hex": "0x56918446b000",
+        "size": 4096,
+        "permissions": "r--p",
+        "file_offset": 8192,
+        "file_offset_hex": "0x2000",
+        "device": "08:30",
+        "inode": "108857",
+        "pathname": "/home/asurada/safe_test_process"
+      },
+      {
+        "start": 95182989471744,
+        "end": 95182989475840,
+        "start_hex": "0x56918446b000",
+        "end_hex": "0x56918446c000",
+        "size": 4096,
+        "permissions": "rw-p",
+        "file_offset": 12288,
+        "file_offset_hex": "0x3000",
+        "device": "08:30",
+        "inode": "108857",
+        "pathname": "/home/asurada/safe_test_process"
+      },
+      {
+        "start": 95183297712128,
+        "end": 95183297847296,
+        "start_hex": "0x569196a61000",
+        "end_hex": "0x569196a82000",
+        "size": 135168,
+        "permissions": "rw-p",
+        "file_offset": 0,
+        "file_offset_hex": "0x0",
+        "device": "00:00",
+        "inode": "0",
+        "pathname": "[heap]"
+      },
+      {
+        "start": 137970541658112,
+        "end": 137970545852416,
+        "start_hex": "0x7d7bc5200000",
+        "end_hex": "0x7d7bc5600000",
+        "size": 4194304,
+        "permissions": "r-xp",
+        "file_offset": 0,
+        "file_offset_hex": "0x0",
+        "device": "00:00",
+        "inode": "0",
+        "pathname": ""
+      },
+      {
+        "start": 137970545852416,
+        "end": 137970546016256,
+        "start_hex": "0x7d7bc5600000",
+        "end_hex": "0x7d7bc5628000",
+        "size": 163840,
+        "permissions": "r--p",
+        "file_offset": 0,
+        "file_offset_hex": "0x0",
+        "device": "08:30",
+        "inode": "41456",
+        "pathname": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+      },
+      {
+        "start": 137970546016256,
+        "end": 137970547625984,
+        "start_hex": "0x7d7bc5628000",
+        "end_hex": "0x7d7bc57b1000",
+        "size": 1609728,
+        "permissions": "r-xp",
+        "file_offset": 163840,
+        "file_offset_hex": "0x28000",
+        "device": "08:30",
+        "inode": "41456",
+        "pathname": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+      },
+      {
+        "start": 137970547625984,
+        "end": 137970547949568,
+        "start_hex": "0x7d7bc57b1000",
+        "end_hex": "0x7d7bc5800000",
+        "size": 323584,
+        "permissions": "r--p",
+        "file_offset": 1773568,
+        "file_offset_hex": "0x1b1000",
+        "device": "08:30",
+        "inode": "41456",
+        "pathname": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+      },
+      {
+        "start": 137970547949568,
+        "end": 137970547965952,
+        "start_hex": "0x7d7bc5800000",
+        "end_hex": "0x7d7bc5804000",
+        "size": 16384,
+        "permissions": "r--p",
+        "file_offset": 2093056,
+        "file_offset_hex": "0x1ff000",
+        "device": "08:30",
+        "inode": "41456",
+        "pathname": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+      },
+      {
+        "start": 137970547965952,
+        "end": 137970547974144,
+        "start_hex": "0x7d7bc5804000",
+        "end_hex": "0x7d7bc5806000",
+        "size": 8192,
+        "permissions": "rw-p",
+        "file_offset": 2109440,
+        "file_offset_hex": "0x203000",
+        "device": "08:30",
+        "inode": "41456",
+        "pathname": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+      },
+      {
+        "start": 137970547974144,
+        "end": 137970548027392,
+        "start_hex": "0x7d7bc5806000",
+        "end_hex": "0x7d7bc5813000",
+        "size": 53248,
+        "permissions": "rw-p",
+        "file_offset": 0,
+        "file_offset_hex": "0x0",
+        "device": "00:00",
+        "inode": "0",
+        "pathname": ""
+      },
+      {
+        "start": 137970548502528,
+        "end": 137970548514816,
+        "start_hex": "0x7d7bc5887000",
+        "end_hex": "0x7d7bc588a000",
+        "size": 12288,
+        "permissions": "rw-p",
+        "file_offset": 0,
+        "file_offset_hex": "0x0",
+        "device": "00:00",
+        "inode": "0",
+        "pathname": ""
+      },
+      {
+        "start": 137970548539392,
+        "end": 137970548547584,
+        "start_hex": "0x7d7bc5890000",
+        "end_hex": "0x7d7bc5892000",
+        "size": 8192,
+        "permissions": "rw-p",
+        "file_offset": 0,
+        "file_offset_hex": "0x0",
+        "device": "00:00",
+        "inode": "0",
+        "pathname": ""
+      },
+      {
+        "start": 137970548547584,
+        "end": 137970548551680,
+        "start_hex": "0x7d7bc5892000",
+        "end_hex": "0x7d7bc5893000",
+        "size": 4096,
+        "permissions": "r--p",
+        "file_offset": 0,
+        "file_offset_hex": "0x0",
+        "device": "08:30",
+        "inode": "41453",
+        "pathname": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2"
+      },
+      {
+        "start": 137970548551680,
+        "end": 137970548727808,
+        "start_hex": "0x7d7bc5893000",
+        "end_hex": "0x7d7bc58be000",
+        "size": 176128,
+        "permissions": "r-xp",
+        "file_offset": 4096,
+        "file_offset_hex": "0x1000",
+        "device": "08:30",
+        "inode": "41453",
+        "pathname": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2"
+      },
+      {
+        "start": 137970548727808,
+        "end": 137970548768768,
+        "start_hex": "0x7d7bc58be000",
+        "end_hex": "0x7d7bc58c8000",
+        "size": 40960,
+        "permissions": "r--p",
+        "file_offset": 180224,
+        "file_offset_hex": "0x2c000",
+        "device": "08:30",
+        "inode": "41453",
+        "pathname": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2"
+      },
+      {
+        "start": 137970548768768,
+        "end": 137970548776960,
+        "start_hex": "0x7d7bc58c8000",
+        "end_hex": "0x7d7bc58ca000",
+        "size": 8192,
+        "permissions": "r--p",
+        "file_offset": 221184,
+        "file_offset_hex": "0x36000",
+        "device": "08:30",
+        "inode": "41453",
+        "pathname": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2"
+      },
+      {
+        "start": 137970548776960,
+        "end": 137970548785152,
+        "start_hex": "0x7d7bc58ca000",
+        "end_hex": "0x7d7bc58cc000",
+        "size": 8192,
+        "permissions": "rw-p",
+        "file_offset": 229376,
+        "file_offset_hex": "0x38000",
+        "device": "08:30",
+        "inode": "41453",
+        "pathname": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2"
+      },
+      {
+        "start": 140737216266240,
+        "end": 140737216401408,
+        "start_hex": "0x7fffefc84000",
+        "end_hex": "0x7fffefca5000",
+        "size": 135168,
+        "permissions": "rw-p",
+        "file_offset": 0,
+        "file_offset_hex": "0x0",
+        "device": "00:00",
+        "inode": "0",
+        "pathname": "[stack]"
+      },
+      {
+        "start": 140737217101824,
+        "end": 140737217118208,
+        "start_hex": "0x7fffefd50000",
+        "end_hex": "0x7fffefd54000",
+        "size": 16384,
+        "permissions": "r--p",
+        "file_offset": 0,
+        "file_offset_hex": "0x0",
+        "device": "00:00",
+        "inode": "0",
+        "pathname": "[vvar]"
+      },
+      {
+        "start": 140737217118208,
+        "end": 140737217126400,
+        "start_hex": "0x7fffefd54000",
+        "end_hex": "0x7fffefd56000",
+        "size": 8192,
+        "permissions": "r-xp",
+        "file_offset": 0,
+        "file_offset_hex": "0x0",
+        "device": "00:00",
+        "inode": "0",
+        "pathname": "[vdso]"
+      }
+    ]
+  },
+  "runtime_snapshot_count": 1,
+  "runtime_snapshot_references": [
+    {
+      "pid": 24817,
+      "create_time": 1792812887.52
+    }
+  ],
+  "source_processes": [
+    {
+      "pid": 24817,
+      "name": "safe_test_process",
+      "create_time": 1792812887.52,
+      "command_line": "./safe_test_process",
+      "command_line_args": [
+        "./safe_test_process"
+      ],
+      "detected_at": "2026-10-24T03:35:41.540607+00:00",
+      "parent": {
+        "pid": 22706,
+        "ppid": 22703,
+        "name": "bash",
+        "create_time": 1792812733.86,
+        "executable": "/usr/bin/bash",
+        "command_line": "-bash",
+        "command_line_args": [
+          "-bash"
+        ]
+      },
+      "ancestor_chain": [
+        {
+          "pid": 22706,
+          "ppid": 22703,
+          "name": "bash",
+          "create_time": 1792812733.86,
+          "executable": "/usr/bin/bash",
+          "command_line": "-bash",
+          "command_line_args": [
+            "-bash"
+          ]
+        },
+        {
+          "pid": 22703,
+          "ppid": 22700,
+          "name": "Relay(22706)",
+          "create_time": 1792812733.85,
+          "executable": "/init",
+          "command_line": "/init",
+          "command_line_args": [
+            "/init"
+          ]
+        },
+        {
+          "pid": 22700,
+          "ppid": 2,
+          "name": "SessionLeader",
+          "create_time": 1792812733.85,
+          "executable": "/init",
+          "command_line": "/init",
+          "command_line_args": [
+            "/init"
+          ]
+        },
+        {
+          "pid": 2,
+          "ppid": 1,
+          "name": "init-systemd(Ub",
+          "create_time": 1792805933.51,
+          "executable": "/init",
+          "command_line": "/init",
+          "command_line_args": [
+            "/init"
+          ]
+        },
+        {
+          "pid": 1,
+          "ppid": 0,
+          "name": "systemd",
+          "create_time": 1792805933.47,
+          "executable": "/sbin/init",
+          "command_line": "/sbin/init",
+          "command_line_args": [
+            "/sbin/init"
+          ]
+        }
+      ]
+    }
+  ],
+  "pid_candidates": [
+    {
+      "pid": 24817,
+      "name": "safe_test_process",
+      "detected_create_time": 1792812887.52,
+      "alive": false,
+      "identity_matches": false,
+      "identity_status": "process_exited"
+    }
+  ],
+  "status": "captured_at_detection",
+  "reason": "process exited before deferred runtime collection",
+  "process_exited_before_runtime_collection": true
+}

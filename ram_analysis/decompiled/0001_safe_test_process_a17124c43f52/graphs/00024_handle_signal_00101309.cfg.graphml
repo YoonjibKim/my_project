@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="label" for="all" attr.name="label" attr.type="string"/>
+  <key id="kind" for="all" attr.name="kind" attr.type="string"/>
+  <graph id="cfg_00101309" edgedefault="directed">
+    <node id="00101309">
+      <data key="label">00101309</data>
+      <data key="kind">basic_block</data>
+    </node>
+  </graph>
+</graphml>

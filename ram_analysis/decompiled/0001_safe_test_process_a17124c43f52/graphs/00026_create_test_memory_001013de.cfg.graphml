@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="label" for="all" attr.name="label" attr.type="string"/>
+  <key id="kind" for="all" attr.name="kind" attr.type="string"/>
+  <graph id="cfg_001013de" edgedefault="directed">
+    <node id="001013de">
+      <data key="label">001013de</data>
+      <data key="kind">basic_block</data>
+    </node>
+    <node id="0010141b">
+      <data key="label">0010141b</data>
+      <data key="kind">basic_block</data>
+    </node>
+    <node id="00101425">
+      <data key="label">00101425</data>
+      <data key="kind">basic_block</data>
+    </node>
+    <node id="00101595">
+      <data key="label">00101595</data>
+      <data key="kind">basic_block</data>
+    </node>
+    <node id="001015c1">
+      <data key="label">001015c1</data>
+      <data key="kind">basic_block</data>
+    </node>
+    <node id="001015c5">
+      <data key="label">001015c5</data>
+      <data key="kind">basic_block</data>
+    </node>
+    <edge id="e0" source="001013de" target="00101180">
+      <data key="label">UNCONDITIONAL_CALL</data>
+      <data key="kind">UNCONDITIONAL_CALL</data>
+    </edge>
+    <edge id="e1" source="001013de" target="00101425">
+      <data key="label">CONDITIONAL_JUMP</data>
+      <data key="kind">CONDITIONAL_JUMP</data>
+    </edge>
+    <edge id="e2" source="001013de" target="0010141b">
+      <data key="label">FALL_THROUGH</data>
+      <data key="kind">FALL_THROUGH</data>
+    </edge>
+    <edge id="e3" source="0010141b" target="001015c5">
+      <data key="label">UNCONDITIONAL_JUMP</data>
+      <data key="kind">UNCONDITIONAL_JUMP</data>
+    </edge>
+    <edge id="e4" source="00101425" target="001011a0">
+      <data key="label">UNCONDITIONAL_CALL</data>
+      <data key="kind">UNCONDITIONAL_CALL</data>
+    </edge>
+    <edge id="e5" source="00101425" target="001011f0">
+      <data key="label">UNCONDITIONAL_CALL</data>
+      <data key="kind">UNCONDITIONAL_CALL</data>
+    </edge>
+    <edge id="e6" source="00101425" target="001015c1">
+      <data key="label">CONDITIONAL_JUMP</data>
+      <data key="kind">CONDITIONAL_JUMP</data>
+    </edge>
+    <edge id="e7" source="00101425" target="00101595">
+      <data key="label">FALL_THROUGH</data>
+      <data key="kind">FALL_THROUGH</data>
+    </edge>
+    <edge id="e8" source="00101595" target="00101130">
+      <data key="label">UNCONDITIONAL_CALL</data>
+      <data key="kind">UNCONDITIONAL_CALL</data>
+    </edge>
+    <edge id="e9" source="00101595" target="001011e0">
+      <data key="label">UNCONDITIONAL_CALL</data>
+      <data key="kind">UNCONDITIONAL_CALL</data>
+    </edge>
+    <edge id="e10" source="00101595" target="00101130">
+      <data key="label">UNCONDITIONAL_CALL</data>
+      <data key="kind">UNCONDITIONAL_CALL</data>
+    </edge>
+    <edge id="e11" source="00101595" target="001015c5">
+      <data key="label">UNCONDITIONAL_JUMP</data>
+      <data key="kind">UNCONDITIONAL_JUMP</data>
+    </edge>
+    <edge id="e12" source="001015c1" target="001015c5">
+      <data key="label">FALL_THROUGH</data>
+      <data key="kind">FALL_THROUGH</data>
+    </edge>
+  </graph>
+</graphml>

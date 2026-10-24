@@ -1,0 +1,1709 @@
+[
+  {
+    "address": "00100000",
+    "label": null,
+    "data_type": "/ELF/Elf64_Ehdr\npack(disabled)\nStructure Elf64_Ehdr {\n   0   byte   1   e_ident_magic_num   \"\"\n   1   string   3   e_ident_magic_str   \"\"\n   4   byte   1   e_ident_class   \"\"\n   5   byte   1   e_ident_data   \"\"\n   6   byte   1   e_ident_version   \"\"\n   7   byte   1   e_ident_osabi   \"\"\n   8   byte   1   e_ident_abiversion   \"\"\n   9   byte[7]   7   e_ident_pad   \"\"\n   16   word   2   e_type   \"\"\n   18   word   2   e_machine   \"\"\n   20   dword   4   e_version   \"\"\n   24   qword   8   e_entry   \"\"\n   32   qword   8   e_phoff   \"\"\n   40   qword   8   e_shoff   \"\"\n   48   dword   4   e_flags   \"\"\n   52   word   2   e_ehsize   \"\"\n   54   word   2   e_phentsize   \"\"\n   56   word   2   e_phnum   \"\"\n   58   word   2   e_shentsize   \"\"\n   60   word   2   e_shnum   \"\"\n   62   word   2   e_shstrndx   \"\"\n}\nLength: 64 Alignment: 1\n",
+    "length": 64,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "00100040",
+    "label": "Elf64_Phdr_ARRAY_00100040",
+    "data_type": "Elf64_Phdr[13]",
+    "length": 728,
+    "value": null,
+    "references": [
+      {
+        "from_address": "00100020",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00100050",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00100338",
+    "label": "NoteGnuProperty_4_00100338",
+    "data_type": "/ELF/NoteGnuProperty_4\npack(disabled)\nStructure NoteGnuProperty_4 {\n   0   dword   4   namesz   \"Length of name field\"\n   4   dword   4   descsz   \"Length of description field\"\n   8   dword   4   type   \"Vendor specific type\"\n   12   string   4   name   \"Vendor name\"\n}\nLength: 16 Alignment: 1\n",
+    "length": 16,
+    "value": null,
+    "references": [
+      {
+        "from_address": "001001d8",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00100248",
+        "type": "DATA"
+      },
+      {
+        "from_address": "_elfSectionHeaders::00000090",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00100348",
+    "label": null,
+    "data_type": "/NoteGnuPropertyElement_4\npack(disabled)\nStructure NoteGnuPropertyElement_4 {\n   0   dword   4   prType   \"\"\n   4   dword   4   prDatasz   \"\"\n   8   byte[4]   4   data   \"\"\n}\nLength: 12 Alignment: 1\n",
+    "length": 12,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "00100354",
+    "label": null,
+    "data_type": "/NoteGnuPropertyElement_4\npack(disabled)\nStructure NoteGnuPropertyElement_4 {\n   0   dword   4   prType   \"\"\n   4   dword   4   prDatasz   \"\"\n   8   byte[4]   4   data   \"\"\n}\nLength: 12 Alignment: 1\n",
+    "length": 12,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "00100368",
+    "label": "GnuBuildId_00100368",
+    "data_type": "/ELF/GnuBuildId\npack(disabled)\nStructure GnuBuildId {\n   0   dword   4   namesz   \"Length of name field\"\n   4   dword   4   descsz   \"Length of description field\"\n   8   dword   4   type   \"Vendor specific type\"\n   12   string   4   name   \"Vendor name\"\n   16   byte[20]   20   hash   \"\"\n}\nLength: 36 Alignment: 1\n",
+    "length": 36,
+    "value": null,
+    "references": [
+      {
+        "from_address": "00100210",
+        "type": "DATA"
+      },
+      {
+        "from_address": "_elfSectionHeaders::000000d0",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "0010038c",
+    "label": "__abi_tag",
+    "data_type": "/ELF/NoteAbiTag\npack(disabled)\nStructure NoteAbiTag {\n   0   dword   4   namesz   \"Length of name field\"\n   4   dword   4   descsz   \"Length of description field\"\n   8   dword   4   type   \"Vendor specific type\"\n   12   string   4   name   \"Vendor name\"\n   16   dword   4   abiType   \"0 == Linux\"\n   20   dword[3]   12   requiredKernelVersion   \"Major.minor.patch\"\n}\nLength: 32 Alignment: 1\n",
+    "length": 32,
+    "value": null,
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::00000110",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "001003b0",
+    "label": "__DT_GNU_HASH",
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x2",
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::00000150",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00103db8",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "001003b4",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x14",
+    "references": []
+  },
+  {
+    "address": "001003b8",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x1",
+    "references": []
+  },
+  {
+    "address": "001003bc",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x6",
+    "references": []
+  },
+  {
+    "address": "001003c0",
+    "label": null,
+    "data_type": "qword[1]",
+    "length": 8,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "001003c8",
+    "label": null,
+    "data_type": "dword[2]",
+    "length": 8,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "001003d0",
+    "label": null,
+    "data_type": "dword[2]",
+    "length": 8,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "001003d8",
+    "label": "__DT_SYMTAB",
+    "data_type": "Elf64_Sym[22]",
+    "length": 528,
+    "value": null,
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::00000190",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00103dd8",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00100702",
+    "label": "__DT_VERSYM",
+    "data_type": "word",
+    "length": 2,
+    "value": "0x0",
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::00000210",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00103ec8",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00100704",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x2",
+    "references": []
+  },
+  {
+    "address": "00100706",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "00100708",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x1",
+    "references": []
+  },
+  {
+    "address": "0010070a",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "0010070c",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "0010070e",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "00100710",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x4",
+    "references": []
+  },
+  {
+    "address": "00100712",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "00100714",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "00100716",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "00100718",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "0010071a",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x1",
+    "references": []
+  },
+  {
+    "address": "0010071c",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "0010071e",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "00100720",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "00100722",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "00100724",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "00100726",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x1",
+    "references": []
+  },
+  {
+    "address": "00100728",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "0010072a",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "0010072c",
+    "label": null,
+    "data_type": "word",
+    "length": 2,
+    "value": "0x3",
+    "references": []
+  },
+  {
+    "address": "00100770",
+    "label": "__DT_RELA",
+    "data_type": "Elf64_Rela[21]",
+    "length": 504,
+    "value": null,
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::00000290",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00103e58",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00100968",
+    "label": "__DT_JMPREL",
+    "data_type": "Elf64_Rela[15]",
+    "length": 360,
+    "value": null,
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::000002d0",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00103e48",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00102000",
+    "label": "_IO_stdin_used",
+    "data_type": "undefined4",
+    "length": 4,
+    "value": "0x20001",
+    "references": [
+      {
+        "from_address": "00100130",
+        "type": "DATA"
+      },
+      {
+        "from_address": "_elfSectionHeaders::00000490",
+        "type": "DATA"
+      },
+      {
+        "from_address": "Entry Point",
+        "type": "EXTERNAL"
+      }
+    ]
+  },
+  {
+    "address": "00102410",
+    "label": "__GNU_EH_FRAME_HDR",
+    "data_type": "/eh_frame_hdr\npack(disabled)\nStructure eh_frame_hdr {\n   0   byte   1   eh_frame_hdr_version   \"Exception Handler Frame Header Version\"\n   1   dwfenc   1   eh_frame_pointer_encoding   \"Exception Handler Frame Pointer Encoding\"\n   2   dwfenc   1   eh_frame_desc_entry_count_encoding   \"Encoding of # of Exception Handler FDEs\"\n   3   dwfenc   1   eh_frame_table_encoding   \"Exception Handler Table Encoding\"\n}\nLength: 4 Alignment: 1\n",
+    "length": 4,
+    "value": null,
+    "references": [
+      {
+        "from_address": "00100280",
+        "type": "DATA"
+      },
+      {
+        "from_address": "_elfSectionHeaders::000004d0",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00102414",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x5c",
+    "references": []
+  },
+  {
+    "address": "00102418",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xa",
+    "references": []
+  },
+  {
+    "address": "0010241c",
+    "label": null,
+    "data_type": "/fde_table_entry\npack(disabled)\nStructure fde_table_entry {\n   0   dword   4   initial_loc   \"Initial Location\"\n   4   dword   4   data_loc   \"Data location\"\n}\nLength: 8 Alignment: 1\n",
+    "length": 8,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "00102424",
+    "label": null,
+    "data_type": "/fde_table_entry\npack(disabled)\nStructure fde_table_entry {\n   0   dword   4   initial_loc   \"Initial Location\"\n   4   dword   4   data_loc   \"Data location\"\n}\nLength: 8 Alignment: 1\n",
+    "length": 8,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "0010242c",
+    "label": null,
+    "data_type": "/fde_table_entry\npack(disabled)\nStructure fde_table_entry {\n   0   dword   4   initial_loc   \"Initial Location\"\n   4   dword   4   data_loc   \"Data location\"\n}\nLength: 8 Alignment: 1\n",
+    "length": 8,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "00102434",
+    "label": null,
+    "data_type": "/fde_table_entry\npack(disabled)\nStructure fde_table_entry {\n   0   dword   4   initial_loc   \"Initial Location\"\n   4   dword   4   data_loc   \"Data location\"\n}\nLength: 8 Alignment: 1\n",
+    "length": 8,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "0010243c",
+    "label": null,
+    "data_type": "/fde_table_entry\npack(disabled)\nStructure fde_table_entry {\n   0   dword   4   initial_loc   \"Initial Location\"\n   4   dword   4   data_loc   \"Data location\"\n}\nLength: 8 Alignment: 1\n",
+    "length": 8,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "00102444",
+    "label": null,
+    "data_type": "/fde_table_entry\npack(disabled)\nStructure fde_table_entry {\n   0   dword   4   initial_loc   \"Initial Location\"\n   4   dword   4   data_loc   \"Data location\"\n}\nLength: 8 Alignment: 1\n",
+    "length": 8,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "0010244c",
+    "label": null,
+    "data_type": "/fde_table_entry\npack(disabled)\nStructure fde_table_entry {\n   0   dword   4   initial_loc   \"Initial Location\"\n   4   dword   4   data_loc   \"Data location\"\n}\nLength: 8 Alignment: 1\n",
+    "length": 8,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "00102454",
+    "label": null,
+    "data_type": "/fde_table_entry\npack(disabled)\nStructure fde_table_entry {\n   0   dword   4   initial_loc   \"Initial Location\"\n   4   dword   4   data_loc   \"Data location\"\n}\nLength: 8 Alignment: 1\n",
+    "length": 8,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "0010245c",
+    "label": null,
+    "data_type": "/fde_table_entry\npack(disabled)\nStructure fde_table_entry {\n   0   dword   4   initial_loc   \"Initial Location\"\n   4   dword   4   data_loc   \"Data location\"\n}\nLength: 8 Alignment: 1\n",
+    "length": 8,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "00102464",
+    "label": null,
+    "data_type": "/fde_table_entry\npack(disabled)\nStructure fde_table_entry {\n   0   dword   4   initial_loc   \"Initial Location\"\n   4   dword   4   data_loc   \"Data location\"\n}\nLength: 8 Alignment: 1\n",
+    "length": 8,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "00102470",
+    "label": "cie_00102470",
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x14",
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::00000510",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00102414",
+        "type": "DATA"
+      },
+      {
+        "from_address": "0010248c",
+        "type": "DATA"
+      },
+      {
+        "from_address": "001024a4",
+        "type": "DATA"
+      },
+      {
+        "from_address": "001024cc",
+        "type": "DATA"
+      },
+      {
+        "from_address": "001024e4",
+        "type": "DATA"
+      },
+      {
+        "from_address": "001024fc",
+        "type": "DATA"
+      },
+      {
+        "from_address": "0010251c",
+        "type": "DATA"
+      },
+      {
+        "from_address": "0010253c",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00102560",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00102580",
+        "type": "DATA"
+      },
+      {
+        "from_address": "001025a0",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00102474",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x0",
+    "references": []
+  },
+  {
+    "address": "00102478",
+    "label": null,
+    "data_type": "byte",
+    "length": 1,
+    "value": "0x1",
+    "references": []
+  },
+  {
+    "address": "0010247c",
+    "label": null,
+    "data_type": "uleb128",
+    "length": 1,
+    "value": "0x1",
+    "references": []
+  },
+  {
+    "address": "0010247d",
+    "label": null,
+    "data_type": "sleb128",
+    "length": 1,
+    "value": "-0x8",
+    "references": []
+  },
+  {
+    "address": "0010247e",
+    "label": null,
+    "data_type": "byte",
+    "length": 1,
+    "value": "0x10",
+    "references": []
+  },
+  {
+    "address": "0010247f",
+    "label": null,
+    "data_type": "uleb128",
+    "length": 1,
+    "value": "0x1",
+    "references": []
+  },
+  {
+    "address": "00102480",
+    "label": null,
+    "data_type": "dwfenc",
+    "length": 1,
+    "value": "DW_EH_PE_sdata4 | DW_EH_PE_pcrel",
+    "references": []
+  },
+  {
+    "address": "00102481",
+    "label": null,
+    "data_type": "byte[7]",
+    "length": 7,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "00102488",
+    "label": "fde_00102488",
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x14",
+    "references": [
+      {
+        "from_address": "00102438",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "0010248c",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x1c",
+    "references": []
+  },
+  {
+    "address": "00102490",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xffffed90",
+    "references": []
+  },
+  {
+    "address": "00102494",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x26",
+    "references": []
+  },
+  {
+    "address": "00102498",
+    "label": null,
+    "data_type": "uleb128",
+    "length": 1,
+    "value": "0x0",
+    "references": []
+  },
+  {
+    "address": "00102499",
+    "label": null,
+    "data_type": "byte[7]",
+    "length": 7,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "001024a0",
+    "label": "fde_001024a0",
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x24",
+    "references": [
+      {
+        "from_address": "00102420",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "001024a4",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x34",
+    "references": []
+  },
+  {
+    "address": "001024a8",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xffffeb78",
+    "references": []
+  },
+  {
+    "address": "001024ac",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x100",
+    "references": []
+  },
+  {
+    "address": "001024b0",
+    "label": null,
+    "data_type": "uleb128",
+    "length": 1,
+    "value": "0x0",
+    "references": []
+  },
+  {
+    "address": "001024b1",
+    "label": null,
+    "data_type": "byte[23]",
+    "length": 23,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "001024c8",
+    "label": "fde_001024c8",
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x14",
+    "references": [
+      {
+        "from_address": "00102428",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "001024cc",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x5c",
+    "references": []
+  },
+  {
+    "address": "001024d0",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xffffec50",
+    "references": []
+  },
+  {
+    "address": "001024d4",
+    "label": null,
+    "data_type": "qword",
+    "length": 8,
+    "value": "0x10",
+    "references": []
+  },
+  {
+    "address": "001024dc",
+    "label": null,
+    "data_type": "uleb128",
+    "length": 1,
+    "value": "0x0",
+    "references": []
+  },
+  {
+    "address": "001024dd",
+    "label": null,
+    "data_type": "byte[3]",
+    "length": 3,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "001024e0",
+    "label": "fde_001024e0",
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x14",
+    "references": [
+      {
+        "from_address": "00102430",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "001024e4",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x74",
+    "references": []
+  },
+  {
+    "address": "001024e8",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xffffec48",
+    "references": []
+  },
+  {
+    "address": "001024ec",
+    "label": null,
+    "data_type": "qword",
+    "length": 8,
+    "value": "0xf0",
+    "references": []
+  },
+  {
+    "address": "001024f4",
+    "label": null,
+    "data_type": "uleb128",
+    "length": 1,
+    "value": "0x0",
+    "references": []
+  },
+  {
+    "address": "001024f5",
+    "label": null,
+    "data_type": "byte[3]",
+    "length": 3,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "001024f8",
+    "label": "fde_001024f8",
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x1c",
+    "references": [
+      {
+        "from_address": "00102440",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "001024fc",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x8c",
+    "references": []
+  },
+  {
+    "address": "00102500",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xffffee09",
+    "references": []
+  },
+  {
+    "address": "00102504",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x18",
+    "references": []
+  },
+  {
+    "address": "00102508",
+    "label": null,
+    "data_type": "uleb128",
+    "length": 1,
+    "value": "0x0",
+    "references": []
+  },
+  {
+    "address": "00102509",
+    "label": null,
+    "data_type": "byte[15]",
+    "length": 15,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "00102518",
+    "label": "fde_00102518",
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x1c",
+    "references": [
+      {
+        "from_address": "00102448",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "0010251c",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xac",
+    "references": []
+  },
+  {
+    "address": "00102520",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xffffee01",
+    "references": []
+  },
+  {
+    "address": "00102524",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xbd",
+    "references": []
+  },
+  {
+    "address": "00102528",
+    "label": null,
+    "data_type": "uleb128",
+    "length": 1,
+    "value": "0x0",
+    "references": []
+  },
+  {
+    "address": "00102529",
+    "label": null,
+    "data_type": "byte[15]",
+    "length": 15,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "00102538",
+    "label": "fde_00102538",
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x20",
+    "references": [
+      {
+        "from_address": "00102450",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "0010253c",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xcc",
+    "references": []
+  },
+  {
+    "address": "00102540",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xffffee9e",
+    "references": []
+  },
+  {
+    "address": "00102544",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x1ed",
+    "references": []
+  },
+  {
+    "address": "00102548",
+    "label": null,
+    "data_type": "uleb128",
+    "length": 1,
+    "value": "0x0",
+    "references": []
+  },
+  {
+    "address": "00102549",
+    "label": null,
+    "data_type": "byte[19]",
+    "length": 19,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "0010255c",
+    "label": "fde_0010255c",
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x1c",
+    "references": [
+      {
+        "from_address": "00102458",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00102560",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xf0",
+    "references": []
+  },
+  {
+    "address": "00102564",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xfffff067",
+    "references": []
+  },
+  {
+    "address": "00102568",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x6b",
+    "references": []
+  },
+  {
+    "address": "0010256c",
+    "label": null,
+    "data_type": "uleb128",
+    "length": 1,
+    "value": "0x0",
+    "references": []
+  },
+  {
+    "address": "0010256d",
+    "label": null,
+    "data_type": "byte[15]",
+    "length": 15,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "0010257c",
+    "label": "fde_0010257c",
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x1c",
+    "references": [
+      {
+        "from_address": "00102460",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00102580",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x110",
+    "references": []
+  },
+  {
+    "address": "00102584",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xfffff0b2",
+    "references": []
+  },
+  {
+    "address": "00102588",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x72",
+    "references": []
+  },
+  {
+    "address": "0010258c",
+    "label": null,
+    "data_type": "uleb128",
+    "length": 1,
+    "value": "0x0",
+    "references": []
+  },
+  {
+    "address": "0010258d",
+    "label": null,
+    "data_type": "byte[15]",
+    "length": 15,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "0010259c",
+    "label": "fde_0010259c",
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x20",
+    "references": [
+      {
+        "from_address": "00102468",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "001025a0",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x130",
+    "references": []
+  },
+  {
+    "address": "001025a4",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0xfffff104",
+    "references": []
+  },
+  {
+    "address": "001025a8",
+    "label": null,
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x23a",
+    "references": []
+  },
+  {
+    "address": "001025ac",
+    "label": null,
+    "data_type": "uleb128",
+    "length": 1,
+    "value": "0x0",
+    "references": []
+  },
+  {
+    "address": "001025ad",
+    "label": null,
+    "data_type": "byte[19]",
+    "length": 19,
+    "value": null,
+    "references": []
+  },
+  {
+    "address": "001025c0",
+    "label": "__FRAME_END__",
+    "data_type": "dword",
+    "length": 4,
+    "value": "0x0",
+    "references": []
+  },
+  {
+    "address": "00103cd0",
+    "label": "__frame_dummy_init_array_entry",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00101300",
+    "references": [
+      {
+        "from_address": "00100168",
+        "type": "DATA"
+      },
+      {
+        "from_address": "001002f0",
+        "type": "DATA"
+      },
+      {
+        "from_address": "_elfSectionHeaders::00000550",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00103d78",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00103cd8",
+    "label": "__do_global_dtors_aux_fini_array_entry",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "001012c0",
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::00000590",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00103d98",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00103ce0",
+    "label": "test_markers",
+    "data_type": "char *[12]",
+    "length": 96,
+    "value": null,
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::000005d0",
+        "type": "DATA"
+      },
+      {
+        "from_address": "0010166f",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00101676",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00103d40",
+    "label": "_DYNAMIC",
+    "data_type": "Elf64_Dyn[27]",
+    "length": 432,
+    "value": null,
+    "references": [
+      {
+        "from_address": "001001a0",
+        "type": "DATA"
+      },
+      {
+        "from_address": "_elfSectionHeaders::00000610",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00103f30",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00103f30",
+    "label": "_GLOBAL_OFFSET_TABLE_",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00103d40",
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::00000650",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00103e18",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00103f38",
+    "label": "PTR_00103f38",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00000000",
+    "references": [
+      {
+        "from_address": "00101020",
+        "type": "READ"
+      }
+    ]
+  },
+  {
+    "address": "00103f40",
+    "label": "PTR_00103f40",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00000000",
+    "references": [
+      {
+        "from_address": "00101026",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103f48",
+    "label": "PTR___errno_location_00103f48",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105008",
+    "references": [
+      {
+        "from_address": "00101134",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103f50",
+    "label": "PTR_puts_00103f50",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105018",
+    "references": [
+      {
+        "from_address": "00101144",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103f58",
+    "label": "PTR_sigaction_00103f58",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105020",
+    "references": [
+      {
+        "from_address": "00101154",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103f60",
+    "label": "PTR_getpid_00103f60",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105028",
+    "references": [
+      {
+        "from_address": "00101164",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103f68",
+    "label": "PTR___stack_chk_fail_00103f68",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105030",
+    "references": [
+      {
+        "from_address": "00101174",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103f70",
+    "label": "PTR_mmap_00103f70",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105038",
+    "references": [
+      {
+        "from_address": "00101184",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103f78",
+    "label": "PTR_printf_00103f78",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105040",
+    "references": [
+      {
+        "from_address": "00101194",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103f80",
+    "label": "PTR_memset_00103f80",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105048",
+    "references": [
+      {
+        "from_address": "001011a4",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103f88",
+    "label": "PTR_sigemptyset_00103f88",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105050",
+    "references": [
+      {
+        "from_address": "001011b4",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103f90",
+    "label": "PTR_time_00103f90",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105060",
+    "references": [
+      {
+        "from_address": "001011c4",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103f98",
+    "label": "PTR_fflush_00103f98",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105068",
+    "references": [
+      {
+        "from_address": "001011d4",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103fa0",
+    "label": "PTR_munmap_00103fa0",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105070",
+    "references": [
+      {
+        "from_address": "001011e4",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103fa8",
+    "label": "PTR_mprotect_00103fa8",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105078",
+    "references": [
+      {
+        "from_address": "001011f4",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103fb0",
+    "label": "PTR_perror_00103fb0",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105080",
+    "references": [
+      {
+        "from_address": "00101204",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103fb8",
+    "label": "PTR_sleep_00103fb8",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105090",
+    "references": [
+      {
+        "from_address": "00101214",
+        "type": "INDIRECTION"
+      }
+    ]
+  },
+  {
+    "address": "00103fc0",
+    "label": "PTR___libc_start_main_00103fc0",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105000",
+    "references": [
+      {
+        "from_address": "0010123f",
+        "type": "READ"
+      }
+    ]
+  },
+  {
+    "address": "00103fc8",
+    "label": "PTR__ITM_deregisterTMCloneTable_00103fc8",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105010",
+    "references": [
+      {
+        "from_address": "00101263",
+        "type": "READ"
+      }
+    ]
+  },
+  {
+    "address": "00103fd0",
+    "label": "PTR___gmon_start___00103fd0",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105058",
+    "references": [
+      {
+        "from_address": "00101008",
+        "type": "READ"
+      }
+    ]
+  },
+  {
+    "address": "00103fd8",
+    "label": "PTR__ITM_registerTMCloneTable_00103fd8",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105088",
+    "references": [
+      {
+        "from_address": "001012a4",
+        "type": "READ"
+      }
+    ]
+  },
+  {
+    "address": "00103fe0",
+    "label": "PTR___cxa_finalize_00103fe0",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00105098",
+    "references": [
+      {
+        "from_address": "00101124",
+        "type": "INDIRECTION"
+      },
+      {
+        "from_address": "001012ce",
+        "type": "READ"
+      }
+    ]
+  },
+  {
+    "address": "00104008",
+    "label": "__dso_handle",
+    "data_type": "pointer",
+    "length": 8,
+    "value": "00104008",
+    "references": [
+      {
+        "from_address": "Entry Point",
+        "type": "EXTERNAL"
+      },
+      {
+        "from_address": "001012db",
+        "type": "READ"
+      },
+      {
+        "from_address": "00104008",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00104010",
+    "label": "stdout",
+    "data_type": "undefined8",
+    "length": 8,
+    "value": "0x0",
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::000006d0",
+        "type": "DATA"
+      },
+      {
+        "from_address": "Entry Point",
+        "type": "EXTERNAL"
+      },
+      {
+        "from_address": "001017b2",
+        "type": "READ"
+      },
+      {
+        "from_address": "00101822",
+        "type": "READ"
+      },
+      {
+        "from_address": "00101280",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00101287",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00101250",
+        "type": "DATA"
+      },
+      {
+        "from_address": "00101257",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "00104018",
+    "label": "completed.0",
+    "data_type": "undefined1",
+    "length": 1,
+    "value": "0x0",
+    "references": [
+      {
+        "from_address": "001012c4",
+        "type": "READ"
+      },
+      {
+        "from_address": "001012ec",
+        "type": "WRITE"
+      }
+    ]
+  },
+  {
+    "address": "0010401c",
+    "label": "stop_requested",
+    "data_type": "typedef sig_atomic_t __sig_atomic_t",
+    "length": 4,
+    "value": "0x0",
+    "references": [
+      {
+        "from_address": "00101314",
+        "type": "WRITE"
+      },
+      {
+        "from_address": "00101855",
+        "type": "READ"
+      },
+      {
+        "from_address": "00101863",
+        "type": "READ"
+      },
+      {
+        "from_address": "00101837",
+        "type": "READ"
+      }
+    ]
+  },
+  {
+    "address": ".symtab::00000000",
+    "label": "Elf64_Sym_ARRAY_.symtab__00000000",
+    "data_type": "Elf64_Sym[59]",
+    "length": 1416,
+    "value": null,
+    "references": [
+      {
+        "from_address": "_elfSectionHeaders::000008d0",
+        "type": "DATA"
+      }
+    ]
+  },
+  {
+    "address": "_elfSectionHeaders::00000000",
+    "label": "Elf64_Shdr_ARRAY__elfSectionHeaders__00000000",
+    "data_type": "Elf64_Shdr[38]",
+    "length": 2432,
+    "value": null,
+    "references": [
+      {
+        "from_address": "00100028",
+        "type": "DATA"
+      }
+    ]
+  }
+]

@@ -1,0 +1,802 @@
+{
+  "index": 1,
+  "name": "_init",
+  "entry": "00101000",
+  "kind": "internal_function",
+  "external": false,
+  "declared_external": false,
+  "implementation_external": false,
+  "external_thunk_record": false,
+  "internal_external_thunk": false,
+  "thunk_target_name": null,
+  "thunk_target_entry": null,
+  "memory_block": ".init",
+  "signature": "int __stdcall _init(EVP_PKEY_CTX * ctx)",
+  "is_thunk": false,
+  "pseudocode": "\nint _init(EVP_PKEY_CTX *ctx)\n\n{\n  int iVar1;\n  \n  iVar1 = 0;\n  if (PTR___gmon_start___00103fd0 != (undefined *)0x0) {\n    iVar1 = (*(code *)PTR___gmon_start___00103fd0)();\n  }\n  return iVar1;\n}\n\n",
+  "assembly": [
+    {
+      "address": "00101000",
+      "bytes": "f3 0f 1e fa",
+      "mnemonic": "ENDBR64",
+      "text": "ENDBR64",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101004",
+      "bytes": "48 83 ec 08",
+      "mnemonic": "SUB",
+      "text": "SUB RSP,0x8",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101008",
+      "bytes": "48 8b 05 c1 2f 00 00",
+      "mnemonic": "MOV",
+      "text": "MOV RAX,qword ptr [0x00103fd0]",
+      "flow_type": "FALL_THROUGH",
+      "references": [
+        {
+          "to": "00103fd0",
+          "type": "READ"
+        },
+        {
+          "to": "00105058",
+          "type": "DATA"
+        }
+      ]
+    },
+    {
+      "address": "0010100f",
+      "bytes": "48 85 c0",
+      "mnemonic": "TEST",
+      "text": "TEST RAX,RAX",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101012",
+      "bytes": "74 02",
+      "mnemonic": "JZ",
+      "text": "JZ 0x00101016",
+      "flow_type": "CONDITIONAL_JUMP",
+      "references": [
+        {
+          "to": "00101016",
+          "type": "CONDITIONAL_JUMP"
+        }
+      ]
+    },
+    {
+      "address": "00101014",
+      "bytes": "ff d0",
+      "mnemonic": "CALL",
+      "text": "CALL RAX",
+      "flow_type": "COMPUTED_CALL",
+      "references": [
+        {
+          "to": "00105058",
+          "type": "COMPUTED_CALL"
+        }
+      ]
+    },
+    {
+      "address": "00101016",
+      "bytes": "48 83 c4 08",
+      "mnemonic": "ADD",
+      "text": "ADD RSP,0x8",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "0010101a",
+      "bytes": "c3",
+      "mnemonic": "RET",
+      "text": "RET",
+      "flow_type": "TERMINATOR",
+      "references": []
+    }
+  ],
+  "pcode": [
+    {
+      "id": "op_0",
+      "sequence": "(ram, 0x10100f, 14, 0)",
+      "mnemonic": "INT_NOTEQUAL",
+      "output": {
+        "text": "(register, 0x206, 1)",
+        "address": "register:00000206",
+        "size": 1,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103fd0, 8)",
+          "address": "00103fd0",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR___gmon_start___00103fd0"
+        },
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_1",
+      "sequence": "(ram, 0x101012, 19, 2)",
+      "mnemonic": "CBRANCH",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(ram, 0x101016, 1)",
+          "address": "00101016",
+          "size": 1,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": null
+        },
+        {
+          "text": "(register, 0x206, 1)",
+          "address": "register:00000206",
+          "size": 1,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_2",
+      "sequence": "(ram, 0x101012, 70, 1)",
+      "mnemonic": "COPY",
+      "output": {
+        "text": "(unique, 0x1000001a, 4)",
+        "address": "unique:1000001a",
+        "size": 4,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "iVar1"
+      },
+      "inputs": [
+        {
+          "text": "(const, 0x0, 4)",
+          "address": "const:00000000",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        }
+      ]
+    },
+    {
+      "id": "op_3",
+      "sequence": "(ram, 0x101014, 23, 2)",
+      "mnemonic": "CALLIND",
+      "output": {
+        "text": "(register, 0x0, 4)",
+        "address": "register:00000000",
+        "size": 4,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "iVar1"
+      },
+      "inputs": [
+        {
+          "text": "(unique, 0x10000022, 8)",
+          "address": "unique:10000022",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_4",
+      "sequence": "(ram, 0x101014, 63, 1)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(ram, 0x103fd0, 8)",
+        "address": "00103fd0",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "PTR___gmon_start___00103fd0"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103fd0, 8)",
+          "address": "00103fd0",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR___gmon_start___00103fd0"
+        },
+        {
+          "text": "(const, 0x17, 4)",
+          "address": "const:00000017",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_5",
+      "sequence": "(ram, 0x101014, 74, 0)",
+      "mnemonic": "CAST",
+      "output": {
+        "text": "(unique, 0x10000022, 8)",
+        "address": "unique:10000022",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103fd0, 8)",
+          "address": "00103fd0",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR___gmon_start___00103fd0"
+        }
+      ]
+    },
+    {
+      "id": "op_6",
+      "sequence": "(ram, 0x101016, 65, 1)",
+      "mnemonic": "MULTIEQUAL",
+      "output": {
+        "text": "(ram, 0x103fd0, 8)",
+        "address": "00103fd0",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "PTR___gmon_start___00103fd0"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103fd0, 8)",
+          "address": "00103fd0",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR___gmon_start___00103fd0"
+        },
+        {
+          "text": "(ram, 0x103fd0, 8)",
+          "address": "00103fd0",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR___gmon_start___00103fd0"
+        }
+      ]
+    },
+    {
+      "id": "op_7",
+      "sequence": "(ram, 0x101016, 72, 0)",
+      "mnemonic": "MULTIEQUAL",
+      "output": {
+        "text": "(register, 0x0, 4)",
+        "address": "register:00000000",
+        "size": 4,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "iVar1"
+      },
+      "inputs": [
+        {
+          "text": "(unique, 0x1000001a, 4)",
+          "address": "unique:1000001a",
+          "size": 4,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "iVar1"
+        },
+        {
+          "text": "(register, 0x0, 4)",
+          "address": "register:00000000",
+          "size": 4,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "iVar1"
+        }
+      ]
+    },
+    {
+      "id": "op_8",
+      "sequence": "(ram, 0x10101a, 35, 4)",
+      "mnemonic": "RETURN",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        },
+        {
+          "text": "(register, 0x0, 4)",
+          "address": "register:00000000",
+          "size": 4,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_9",
+      "sequence": "(ram, 0x10101a, 41, 2)",
+      "mnemonic": "COPY",
+      "output": {
+        "text": "(register, 0x0, 4)",
+        "address": "register:00000000",
+        "size": 4,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(register, 0x0, 4)",
+          "address": "register:00000000",
+          "size": 4,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "iVar1"
+        }
+      ]
+    },
+    {
+      "id": "op_10",
+      "sequence": "(ram, 0x10101a, 64, 3)",
+      "mnemonic": "COPY",
+      "output": {
+        "text": "(ram, 0x103fd0, 8)",
+        "address": "00103fd0",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "PTR___gmon_start___00103fd0"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103fd0, 8)",
+          "address": "00103fd0",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR___gmon_start___00103fd0"
+        }
+      ]
+    }
+  ],
+  "cfg": {
+    "nodes": [
+      {
+        "id": "00101000",
+        "label": "00101000",
+        "kind": "basic_block",
+        "start": "00101000",
+        "end": "00101013",
+        "flow_type": "CONDITIONAL_JUMP"
+      },
+      {
+        "id": "00101014",
+        "label": "00101014",
+        "kind": "basic_block",
+        "start": "00101014",
+        "end": "00101015",
+        "flow_type": "COMPUTED_CALL"
+      },
+      {
+        "id": "00101016",
+        "label": "00101016",
+        "kind": "basic_block",
+        "start": "00101016",
+        "end": "0010101a",
+        "flow_type": "TERMINATOR"
+      }
+    ],
+    "edges": [
+      {
+        "source": "00101000",
+        "target": "00101016",
+        "kind": "CONDITIONAL_JUMP",
+        "label": "CONDITIONAL_JUMP"
+      },
+      {
+        "source": "00101000",
+        "target": "00101014",
+        "kind": "FALL_THROUGH",
+        "label": "FALL_THROUGH"
+      },
+      {
+        "source": "00101014",
+        "target": "00105058",
+        "kind": "COMPUTED_CALL",
+        "label": "COMPUTED_CALL"
+      },
+      {
+        "source": "00101014",
+        "target": "00101016",
+        "kind": "FALL_THROUGH",
+        "label": "FALL_THROUGH"
+      }
+    ]
+  },
+  "dfg": {
+    "nodes": [
+      {
+        "id": "op_0",
+        "label": "INT_NOTEQUAL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_099964eb209491dd",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_44ad86a53893f5f4",
+        "label": "PTR___gmon_start___00103fd0",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_88811e232378f02a",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_1",
+        "label": "CBRANCH",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_7a1bcc78f2a0fc4e",
+        "label": "(ram, 0x101016, 1)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_2",
+        "label": "COPY",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_e15e777d95a01155",
+        "label": "iVar1",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_5bd3595558fd8d2a",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_3",
+        "label": "CALLIND",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_83ca96423576297e",
+        "label": "iVar1",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_32496044867224eb",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_4",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_096d1584719ead95",
+        "label": "(const, 0x17, 4)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_5",
+        "label": "CAST",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_6",
+        "label": "MULTIEQUAL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_7",
+        "label": "MULTIEQUAL",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_8",
+        "label": "RETURN",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_9",
+        "label": "COPY",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_10",
+        "label": "COPY",
+        "kind": "pcode_op"
+      }
+    ],
+    "edges": [
+      {
+        "source": "op_0",
+        "target": "var_099964eb209491dd",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_44ad86a53893f5f4",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_7a1bcc78f2a0fc4e",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_099964eb209491dd",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_2",
+        "target": "var_e15e777d95a01155",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_5bd3595558fd8d2a",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_3",
+        "target": "var_83ca96423576297e",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_32496044867224eb",
+        "target": "op_3",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_4",
+        "target": "var_44ad86a53893f5f4",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_44ad86a53893f5f4",
+        "target": "op_4",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_096d1584719ead95",
+        "target": "op_4",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_5",
+        "target": "var_32496044867224eb",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_44ad86a53893f5f4",
+        "target": "op_5",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_6",
+        "target": "var_44ad86a53893f5f4",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_44ad86a53893f5f4",
+        "target": "op_6",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_44ad86a53893f5f4",
+        "target": "op_6",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_7",
+        "target": "var_83ca96423576297e",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_e15e777d95a01155",
+        "target": "op_7",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_83ca96423576297e",
+        "target": "op_7",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_8",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_83ca96423576297e",
+        "target": "op_8",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_9",
+        "target": "var_83ca96423576297e",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_83ca96423576297e",
+        "target": "op_9",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_10",
+        "target": "var_44ad86a53893f5f4",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_44ad86a53893f5f4",
+        "target": "op_10",
+        "kind": "uses",
+        "label": "uses"
+      }
+    ]
+  },
+  "call_graph": {
+    "callers": [],
+    "callees": [
+      {
+        "name": "__gmon_start__",
+        "entry": "00105058",
+        "kind": "external_symbol",
+        "external": true,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": true,
+        "entry_in_external_space": false,
+        "external_thunk_record": true,
+        "internal_external_thunk": false,
+        "implementation_external": true,
+        "thunk": true,
+        "thunk_target_name": "__gmon_start__",
+        "thunk_target_entry": "EXTERNAL:00000014",
+        "memory_block": "EXTERNAL"
+      }
+    ]
+  },
+  "string_references": [],
+  "graph_files": {
+    "cfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00001__init_00101000.cfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00001__init_00101000.cfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00001__init_00101000.cfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00001__init_00101000.cfg.svg",
+      "rendered": true,
+      "error": null
+    },
+    "dfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00001__init_00101000.dfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00001__init_00101000.dfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00001__init_00101000.dfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00001__init_00101000.dfg.svg",
+      "rendered": true,
+      "error": null
+    }
+  },
+  "success": true,
+  "error": null
+}

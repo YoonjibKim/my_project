@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="label" for="all" attr.name="label" attr.type="string"/>
+  <key id="kind" for="all" attr.name="kind" attr.type="string"/>
+  <graph id="cfg_00101636" edgedefault="directed">
+    <node id="00101636">
+      <data key="label">00101636</data>
+      <data key="kind">basic_block</data>
+    </node>
+    <node id="00101663">
+      <data key="label">00101663</data>
+      <data key="kind">basic_block</data>
+    </node>
+    <node id="0010169a">
+      <data key="label">0010169a</data>
+      <data key="kind">basic_block</data>
+    </node>
+    <node id="001016a4">
+      <data key="label">001016a4</data>
+      <data key="kind">basic_block</data>
+    </node>
+    <edge id="e0" source="00101636" target="00101140">
+      <data key="label">UNCONDITIONAL_CALL</data>
+      <data key="kind">UNCONDITIONAL_CALL</data>
+    </edge>
+    <edge id="e1" source="00101636" target="0010169a">
+      <data key="label">UNCONDITIONAL_JUMP</data>
+      <data key="kind">UNCONDITIONAL_JUMP</data>
+    </edge>
+    <edge id="e2" source="00101663" target="00101190">
+      <data key="label">UNCONDITIONAL_CALL</data>
+      <data key="kind">UNCONDITIONAL_CALL</data>
+    </edge>
+    <edge id="e3" source="00101663" target="0010169a">
+      <data key="label">FALL_THROUGH</data>
+      <data key="kind">FALL_THROUGH</data>
+    </edge>
+    <edge id="e4" source="0010169a" target="00101663">
+      <data key="label">CONDITIONAL_JUMP</data>
+      <data key="kind">CONDITIONAL_JUMP</data>
+    </edge>
+    <edge id="e5" source="0010169a" target="001016a4">
+      <data key="label">FALL_THROUGH</data>
+      <data key="kind">FALL_THROUGH</data>
+    </edge>
+  </graph>
+</graphml>

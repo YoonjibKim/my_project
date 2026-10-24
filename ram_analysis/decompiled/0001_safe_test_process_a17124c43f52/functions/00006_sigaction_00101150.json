@@ -1,0 +1,401 @@
+{
+  "index": 6,
+  "name": "sigaction",
+  "entry": "00101150",
+  "kind": "plt_stub",
+  "external": true,
+  "declared_external": false,
+  "implementation_external": true,
+  "external_thunk_record": false,
+  "internal_external_thunk": false,
+  "thunk_target_name": "sigaction",
+  "thunk_target_entry": "EXTERNAL:00000004",
+  "memory_block": ".plt.sec",
+  "signature": "int sigaction(int __sig, sigaction * __act, sigaction * __oact)",
+  "is_thunk": true,
+  "pseudocode": "\n/* WARNING: Unknown calling convention -- yet parameter storage is locked */\n\nint sigaction(int __sig,sigaction *__act,sigaction *__oact)\n\n{\n  int iVar1;\n  \n  iVar1 = (*(code *)PTR_sigaction_00103f58)();\n  return iVar1;\n}\n\n",
+  "assembly": [
+    {
+      "address": "00101150",
+      "bytes": "f3 0f 1e fa",
+      "mnemonic": "ENDBR64",
+      "text": "ENDBR64",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101154",
+      "bytes": "ff 25 fe 2d 00 00",
+      "mnemonic": "JMP",
+      "text": "JMP qword ptr [0x00103f58]",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "references": [
+        {
+          "to": "00103f58",
+          "type": "INDIRECTION"
+        },
+        {
+          "to": "00105020",
+          "type": "COMPUTED_CALL_TERMINATOR"
+        }
+      ]
+    }
+  ],
+  "pcode": [
+    {
+      "id": "op_0",
+      "sequence": "(ram, 0x101154, 0, 2)",
+      "mnemonic": "CALLIND",
+      "output": {
+        "text": "(register, 0x0, 4)",
+        "address": "register:00000000",
+        "size": 4,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "iVar1"
+      },
+      "inputs": [
+        {
+          "text": "(unique, 0x10000009, 8)",
+          "address": "unique:10000009",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_1",
+      "sequence": "(ram, 0x101154, 1, 4)",
+      "mnemonic": "RETURN",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        },
+        {
+          "text": "(register, 0x0, 4)",
+          "address": "register:00000000",
+          "size": 4,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "iVar1"
+        }
+      ]
+    },
+    {
+      "id": "op_2",
+      "sequence": "(ram, 0x101154, 11, 1)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(ram, 0x103f58, 8)",
+        "address": "00103f58",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "PTR_sigaction_00103f58"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103f58, 8)",
+          "address": "00103f58",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR_sigaction_00103f58"
+        },
+        {
+          "text": "(const, 0x0, 4)",
+          "address": "const:00000000",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_3",
+      "sequence": "(ram, 0x101154, 12, 3)",
+      "mnemonic": "COPY",
+      "output": {
+        "text": "(ram, 0x103f58, 8)",
+        "address": "00103f58",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "PTR_sigaction_00103f58"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103f58, 8)",
+          "address": "00103f58",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR_sigaction_00103f58"
+        }
+      ]
+    },
+    {
+      "id": "op_4",
+      "sequence": "(ram, 0x101154, 13, 0)",
+      "mnemonic": "CAST",
+      "output": {
+        "text": "(unique, 0x10000009, 8)",
+        "address": "unique:10000009",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103f58, 8)",
+          "address": "00103f58",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR_sigaction_00103f58"
+        }
+      ]
+    }
+  ],
+  "cfg": {
+    "nodes": [
+      {
+        "id": "00101150",
+        "label": "00101150",
+        "kind": "basic_block",
+        "start": "00101150",
+        "end": "00101159",
+        "flow_type": "COMPUTED_CALL_TERMINATOR"
+      }
+    ],
+    "edges": [
+      {
+        "source": "00101150",
+        "target": "00105020",
+        "kind": "COMPUTED_CALL",
+        "label": "COMPUTED_CALL"
+      },
+      {
+        "source": "00101150",
+        "target": "00105020",
+        "kind": "COMPUTED_CALL_TERMINATOR",
+        "label": "COMPUTED_CALL_TERMINATOR"
+      }
+    ]
+  },
+  "dfg": {
+    "nodes": [
+      {
+        "id": "op_0",
+        "label": "CALLIND",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_83ca96423576297e",
+        "label": "iVar1",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_d9653fba090902ca",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_1",
+        "label": "RETURN",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_88811e232378f02a",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_2",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_1856bb5da397de54",
+        "label": "PTR_sigaction_00103f58",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_5bd3595558fd8d2a",
+        "label": "(const, 0x0, 4)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_3",
+        "label": "COPY",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_4",
+        "label": "CAST",
+        "kind": "pcode_op"
+      }
+    ],
+    "edges": [
+      {
+        "source": "op_0",
+        "target": "var_83ca96423576297e",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_d9653fba090902ca",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_83ca96423576297e",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_2",
+        "target": "var_1856bb5da397de54",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_1856bb5da397de54",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_5bd3595558fd8d2a",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_3",
+        "target": "var_1856bb5da397de54",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_1856bb5da397de54",
+        "target": "op_3",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_4",
+        "target": "var_d9653fba090902ca",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_1856bb5da397de54",
+        "target": "op_4",
+        "kind": "uses",
+        "label": "uses"
+      }
+    ]
+  },
+  "call_graph": {
+    "callers": [
+      {
+        "name": "install_signal_handlers",
+        "entry": "00101321",
+        "kind": "internal_function",
+        "external": false,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": false,
+        "entry_in_external_space": false,
+        "external_thunk_record": false,
+        "internal_external_thunk": false,
+        "implementation_external": false,
+        "thunk": false,
+        "thunk_target_name": null,
+        "thunk_target_entry": null,
+        "memory_block": ".text"
+      }
+    ],
+    "callees": [
+      {
+        "name": "sigaction",
+        "entry": "00105020",
+        "kind": "external_symbol",
+        "external": true,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": true,
+        "entry_in_external_space": false,
+        "external_thunk_record": true,
+        "internal_external_thunk": false,
+        "implementation_external": true,
+        "thunk": true,
+        "thunk_target_name": "sigaction",
+        "thunk_target_entry": "EXTERNAL:00000004",
+        "memory_block": "EXTERNAL"
+      }
+    ]
+  },
+  "string_references": [],
+  "graph_files": {
+    "cfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00006_sigaction_00101150.cfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00006_sigaction_00101150.cfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00006_sigaction_00101150.cfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00006_sigaction_00101150.cfg.svg",
+      "rendered": true,
+      "error": null
+    },
+    "dfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00006_sigaction_00101150.dfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00006_sigaction_00101150.dfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00006_sigaction_00101150.dfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00006_sigaction_00101150.dfg.svg",
+      "rendered": true,
+      "error": null
+    }
+  },
+  "success": true,
+  "error": null
+}

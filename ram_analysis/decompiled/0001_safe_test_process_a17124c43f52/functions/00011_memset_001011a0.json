@@ -1,0 +1,467 @@
+{
+  "index": 11,
+  "name": "memset",
+  "entry": "001011a0",
+  "kind": "plt_stub",
+  "external": true,
+  "declared_external": false,
+  "implementation_external": true,
+  "external_thunk_record": false,
+  "internal_external_thunk": false,
+  "thunk_target_name": "memset",
+  "thunk_target_entry": "EXTERNAL:00000009",
+  "memory_block": ".plt.sec",
+  "signature": "void * memset(void * __s, int __c, size_t __n)",
+  "is_thunk": true,
+  "pseudocode": "\n/* WARNING: Unknown calling convention -- yet parameter storage is locked */\n\nvoid * memset(void *__s,int __c,size_t __n)\n\n{\n  void *pvVar1;\n  \n  pvVar1 = (void *)(*(code *)PTR_memset_00103f80)();\n  return pvVar1;\n}\n\n",
+  "assembly": [
+    {
+      "address": "001011a0",
+      "bytes": "f3 0f 1e fa",
+      "mnemonic": "ENDBR64",
+      "text": "ENDBR64",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "001011a4",
+      "bytes": "ff 25 d6 2d 00 00",
+      "mnemonic": "JMP",
+      "text": "JMP qword ptr [0x00103f80]",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "references": [
+        {
+          "to": "00103f80",
+          "type": "INDIRECTION"
+        },
+        {
+          "to": "00105048",
+          "type": "COMPUTED_CALL_TERMINATOR"
+        }
+      ]
+    }
+  ],
+  "pcode": [
+    {
+      "id": "op_0",
+      "sequence": "(ram, 0x1011a4, 0, 2)",
+      "mnemonic": "CALLIND",
+      "output": {
+        "text": "(unique, 0x10000011, 8)",
+        "address": "unique:10000011",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(unique, 0x10000009, 8)",
+          "address": "unique:10000009",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_1",
+      "sequence": "(ram, 0x1011a4, 1, 5)",
+      "mnemonic": "RETURN",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        },
+        {
+          "text": "(register, 0x0, 8)",
+          "address": "register:00000000",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "pvVar1"
+        }
+      ]
+    },
+    {
+      "id": "op_2",
+      "sequence": "(ram, 0x1011a4, 11, 1)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(ram, 0x103f80, 8)",
+        "address": "00103f80",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "PTR_memset_00103f80"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103f80, 8)",
+          "address": "00103f80",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR_memset_00103f80"
+        },
+        {
+          "text": "(const, 0x0, 4)",
+          "address": "const:00000000",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_3",
+      "sequence": "(ram, 0x1011a4, 12, 4)",
+      "mnemonic": "COPY",
+      "output": {
+        "text": "(ram, 0x103f80, 8)",
+        "address": "00103f80",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "PTR_memset_00103f80"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103f80, 8)",
+          "address": "00103f80",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR_memset_00103f80"
+        }
+      ]
+    },
+    {
+      "id": "op_4",
+      "sequence": "(ram, 0x1011a4, 13, 0)",
+      "mnemonic": "CAST",
+      "output": {
+        "text": "(unique, 0x10000009, 8)",
+        "address": "unique:10000009",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103f80, 8)",
+          "address": "00103f80",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR_memset_00103f80"
+        }
+      ]
+    },
+    {
+      "id": "op_5",
+      "sequence": "(ram, 0x1011a4, 14, 3)",
+      "mnemonic": "CAST",
+      "output": {
+        "text": "(register, 0x0, 8)",
+        "address": "register:00000000",
+        "size": 8,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "pvVar1"
+      },
+      "inputs": [
+        {
+          "text": "(unique, 0x10000011, 8)",
+          "address": "unique:10000011",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    }
+  ],
+  "cfg": {
+    "nodes": [
+      {
+        "id": "001011a0",
+        "label": "001011a0",
+        "kind": "basic_block",
+        "start": "001011a0",
+        "end": "001011a9",
+        "flow_type": "COMPUTED_CALL_TERMINATOR"
+      }
+    ],
+    "edges": [
+      {
+        "source": "001011a0",
+        "target": "00105048",
+        "kind": "COMPUTED_CALL",
+        "label": "COMPUTED_CALL"
+      },
+      {
+        "source": "001011a0",
+        "target": "00105048",
+        "kind": "COMPUTED_CALL_TERMINATOR",
+        "label": "COMPUTED_CALL_TERMINATOR"
+      }
+    ]
+  },
+  "dfg": {
+    "nodes": [
+      {
+        "id": "op_0",
+        "label": "CALLIND",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_1bd044a8c31b3d63",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_d9653fba090902ca",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_1",
+        "label": "RETURN",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_88811e232378f02a",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_1cc3985f02ba7623",
+        "label": "pvVar1",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_2",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_ec70c29c4f8d2d20",
+        "label": "PTR_memset_00103f80",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_5bd3595558fd8d2a",
+        "label": "(const, 0x0, 4)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_3",
+        "label": "COPY",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_4",
+        "label": "CAST",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_5",
+        "label": "CAST",
+        "kind": "pcode_op"
+      }
+    ],
+    "edges": [
+      {
+        "source": "op_0",
+        "target": "var_1bd044a8c31b3d63",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_d9653fba090902ca",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_1cc3985f02ba7623",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_2",
+        "target": "var_ec70c29c4f8d2d20",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_ec70c29c4f8d2d20",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_5bd3595558fd8d2a",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_3",
+        "target": "var_ec70c29c4f8d2d20",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_ec70c29c4f8d2d20",
+        "target": "op_3",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_4",
+        "target": "var_d9653fba090902ca",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_ec70c29c4f8d2d20",
+        "target": "op_4",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_5",
+        "target": "var_1cc3985f02ba7623",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_1bd044a8c31b3d63",
+        "target": "op_5",
+        "kind": "uses",
+        "label": "uses"
+      }
+    ]
+  },
+  "call_graph": {
+    "callers": [
+      {
+        "name": "install_signal_handlers",
+        "entry": "00101321",
+        "kind": "internal_function",
+        "external": false,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": false,
+        "entry_in_external_space": false,
+        "external_thunk_record": false,
+        "internal_external_thunk": false,
+        "implementation_external": false,
+        "thunk": false,
+        "thunk_target_name": null,
+        "thunk_target_entry": null,
+        "memory_block": ".text"
+      },
+      {
+        "name": "create_test_memory",
+        "entry": "001013de",
+        "kind": "internal_function",
+        "external": false,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": false,
+        "entry_in_external_space": false,
+        "external_thunk_record": false,
+        "internal_external_thunk": false,
+        "implementation_external": false,
+        "thunk": false,
+        "thunk_target_name": null,
+        "thunk_target_entry": null,
+        "memory_block": ".text"
+      }
+    ],
+    "callees": [
+      {
+        "name": "memset",
+        "entry": "00105048",
+        "kind": "external_symbol",
+        "external": true,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": true,
+        "entry_in_external_space": false,
+        "external_thunk_record": true,
+        "internal_external_thunk": false,
+        "implementation_external": true,
+        "thunk": true,
+        "thunk_target_name": "memset",
+        "thunk_target_entry": "EXTERNAL:00000009",
+        "memory_block": "EXTERNAL"
+      }
+    ]
+  },
+  "string_references": [],
+  "graph_files": {
+    "cfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00011_memset_001011a0.cfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00011_memset_001011a0.cfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00011_memset_001011a0.cfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00011_memset_001011a0.cfg.svg",
+      "rendered": true,
+      "error": null
+    },
+    "dfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00011_memset_001011a0.dfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00011_memset_001011a0.dfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00011_memset_001011a0.dfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00011_memset_001011a0.dfg.svg",
+      "rendered": true,
+      "error": null
+    }
+  },
+  "success": true,
+  "error": null
+}

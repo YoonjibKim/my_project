@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="label" for="all" attr.name="label" attr.type="string"/>
+  <key id="kind" for="all" attr.name="kind" attr.type="string"/>
+  <graph id="cfg_001011d0" edgedefault="directed">
+    <node id="001011d0">
+      <data key="label">001011d0</data>
+      <data key="kind">basic_block</data>
+    </node>
+    <edge id="e0" source="001011d0" target="00105068">
+      <data key="label">COMPUTED_CALL</data>
+      <data key="kind">COMPUTED_CALL</data>
+    </edge>
+    <edge id="e1" source="001011d0" target="00105068">
+      <data key="label">COMPUTED_CALL_TERMINATOR</data>
+      <data key="kind">COMPUTED_CALL_TERMINATOR</data>
+    </edge>
+  </graph>
+</graphml>

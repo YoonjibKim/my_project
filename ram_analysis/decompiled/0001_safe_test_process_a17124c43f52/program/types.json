@@ -1,0 +1,1234 @@
+[
+  {
+    "name": "__clock_t",
+    "path": "/DWARF/__clock_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Signed Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "__clock_t",
+    "path": "/types.h/__clock_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Signed Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "__off64_t",
+    "path": "/DWARF/__off64_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Signed Quad-Word (sdq, 8-bytes)"
+  },
+  {
+    "name": "__off64_t",
+    "path": "/types.h/__off64_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Signed Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "__off_t",
+    "path": "/DWARF/__off_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Signed Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "__off_t",
+    "path": "/types.h/__off_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Signed Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "__pid_t",
+    "path": "/DWARF/__pid_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 4,
+    "description": "Signed Integer (compiler-specific size)"
+  },
+  {
+    "name": "__pid_t",
+    "path": "/types.h/__pid_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 4,
+    "description": "Signed Integer (compiler-specific size)"
+  },
+  {
+    "name": "__sig_atomic_t",
+    "path": "/DWARF/__sig_atomic_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 4,
+    "description": "Signed Integer (compiler-specific size)"
+  },
+  {
+    "name": "__sighandler_t",
+    "path": "/DWARF/signal.h/__sighandler_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "pointer to _func_void_int"
+  },
+  {
+    "name": "__sighandler_t",
+    "path": "/signal.h/__sighandler_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "pointer to __sighandler_t"
+  },
+  {
+    "name": "__sighandler_t",
+    "path": "/signal.h/functions/__sighandler_t",
+    "class": "ghidra.program.database.data.FunctionDefinitionDB",
+    "length": -1,
+    "description": "Function Signature Data Type"
+  },
+  {
+    "name": "__sighandler_t *",
+    "path": "/signal.h/functions/__sighandler_t *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to __sighandler_t"
+  },
+  {
+    "name": "__sigset_t",
+    "path": "/DWARF/__sigset_t.h/__sigset_t",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 128,
+    "description": ""
+  },
+  {
+    "name": "__sigset_t",
+    "path": "/sigset.h/__sigset_t",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 128,
+    "description": ""
+  },
+  {
+    "name": "__sigval_t",
+    "path": "/DWARF/__sigval_t.h/__sigval_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": ""
+  },
+  {
+    "name": "__time_t",
+    "path": "/DWARF/__time_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Signed Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "__time_t",
+    "path": "/types.h/__time_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Signed Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "__uid_t",
+    "path": "/DWARF/__uid_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 4,
+    "description": "Unsigned Integer (compiler-specific size)"
+  },
+  {
+    "name": "__uid_t",
+    "path": "/types.h/__uid_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 4,
+    "description": "Unsigned Integer (compiler-specific size)"
+  },
+  {
+    "name": "__uint32_t",
+    "path": "/DWARF/__uint32_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 4,
+    "description": "Unsigned Double-Word (ddw, 4-bytes)"
+  },
+  {
+    "name": "__uint64_t",
+    "path": "/DWARF/__uint64_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Unsigned Quad-Word (dq, 8-bytes)"
+  },
+  {
+    "name": "_func_5326",
+    "path": "/sigaction.h/functions/_func_5326",
+    "class": "ghidra.program.database.data.FunctionDefinitionDB",
+    "length": -1,
+    "description": "Function Signature Data Type"
+  },
+  {
+    "name": "_func_5326 *",
+    "path": "/sigaction.h/functions/_func_5326 *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to _func_5326"
+  },
+  {
+    "name": "_func_5327",
+    "path": "/sigaction.h/functions/_func_5327",
+    "class": "ghidra.program.database.data.FunctionDefinitionDB",
+    "length": -1,
+    "description": "Function Signature Data Type"
+  },
+  {
+    "name": "_func_5327 *",
+    "path": "/sigaction.h/functions/_func_5327 *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to _func_5327"
+  },
+  {
+    "name": "_func_void",
+    "path": "/DWARF/_UNCATEGORIZED_/_func_void",
+    "class": "ghidra.program.database.data.FunctionDefinitionDB",
+    "length": -1,
+    "description": "Function Signature Data Type"
+  },
+  {
+    "name": "_func_void *",
+    "path": "/DWARF/_UNCATEGORIZED_/_func_void *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to _func_void"
+  },
+  {
+    "name": "_func_void_int",
+    "path": "/DWARF/_UNCATEGORIZED_/_func_void_int",
+    "class": "ghidra.program.database.data.FunctionDefinitionDB",
+    "length": -1,
+    "description": "Function Signature Data Type"
+  },
+  {
+    "name": "_func_void_int *",
+    "path": "/DWARF/_UNCATEGORIZED_/_func_void_int *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to _func_void_int"
+  },
+  {
+    "name": "_func_void_int_siginfo_t_ptr_void_ptr",
+    "path": "/DWARF/_UNCATEGORIZED_/_func_void_int_siginfo_t_ptr_void_ptr",
+    "class": "ghidra.program.database.data.FunctionDefinitionDB",
+    "length": -1,
+    "description": "Function Signature Data Type"
+  },
+  {
+    "name": "_func_void_int_siginfo_t_ptr_void_ptr *",
+    "path": "/DWARF/_UNCATEGORIZED_/_func_void_int_siginfo_t_ptr_void_ptr *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to _func_void_int_siginfo_t_ptr_void_ptr"
+  },
+  {
+    "name": "_IO_codecvt",
+    "path": "/DWARF/_UNCATEGORIZED_/_IO_codecvt",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 1,
+    "description": ""
+  },
+  {
+    "name": "_IO_codecvt *",
+    "path": "/DWARF/_UNCATEGORIZED_/_IO_codecvt *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to _IO_codecvt"
+  },
+  {
+    "name": "_IO_FILE",
+    "path": "/DWARF/struct_FILE.h/_IO_FILE",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 216,
+    "description": ""
+  },
+  {
+    "name": "_IO_FILE",
+    "path": "/stdio.h/_IO_FILE",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 216,
+    "description": ""
+  },
+  {
+    "name": "_IO_FILE *",
+    "path": "/DWARF/struct_FILE.h/_IO_FILE *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to _IO_FILE"
+  },
+  {
+    "name": "_IO_FILE *",
+    "path": "/stdio.h/_IO_FILE *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to _IO_FILE"
+  },
+  {
+    "name": "_IO_lock_t",
+    "path": "/DWARF/struct_FILE.h/_IO_lock_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 0,
+    "description": "void datatype"
+  },
+  {
+    "name": "_IO_lock_t",
+    "path": "/libio.h/_IO_lock_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 0,
+    "description": "void datatype"
+  },
+  {
+    "name": "_IO_lock_t *",
+    "path": "/DWARF/struct_FILE.h/_IO_lock_t *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to _IO_lock_t"
+  },
+  {
+    "name": "_IO_lock_t *",
+    "path": "/libio.h/_IO_lock_t *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to _IO_lock_t"
+  },
+  {
+    "name": "_IO_marker",
+    "path": "/DWARF/_UNCATEGORIZED_/_IO_marker",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 1,
+    "description": ""
+  },
+  {
+    "name": "_IO_marker",
+    "path": "/libio.h/_IO_marker",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 24,
+    "description": ""
+  },
+  {
+    "name": "_IO_marker *",
+    "path": "/DWARF/_UNCATEGORIZED_/_IO_marker *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to _IO_marker"
+  },
+  {
+    "name": "_IO_marker *",
+    "path": "/libio.h/_IO_marker *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to _IO_marker"
+  },
+  {
+    "name": "_IO_wide_data",
+    "path": "/DWARF/_UNCATEGORIZED_/_IO_wide_data",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 1,
+    "description": ""
+  },
+  {
+    "name": "_IO_wide_data *",
+    "path": "/DWARF/_UNCATEGORIZED_/_IO_wide_data *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to _IO_wide_data"
+  },
+  {
+    "name": "_struct_1442",
+    "path": "/siginfo.h/_struct_1442",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 8,
+    "description": ""
+  },
+  {
+    "name": "_struct_1443",
+    "path": "/siginfo.h/_struct_1443",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 16,
+    "description": ""
+  },
+  {
+    "name": "_struct_1444",
+    "path": "/siginfo.h/_struct_1444",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 16,
+    "description": ""
+  },
+  {
+    "name": "_struct_1445",
+    "path": "/siginfo.h/_struct_1445",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 32,
+    "description": ""
+  },
+  {
+    "name": "_struct_1446",
+    "path": "/siginfo.h/_struct_1446",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 8,
+    "description": ""
+  },
+  {
+    "name": "_struct_1447",
+    "path": "/siginfo.h/_struct_1447",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 16,
+    "description": ""
+  },
+  {
+    "name": "_union_1441",
+    "path": "/siginfo.h/_union_1441",
+    "class": "ghidra.program.database.data.UnionDB",
+    "length": 112,
+    "description": ""
+  },
+  {
+    "name": "_union_1457",
+    "path": "/sigaction.h/_union_1457",
+    "class": "ghidra.program.database.data.UnionDB",
+    "length": 8,
+    "description": ""
+  },
+  {
+    "name": "anon_struct_16_2_3c0246b2_for__sigpoll",
+    "path": "/DWARF/siginfo_t.h/siginfo_t/anon_union_112_8_26c2b70a_for__sifields/anon_struct_16_2_3c0246b2_for__sigpoll",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 16,
+    "description": ""
+  },
+  {
+    "name": "anon_struct_16_2_6c587c7a_for__addr_bnd",
+    "path": "/DWARF/siginfo_t.h/siginfo_t/anon_union_112_8_26c2b70a_for__sifields/anon_struct_32_3_f01937af_for__sigfault/anon_union_16_2_200698a6_for__bounds/anon_struct_16_2_6c587c7a_for__addr_bnd",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 16,
+    "description": ""
+  },
+  {
+    "name": "anon_struct_16_3_349d2ff7_for__sigsys",
+    "path": "/DWARF/siginfo_t.h/siginfo_t/anon_union_112_8_26c2b70a_for__sifields/anon_struct_16_3_349d2ff7_for__sigsys",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 16,
+    "description": ""
+  },
+  {
+    "name": "anon_struct_16_3_5124685d_for__timer",
+    "path": "/DWARF/siginfo_t.h/siginfo_t/anon_union_112_8_26c2b70a_for__sifields/anon_struct_16_3_5124685d_for__timer",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 16,
+    "description": ""
+  },
+  {
+    "name": "anon_struct_16_3_9bedbd60_for__rt",
+    "path": "/DWARF/siginfo_t.h/siginfo_t/anon_union_112_8_26c2b70a_for__sifields/anon_struct_16_3_9bedbd60_for__rt",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 16,
+    "description": ""
+  },
+  {
+    "name": "anon_struct_32_3_f01937af_for__sigfault",
+    "path": "/DWARF/siginfo_t.h/siginfo_t/anon_union_112_8_26c2b70a_for__sifields/anon_struct_32_3_f01937af_for__sigfault",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 32,
+    "description": ""
+  },
+  {
+    "name": "anon_struct_32_5_7a6ff138_for__sigchld",
+    "path": "/DWARF/siginfo_t.h/siginfo_t/anon_union_112_8_26c2b70a_for__sifields/anon_struct_32_5_7a6ff138_for__sigchld",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 32,
+    "description": ""
+  },
+  {
+    "name": "anon_struct_8_2_0a3d7222_for__kill",
+    "path": "/DWARF/siginfo_t.h/siginfo_t/anon_union_112_8_26c2b70a_for__sifields/anon_struct_8_2_0a3d7222_for__kill",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 8,
+    "description": ""
+  },
+  {
+    "name": "anon_union_112_8_26c2b70a_for__sifields",
+    "path": "/DWARF/siginfo_t.h/siginfo_t/anon_union_112_8_26c2b70a_for__sifields",
+    "class": "ghidra.program.database.data.UnionDB",
+    "length": 112,
+    "description": ""
+  },
+  {
+    "name": "anon_union_16_2_200698a6_for__bounds",
+    "path": "/DWARF/siginfo_t.h/siginfo_t/anon_union_112_8_26c2b70a_for__sifields/anon_struct_32_3_f01937af_for__sigfault/anon_union_16_2_200698a6_for__bounds",
+    "class": "ghidra.program.database.data.UnionDB",
+    "length": 16,
+    "description": ""
+  },
+  {
+    "name": "anon_union_8_2_5ad2d23e_for___sigaction_handler",
+    "path": "/DWARF/sigaction.h/sigaction/anon_union_8_2_5ad2d23e_for___sigaction_handler",
+    "class": "ghidra.program.database.data.UnionDB",
+    "length": 8,
+    "description": ""
+  },
+  {
+    "name": "byte",
+    "path": "/byte",
+    "class": "ghidra.program.model.data.ByteDataType",
+    "length": 1,
+    "description": "Unsigned Byte (db)"
+  },
+  {
+    "name": "byte[15]",
+    "path": "/byte[15]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 15,
+    "description": "Array of Unsigned Byte (db)"
+  },
+  {
+    "name": "byte[19]",
+    "path": "/byte[19]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 19,
+    "description": "Array of Unsigned Byte (db)"
+  },
+  {
+    "name": "byte[20]",
+    "path": "/byte[20]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 20,
+    "description": "Array of Unsigned Byte (db)"
+  },
+  {
+    "name": "byte[23]",
+    "path": "/byte[23]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 23,
+    "description": "Array of Unsigned Byte (db)"
+  },
+  {
+    "name": "byte[3]",
+    "path": "/byte[3]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 3,
+    "description": "Array of Unsigned Byte (db)"
+  },
+  {
+    "name": "byte[4]",
+    "path": "/byte[4]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 4,
+    "description": "Array of Unsigned Byte (db)"
+  },
+  {
+    "name": "byte[7]",
+    "path": "/byte[7]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 7,
+    "description": "Array of Unsigned Byte (db)"
+  },
+  {
+    "name": "calculate_checksum",
+    "path": "/DWARF/safe_test_process.c/calculate_checksum",
+    "class": "ghidra.program.database.data.FunctionDefinitionDB",
+    "length": -1,
+    "description": "Function Signature Data Type"
+  },
+  {
+    "name": "char",
+    "path": "/char",
+    "class": "ghidra.program.model.data.CharDataType",
+    "length": 1,
+    "description": "Character"
+  },
+  {
+    "name": "char *",
+    "path": "/char *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to char"
+  },
+  {
+    "name": "char *[12]",
+    "path": "/char *[12]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 96,
+    "description": "Array of pointer to char"
+  },
+  {
+    "name": "char[1]",
+    "path": "/char[1]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 1,
+    "description": "Array of Character"
+  },
+  {
+    "name": "char[207]",
+    "path": "/char[207]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 207,
+    "description": "Array of Character"
+  },
+  {
+    "name": "char[20]",
+    "path": "/char[20]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 20,
+    "description": "Array of Character"
+  },
+  {
+    "name": "create_test_memory",
+    "path": "/DWARF/safe_test_process.c/create_test_memory",
+    "class": "ghidra.program.database.data.FunctionDefinitionDB",
+    "length": -1,
+    "description": "Function Signature Data Type"
+  },
+  {
+    "name": "dwfenc",
+    "path": "/dwfenc",
+    "class": "ghidra.app.plugin.exceptionhandlers.gcc.datatype.DwarfEncodingModeDataType",
+    "length": 1,
+    "description": "DWARF value-encoding mode"
+  },
+  {
+    "name": "dword",
+    "path": "/dword",
+    "class": "ghidra.program.model.data.DWordDataType",
+    "length": 4,
+    "description": "Unsigned Double-Word (ddw, 4-bytes)"
+  },
+  {
+    "name": "dword[2]",
+    "path": "/dword[2]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 8,
+    "description": "Array of Unsigned Double-Word (ddw, 4-bytes)"
+  },
+  {
+    "name": "dword[3]",
+    "path": "/dword[3]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 12,
+    "description": "Array of Unsigned Double-Word (ddw, 4-bytes)"
+  },
+  {
+    "name": "eh_frame_hdr",
+    "path": "/eh_frame_hdr",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 4,
+    "description": ""
+  },
+  {
+    "name": "Elf64_Dyn",
+    "path": "/ELF/Elf64_Dyn",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 16,
+    "description": ""
+  },
+  {
+    "name": "Elf64_Dyn[27]",
+    "path": "/ELF/Elf64_Dyn[27]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 432,
+    "description": "Array of "
+  },
+  {
+    "name": "Elf64_DynTag",
+    "path": "/ELF/Elf64_DynTag",
+    "class": "ghidra.program.database.data.EnumDB",
+    "length": 8,
+    "description": ""
+  },
+  {
+    "name": "Elf64_Ehdr",
+    "path": "/ELF/Elf64_Ehdr",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 64,
+    "description": ""
+  },
+  {
+    "name": "Elf64_Phdr",
+    "path": "/ELF/Elf64_Phdr",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 56,
+    "description": ""
+  },
+  {
+    "name": "Elf64_Phdr[13]",
+    "path": "/ELF/Elf64_Phdr[13]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 728,
+    "description": "Array of "
+  },
+  {
+    "name": "Elf64_Rela",
+    "path": "/ELF/Elf64_Rela",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 24,
+    "description": ""
+  },
+  {
+    "name": "Elf64_Rela[15]",
+    "path": "/ELF/Elf64_Rela[15]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 360,
+    "description": "Array of "
+  },
+  {
+    "name": "Elf64_Rela[21]",
+    "path": "/ELF/Elf64_Rela[21]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 504,
+    "description": "Array of "
+  },
+  {
+    "name": "Elf64_Shdr",
+    "path": "/ELF/Elf64_Shdr",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 64,
+    "description": ""
+  },
+  {
+    "name": "Elf64_Shdr[38]",
+    "path": "/ELF/Elf64_Shdr[38]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 2432,
+    "description": "Array of "
+  },
+  {
+    "name": "Elf64_Sym",
+    "path": "/ELF/Elf64_Sym",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 24,
+    "description": ""
+  },
+  {
+    "name": "Elf64_Sym[22]",
+    "path": "/ELF/Elf64_Sym[22]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 528,
+    "description": "Array of "
+  },
+  {
+    "name": "Elf64_Sym[59]",
+    "path": "/ELF/Elf64_Sym[59]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 1416,
+    "description": "Array of "
+  },
+  {
+    "name": "Elf_ProgramHeaderType",
+    "path": "/ELF/Elf_ProgramHeaderType",
+    "class": "ghidra.program.database.data.EnumDB",
+    "length": 4,
+    "description": ""
+  },
+  {
+    "name": "Elf_SectionHeaderType",
+    "path": "/ELF/Elf_SectionHeaderType",
+    "class": "ghidra.program.database.data.EnumDB",
+    "length": 4,
+    "description": ""
+  },
+  {
+    "name": "EVP_PKEY_CTX",
+    "path": "/ossl_typ.h/EVP_PKEY_CTX",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 1,
+    "description": ""
+  },
+  {
+    "name": "EVP_PKEY_CTX *",
+    "path": "/ossl_typ.h/EVP_PKEY_CTX *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to EVP_PKEY_CTX"
+  },
+  {
+    "name": "evp_pkey_ctx_st",
+    "path": "/ossl_typ.h/evp_pkey_ctx_st",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 1,
+    "description": ""
+  },
+  {
+    "name": "fde_table_entry",
+    "path": "/fde_table_entry",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 8,
+    "description": ""
+  },
+  {
+    "name": "FILE",
+    "path": "/DWARF/FILE.h/FILE",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 216,
+    "description": ""
+  },
+  {
+    "name": "FILE",
+    "path": "/stdio.h/FILE",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 216,
+    "description": ""
+  },
+  {
+    "name": "FILE *",
+    "path": "/DWARF/FILE.h/FILE *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to FILE"
+  },
+  {
+    "name": "FILE *",
+    "path": "/stdio.h/FILE *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to FILE"
+  },
+  {
+    "name": "GnuBuildId",
+    "path": "/ELF/GnuBuildId",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 36,
+    "description": ""
+  },
+  {
+    "name": "handle_signal",
+    "path": "/DWARF/safe_test_process.c/handle_signal",
+    "class": "ghidra.program.database.data.FunctionDefinitionDB",
+    "length": -1,
+    "description": "Function Signature Data Type"
+  },
+  {
+    "name": "install_signal_handlers",
+    "path": "/DWARF/safe_test_process.c/install_signal_handlers",
+    "class": "ghidra.program.database.data.FunctionDefinitionDB",
+    "length": -1,
+    "description": "Function Signature Data Type"
+  },
+  {
+    "name": "int",
+    "path": "/int",
+    "class": "ghidra.program.model.data.IntegerDataType",
+    "length": 4,
+    "description": "Signed Integer (compiler-specific size)"
+  },
+  {
+    "name": "int *",
+    "path": "/int *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to int"
+  },
+  {
+    "name": "int[28]",
+    "path": "/int[28]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 112,
+    "description": "Array of Signed Integer (compiler-specific size)"
+  },
+  {
+    "name": "long",
+    "path": "/long",
+    "class": "ghidra.program.model.data.LongDataType",
+    "length": 8,
+    "description": "Signed Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "longlong",
+    "path": "/longlong",
+    "class": "ghidra.program.model.data.LongLongDataType",
+    "length": 8,
+    "description": "Signed Long Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "main",
+    "path": "/DWARF/safe_test_process.c/main",
+    "class": "ghidra.program.database.data.FunctionDefinitionDB",
+    "length": -1,
+    "description": "Function Signature Data Type"
+  },
+  {
+    "name": "NoteAbiTag",
+    "path": "/ELF/NoteAbiTag",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 32,
+    "description": ""
+  },
+  {
+    "name": "NoteGnuProperty_4",
+    "path": "/ELF/NoteGnuProperty_4",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 16,
+    "description": ""
+  },
+  {
+    "name": "NoteGnuPropertyElement_4",
+    "path": "/NoteGnuPropertyElement_4",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 12,
+    "description": ""
+  },
+  {
+    "name": "pointer",
+    "path": "/pointer",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer"
+  },
+  {
+    "name": "print_test_markers",
+    "path": "/DWARF/safe_test_process.c/print_test_markers",
+    "class": "ghidra.program.database.data.FunctionDefinitionDB",
+    "length": -1,
+    "description": "Function Signature Data Type"
+  },
+  {
+    "name": "qword",
+    "path": "/qword",
+    "class": "ghidra.program.model.data.QWordDataType",
+    "length": 8,
+    "description": "Unsigned Quad-Word (dq, 8-bytes)"
+  },
+  {
+    "name": "qword[1]",
+    "path": "/qword[1]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 8,
+    "description": "Array of Unsigned Quad-Word (dq, 8-bytes)"
+  },
+  {
+    "name": "short",
+    "path": "/short",
+    "class": "ghidra.program.model.data.ShortDataType",
+    "length": 2,
+    "description": "Signed Short Integer (compiler-specific size)"
+  },
+  {
+    "name": "sig_atomic_t",
+    "path": "/DWARF/sig_atomic_t.h/sig_atomic_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 4,
+    "description": "Signed Integer (compiler-specific size)"
+  },
+  {
+    "name": "sigaction",
+    "path": "/DWARF/sigaction.h/sigaction",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 152,
+    "description": ""
+  },
+  {
+    "name": "sigaction",
+    "path": "/sigaction.h/sigaction",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 152,
+    "description": ""
+  },
+  {
+    "name": "sigaction *",
+    "path": "/DWARF/sigaction.h/sigaction *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to sigaction"
+  },
+  {
+    "name": "sigaction *",
+    "path": "/sigaction.h/sigaction *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to sigaction"
+  },
+  {
+    "name": "siginfo",
+    "path": "/siginfo.h/siginfo",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 128,
+    "description": ""
+  },
+  {
+    "name": "siginfo_t",
+    "path": "/DWARF/siginfo_t.h/siginfo_t",
+    "class": "ghidra.program.database.data.StructureDB",
+    "length": 128,
+    "description": ""
+  },
+  {
+    "name": "siginfo_t",
+    "path": "/siginfo.h/siginfo_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 128,
+    "description": ""
+  },
+  {
+    "name": "siginfo_t *",
+    "path": "/DWARF/siginfo_t.h/siginfo_t *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to siginfo_t"
+  },
+  {
+    "name": "siginfo_t *",
+    "path": "/siginfo.h/siginfo_t *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to siginfo_t"
+  },
+  {
+    "name": "sigset_t",
+    "path": "/DWARF/sigset_t.h/sigset_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 128,
+    "description": ""
+  },
+  {
+    "name": "sigset_t",
+    "path": "/select.h/sigset_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 128,
+    "description": ""
+  },
+  {
+    "name": "sigset_t *",
+    "path": "/DWARF/sigset_t.h/sigset_t *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to sigset_t"
+  },
+  {
+    "name": "sigset_t *",
+    "path": "/select.h/sigset_t *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to sigset_t"
+  },
+  {
+    "name": "sigval",
+    "path": "/DWARF/__sigval_t.h/sigval",
+    "class": "ghidra.program.database.data.UnionDB",
+    "length": 8,
+    "description": ""
+  },
+  {
+    "name": "sigval",
+    "path": "/siginfo.h/sigval",
+    "class": "ghidra.program.database.data.UnionDB",
+    "length": 8,
+    "description": ""
+  },
+  {
+    "name": "sigval_t",
+    "path": "/siginfo.h/sigval_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": ""
+  },
+  {
+    "name": "size_t",
+    "path": "/DWARF/size_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Unsigned Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "size_t",
+    "path": "/stddef.h/size_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Unsigned Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "sleb128",
+    "path": "/sleb128",
+    "class": "ghidra.program.model.data.SignedLeb128DataType",
+    "length": -1,
+    "description": "Signed LEB128-Encoded Number"
+  },
+  {
+    "name": "sqword",
+    "path": "/sqword",
+    "class": "ghidra.program.model.data.SignedQWordDataType",
+    "length": 8,
+    "description": "Signed Quad-Word (sdq, 8-bytes)"
+  },
+  {
+    "name": "string",
+    "path": "/string",
+    "class": "ghidra.program.model.data.StringDataType",
+    "length": -1,
+    "description": "String (fixed length)"
+  },
+  {
+    "name": "string-utf8",
+    "path": "/string-utf8",
+    "class": "ghidra.program.model.data.StringUTF8DataType",
+    "length": -1,
+    "description": "String (Fixed Length UTF-8 Unicode)"
+  },
+  {
+    "name": "TerminatedCString",
+    "path": "/TerminatedCString",
+    "class": "ghidra.program.model.data.TerminatedStringDataType",
+    "length": -1,
+    "description": "String (Null Terminated)"
+  },
+  {
+    "name": "time_t",
+    "path": "/DWARF/time_t.h/time_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Signed Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "time_t",
+    "path": "/time.h/time_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Signed Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "time_t *",
+    "path": "/DWARF/time_t.h/time_t *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to time_t"
+  },
+  {
+    "name": "time_t *",
+    "path": "/time.h/time_t *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to time_t"
+  },
+  {
+    "name": "uchar",
+    "path": "/uchar",
+    "class": "ghidra.program.model.data.UnsignedCharDataType",
+    "length": 1,
+    "description": "Unsigned Character (ASCII)"
+  },
+  {
+    "name": "uchar *",
+    "path": "/uchar *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to uchar"
+  },
+  {
+    "name": "uint",
+    "path": "/uint",
+    "class": "ghidra.program.model.data.UnsignedIntegerDataType",
+    "length": 4,
+    "description": "Unsigned Integer (compiler-specific size)"
+  },
+  {
+    "name": "uint64_t",
+    "path": "/DWARF/stdint-uintn.h/uint64_t",
+    "class": "ghidra.program.database.data.TypedefDB",
+    "length": 8,
+    "description": "Unsigned Quad-Word (dq, 8-bytes)"
+  },
+  {
+    "name": "uleb128",
+    "path": "/uleb128",
+    "class": "ghidra.program.model.data.UnsignedLeb128DataType",
+    "length": -1,
+    "description": "Unsigned LEB128-Encoded Number"
+  },
+  {
+    "name": "ulong",
+    "path": "/ulong",
+    "class": "ghidra.program.model.data.UnsignedLongDataType",
+    "length": 8,
+    "description": "Unsigned Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "ulong[16]",
+    "path": "/ulong[16]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 128,
+    "description": "Array of Unsigned Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "ulonglong",
+    "path": "/ulonglong",
+    "class": "ghidra.program.model.data.UnsignedLongLongDataType",
+    "length": 8,
+    "description": "Unsigned Long Long Integer (compiler-specific size)"
+  },
+  {
+    "name": "undefined *",
+    "path": "/undefined *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to undefined"
+  },
+  {
+    "name": "undefined1",
+    "path": "/undefined1",
+    "class": "ghidra.program.model.data.Undefined1DataType",
+    "length": 1,
+    "description": "Undefined Byte"
+  },
+  {
+    "name": "undefined1[207]",
+    "path": "/undefined1[207]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 207,
+    "description": "Array of Undefined Byte"
+  },
+  {
+    "name": "undefined1[32]",
+    "path": "/undefined1[32]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 32,
+    "description": "Array of Undefined Byte"
+  },
+  {
+    "name": "undefined1[96]",
+    "path": "/undefined1[96]",
+    "class": "ghidra.program.database.data.ArrayDB",
+    "length": 96,
+    "description": "Array of Undefined Byte"
+  },
+  {
+    "name": "undefined4",
+    "path": "/undefined4",
+    "class": "ghidra.program.model.data.Undefined4DataType",
+    "length": 4,
+    "description": "Undefined Double Word"
+  },
+  {
+    "name": "undefined8",
+    "path": "/undefined8",
+    "class": "ghidra.program.model.data.Undefined8DataType",
+    "length": 8,
+    "description": "Undefined Quad Word"
+  },
+  {
+    "name": "ushort",
+    "path": "/ushort",
+    "class": "ghidra.program.model.data.UnsignedShortDataType",
+    "length": 2,
+    "description": "Unsigned Short Integer (compiler-specific size)"
+  },
+  {
+    "name": "void",
+    "path": "/void",
+    "class": "ghidra.program.model.data.VoidDataType",
+    "length": 0,
+    "description": "void datatype"
+  },
+  {
+    "name": "void *",
+    "path": "/void *",
+    "class": "ghidra.program.database.data.PointerDB",
+    "length": 8,
+    "description": "pointer to void"
+  },
+  {
+    "name": "word",
+    "path": "/word",
+    "class": "ghidra.program.model.data.WordDataType",
+    "length": 2,
+    "description": "Unsigned Word (dw, 2-bytes)"
+  }
+]

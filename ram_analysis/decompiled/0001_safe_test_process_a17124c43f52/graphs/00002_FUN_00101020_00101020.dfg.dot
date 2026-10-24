@@ -1,0 +1,31 @@
+digraph "dfg_00101020" {
+  graph [rankdir=LR, bgcolor="white", pad="0.25", nodesep="0.35", ranksep="0.55", overlap=false, splines=true];
+  node [fontname="DejaVu Sans", fontsize=10, style="filled,rounded", margin="0.10,0.06"];
+  edge [fontname="DejaVu Sans", fontsize=8, arrowsize=0.75];
+  "op_0" [label="CALLIND", shape=box, fillcolor="#9EC5FE", color="#2457A7", penwidth=1.4, tooltip="id=op_0 | kind=pcode_op"];
+  "var_1bd044a8c31b3d63" [label="UNNAMED", shape=ellipse, fillcolor="#FFD59A", color="#A85D00", penwidth=1.4, tooltip="id=var_1bd044a8c31b3d63 | kind=varnode"];
+  "op_1" [label="RETURN", shape=box, fillcolor="#9EC5FE", color="#2457A7", penwidth=1.4, tooltip="id=op_1 | kind=pcode_op"];
+  "var_7d8171ad5edfba5c" [label="None", shape=ellipse, fillcolor="#FFD59A", color="#A85D00", penwidth=1.4, tooltip="id=var_7d8171ad5edfba5c | kind=varnode"];
+  "op_2" [label="INDIRECT", shape=box, fillcolor="#9EC5FE", color="#2457A7", penwidth=1.4, tooltip="id=op_2 | kind=pcode_op"];
+  "var_d7e79a47e750929e" [label="PTR_00103f38", shape=ellipse, fillcolor="#FFD59A", color="#A85D00", penwidth=1.4, tooltip="id=var_d7e79a47e750929e | kind=varnode"];
+  "var_3bba7c1477af2e87" [label="(const, 0x3, 4)", shape=ellipse, fillcolor="#FFD59A", color="#A85D00", penwidth=1.4, tooltip="id=var_3bba7c1477af2e87 | kind=varnode"];
+  "op_3" [label="COPY", shape=box, fillcolor="#9EC5FE", color="#2457A7", penwidth=1.4, tooltip="id=op_3 | kind=pcode_op"];
+  "op_4" [label="INDIRECT", shape=box, fillcolor="#9EC5FE", color="#2457A7", penwidth=1.4, tooltip="id=op_4 | kind=pcode_op"];
+  "var_8b10ce2dfeee12f8" [label="PTR_00103f40", shape=ellipse, fillcolor="#FFD59A", color="#A85D00", penwidth=1.4, tooltip="id=var_8b10ce2dfeee12f8 | kind=varnode"];
+  "op_5" [label="COPY", shape=box, fillcolor="#9EC5FE", color="#2457A7", penwidth=1.4, tooltip="id=op_5 | kind=pcode_op"];
+  "op_6" [label="CAST", shape=box, fillcolor="#9EC5FE", color="#2457A7", penwidth=1.4, tooltip="id=op_6 | kind=pcode_op"];
+  "var_1bd044a8c31b3d63" -> "op_0" [label="uses", color="#666666", fontcolor="#666666", style="solid"];
+  "var_7d8171ad5edfba5c" -> "op_1" [label="uses", color="#666666", fontcolor="#666666", style="solid"];
+  "op_2" -> "var_d7e79a47e750929e" [label="defines", color="#16794D", fontcolor="#16794D", style="solid"];
+  "var_d7e79a47e750929e" -> "op_2" [label="uses", color="#666666", fontcolor="#666666", style="solid"];
+  "var_3bba7c1477af2e87" -> "op_2" [label="uses", color="#666666", fontcolor="#666666", style="solid"];
+  "op_3" -> "var_d7e79a47e750929e" [label="defines", color="#16794D", fontcolor="#16794D", style="solid"];
+  "var_d7e79a47e750929e" -> "op_3" [label="uses", color="#666666", fontcolor="#666666", style="solid"];
+  "op_4" -> "var_8b10ce2dfeee12f8" [label="defines", color="#16794D", fontcolor="#16794D", style="solid"];
+  "var_8b10ce2dfeee12f8" -> "op_4" [label="uses", color="#666666", fontcolor="#666666", style="solid"];
+  "var_3bba7c1477af2e87" -> "op_4" [label="uses", color="#666666", fontcolor="#666666", style="solid"];
+  "op_5" -> "var_8b10ce2dfeee12f8" [label="defines", color="#16794D", fontcolor="#16794D", style="solid"];
+  "var_8b10ce2dfeee12f8" -> "op_5" [label="uses", color="#666666", fontcolor="#666666", style="solid"];
+  "op_6" -> "var_1bd044a8c31b3d63" [label="defines", color="#16794D", fontcolor="#16794D", style="solid"];
+  "var_8b10ce2dfeee12f8" -> "op_6" [label="uses", color="#666666", fontcolor="#666666", style="solid"];
+}

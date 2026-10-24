@@ -1,0 +1,450 @@
+{
+  "index": 9,
+  "name": "mmap",
+  "entry": "00101180",
+  "kind": "plt_stub",
+  "external": true,
+  "declared_external": false,
+  "implementation_external": true,
+  "external_thunk_record": false,
+  "internal_external_thunk": false,
+  "thunk_target_name": "mmap",
+  "thunk_target_entry": "EXTERNAL:00000007",
+  "memory_block": ".plt.sec",
+  "signature": "void * mmap(void * __addr, size_t __len, int __prot, int __flags, int __fd, __off_t __offset)",
+  "is_thunk": true,
+  "pseudocode": "\n/* WARNING: Unknown calling convention -- yet parameter storage is locked */\n\nvoid * mmap(void *__addr,size_t __len,int __prot,int __flags,int __fd,__off_t __offset)\n\n{\n  void *pvVar1;\n  \n  pvVar1 = (void *)(*(code *)PTR_mmap_00103f70)();\n  return pvVar1;\n}\n\n",
+  "assembly": [
+    {
+      "address": "00101180",
+      "bytes": "f3 0f 1e fa",
+      "mnemonic": "ENDBR64",
+      "text": "ENDBR64",
+      "flow_type": "FALL_THROUGH",
+      "references": []
+    },
+    {
+      "address": "00101184",
+      "bytes": "ff 25 e6 2d 00 00",
+      "mnemonic": "JMP",
+      "text": "JMP qword ptr [0x00103f70]",
+      "flow_type": "COMPUTED_CALL_TERMINATOR",
+      "references": [
+        {
+          "to": "00103f70",
+          "type": "INDIRECTION"
+        },
+        {
+          "to": "00105038",
+          "type": "COMPUTED_CALL_TERMINATOR"
+        }
+      ]
+    }
+  ],
+  "pcode": [
+    {
+      "id": "op_0",
+      "sequence": "(ram, 0x101184, 0, 2)",
+      "mnemonic": "CALLIND",
+      "output": {
+        "text": "(unique, 0x10000011, 8)",
+        "address": "unique:10000011",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(unique, 0x10000009, 8)",
+          "address": "unique:10000009",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    },
+    {
+      "id": "op_1",
+      "sequence": "(ram, 0x101184, 1, 5)",
+      "mnemonic": "RETURN",
+      "output": null,
+      "inputs": [
+        {
+          "text": "(const, 0x0, 8)",
+          "address": "const:00000000",
+          "size": 8,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "None"
+        },
+        {
+          "text": "(register, 0x0, 8)",
+          "address": "register:00000000",
+          "size": 8,
+          "is_constant": false,
+          "is_register": true,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": "pvVar1"
+        }
+      ]
+    },
+    {
+      "id": "op_2",
+      "sequence": "(ram, 0x101184, 14, 1)",
+      "mnemonic": "INDIRECT",
+      "output": {
+        "text": "(ram, 0x103f70, 8)",
+        "address": "00103f70",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "PTR_mmap_00103f70"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103f70, 8)",
+          "address": "00103f70",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR_mmap_00103f70"
+        },
+        {
+          "text": "(const, 0x0, 4)",
+          "address": "const:00000000",
+          "size": 4,
+          "is_constant": true,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": false,
+          "high_name": null
+        }
+      ]
+    },
+    {
+      "id": "op_3",
+      "sequence": "(ram, 0x101184, 15, 4)",
+      "mnemonic": "COPY",
+      "output": {
+        "text": "(ram, 0x103f70, 8)",
+        "address": "00103f70",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": false,
+        "is_address": true,
+        "high_name": "PTR_mmap_00103f70"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103f70, 8)",
+          "address": "00103f70",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR_mmap_00103f70"
+        }
+      ]
+    },
+    {
+      "id": "op_4",
+      "sequence": "(ram, 0x101184, 16, 0)",
+      "mnemonic": "CAST",
+      "output": {
+        "text": "(unique, 0x10000009, 8)",
+        "address": "unique:10000009",
+        "size": 8,
+        "is_constant": false,
+        "is_register": false,
+        "is_unique": true,
+        "is_address": false,
+        "high_name": "UNNAMED"
+      },
+      "inputs": [
+        {
+          "text": "(ram, 0x103f70, 8)",
+          "address": "00103f70",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": false,
+          "is_address": true,
+          "high_name": "PTR_mmap_00103f70"
+        }
+      ]
+    },
+    {
+      "id": "op_5",
+      "sequence": "(ram, 0x101184, 17, 3)",
+      "mnemonic": "CAST",
+      "output": {
+        "text": "(register, 0x0, 8)",
+        "address": "register:00000000",
+        "size": 8,
+        "is_constant": false,
+        "is_register": true,
+        "is_unique": false,
+        "is_address": false,
+        "high_name": "pvVar1"
+      },
+      "inputs": [
+        {
+          "text": "(unique, 0x10000011, 8)",
+          "address": "unique:10000011",
+          "size": 8,
+          "is_constant": false,
+          "is_register": false,
+          "is_unique": true,
+          "is_address": false,
+          "high_name": "UNNAMED"
+        }
+      ]
+    }
+  ],
+  "cfg": {
+    "nodes": [
+      {
+        "id": "00101180",
+        "label": "00101180",
+        "kind": "basic_block",
+        "start": "00101180",
+        "end": "00101189",
+        "flow_type": "COMPUTED_CALL_TERMINATOR"
+      }
+    ],
+    "edges": [
+      {
+        "source": "00101180",
+        "target": "00105038",
+        "kind": "COMPUTED_CALL",
+        "label": "COMPUTED_CALL"
+      },
+      {
+        "source": "00101180",
+        "target": "00105038",
+        "kind": "COMPUTED_CALL_TERMINATOR",
+        "label": "COMPUTED_CALL_TERMINATOR"
+      }
+    ]
+  },
+  "dfg": {
+    "nodes": [
+      {
+        "id": "op_0",
+        "label": "CALLIND",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_1bd044a8c31b3d63",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_d9653fba090902ca",
+        "label": "UNNAMED",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_1",
+        "label": "RETURN",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_88811e232378f02a",
+        "label": "None",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_1cc3985f02ba7623",
+        "label": "pvVar1",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_2",
+        "label": "INDIRECT",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "var_90c7178ec4abefc8",
+        "label": "PTR_mmap_00103f70",
+        "kind": "varnode"
+      },
+      {
+        "id": "var_5bd3595558fd8d2a",
+        "label": "(const, 0x0, 4)",
+        "kind": "varnode"
+      },
+      {
+        "id": "op_3",
+        "label": "COPY",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_4",
+        "label": "CAST",
+        "kind": "pcode_op"
+      },
+      {
+        "id": "op_5",
+        "label": "CAST",
+        "kind": "pcode_op"
+      }
+    ],
+    "edges": [
+      {
+        "source": "op_0",
+        "target": "var_1bd044a8c31b3d63",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_d9653fba090902ca",
+        "target": "op_0",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_88811e232378f02a",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_1cc3985f02ba7623",
+        "target": "op_1",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_2",
+        "target": "var_90c7178ec4abefc8",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_90c7178ec4abefc8",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "var_5bd3595558fd8d2a",
+        "target": "op_2",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_3",
+        "target": "var_90c7178ec4abefc8",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_90c7178ec4abefc8",
+        "target": "op_3",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_4",
+        "target": "var_d9653fba090902ca",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_90c7178ec4abefc8",
+        "target": "op_4",
+        "kind": "uses",
+        "label": "uses"
+      },
+      {
+        "source": "op_5",
+        "target": "var_1cc3985f02ba7623",
+        "kind": "defines",
+        "label": "defines"
+      },
+      {
+        "source": "var_1bd044a8c31b3d63",
+        "target": "op_5",
+        "kind": "uses",
+        "label": "uses"
+      }
+    ]
+  },
+  "call_graph": {
+    "callers": [
+      {
+        "name": "create_test_memory",
+        "entry": "001013de",
+        "kind": "internal_function",
+        "external": false,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": false,
+        "entry_in_external_space": false,
+        "external_thunk_record": false,
+        "internal_external_thunk": false,
+        "implementation_external": false,
+        "thunk": false,
+        "thunk_target_name": null,
+        "thunk_target_entry": null,
+        "memory_block": ".text"
+      }
+    ],
+    "callees": [
+      {
+        "name": "mmap",
+        "entry": "00105038",
+        "kind": "external_symbol",
+        "external": true,
+        "declared_external": false,
+        "external_address": false,
+        "in_external_block": true,
+        "entry_in_external_space": false,
+        "external_thunk_record": true,
+        "internal_external_thunk": false,
+        "implementation_external": true,
+        "thunk": true,
+        "thunk_target_name": "mmap",
+        "thunk_target_entry": "EXTERNAL:00000007",
+        "memory_block": "EXTERNAL"
+      }
+    ]
+  },
+  "string_references": [],
+  "graph_files": {
+    "cfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00009_mmap_00101180.cfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00009_mmap_00101180.cfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00009_mmap_00101180.cfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00009_mmap_00101180.cfg.svg",
+      "rendered": true,
+      "error": null
+    },
+    "dfg": {
+      "graphml": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00009_mmap_00101180.dfg.graphml",
+      "dot": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00009_mmap_00101180.dfg.dot",
+      "png": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00009_mmap_00101180.dfg.png",
+      "svg": "/home/asurada/my_project/ram_analysis/decompiled/0001_safe_test_process_a17124c43f52/graphs/00009_mmap_00101180.dfg.svg",
+      "rendered": true,
+      "error": null
+    }
+  },
+  "success": true,
+  "error": null
+}
